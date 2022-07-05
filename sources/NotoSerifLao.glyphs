@@ -1,6 +1,6 @@
 {
 .appVersion = "998";
-copyright = "Copyright 2017 Google Inc. All Rights Reserved.";
+copyright = "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/lao)";
 customParameters = (
 {
 name = glyphOrder;
@@ -126,7 +126,7 @@ uni25CC
 },
 {
 name = licenseURL;
-value = "http://scripts.sil.org/OFL";
+value = "https://scripts.sil.org/OFL";
 },
 {
 name = vendorID;
@@ -135,18 +135,18 @@ value = GOOG;
 {
 name = unicodeRanges;
 value = (
-"0",
-"1",
-"25",
-"31",
-"33",
-"45"
+0,
+1,
+25,
+31,
+33,
+45
 );
 },
 {
 name = codePageRanges;
 value = (
-"1252"
+1252
 );
 },
 {
@@ -155,7 +155,7 @@ value = "Designed by Monotype design team.";
 },
 {
 name = license;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
 },
 {
 name = trademark;
@@ -167,7 +167,7 @@ value = 1;
 },
 {
 name = versionString;
-value = "Version 2.000";
+value = "Version 2.002";
 },
 {
 name = fsType;
@@ -176,6 +176,10 @@ value = (
 },
 {
 name = "Don't use Production Names";
+value = 1;
+},
+{
+name = "Use Typo Metrics";
 value = 1;
 }
 );
@@ -258,16 +262,16 @@ value = 50;
 {
 name = panose;
 value = (
-"2",
-"2",
-"2",
-"2",
-"6",
-"5",
-"5",
-"2",
-"2",
-"4"
+2,
+2,
+2,
+2,
+6,
+5,
+5,
+2,
+2,
+4
 );
 }
 );
@@ -342,16 +346,16 @@ value = 50;
 {
 name = panose;
 value = (
-"2",
-"2",
-"5",
-"2",
-"6",
-"5",
-"5",
-"2",
-"2",
-"4"
+2,
+2,
+5,
+2,
+6,
+5,
+5,
+2,
+2,
+4
 );
 }
 );
@@ -422,16 +426,16 @@ value = 50;
 {
 name = panose;
 value = (
-"2",
-"2",
-"10",
-"2",
-"6",
-"5",
-"5",
-"2",
-"2",
-"4"
+2,
+2,
+10,
+2,
+6,
+5,
+5,
+2,
+2,
+4
 );
 }
 );
@@ -505,16 +509,16 @@ value = 50;
 {
 name = panose;
 value = (
-"2",
-"2",
-"2",
-"6",
-"6",
-"5",
-"5",
-"2",
-"2",
-"4"
+2,
+2,
+2,
+6,
+6,
+5,
+5,
+2,
+2,
+4
 );
 }
 );
@@ -591,16 +595,16 @@ value = 50;
 {
 name = panose;
 value = (
-"2",
-"2",
-"5",
-"6",
-"6",
-"5",
-"5",
-"2",
-"2",
-"4"
+2,
+2,
+5,
+6,
+6,
+5,
+5,
+2,
+2,
+4
 );
 }
 );
@@ -674,16 +678,16 @@ value = 50;
 {
 name = panose;
 value = (
-"2",
-"2",
-"10",
-"6",
-"6",
-"5",
-"5",
-"2",
-"2",
-"4"
+2,
+2,
+10,
+6,
+6,
+5,
+5,
+2,
+2,
+4
 );
 }
 );
@@ -52656,8 +52660,8 @@ value = "Noto Serif Lao ExtLt";
 );
 interpolationWeight = 42;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.212121;
-"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.787879;
+"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.78788;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.21212;
 };
 name = ExtraLight;
 weightClass = "Extra Light";
@@ -52726,8 +52730,8 @@ value = "Noto Serif Lao Light";
 );
 interpolationWeight = 64;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.545455;
-"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.454545;
+"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.45454;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.54546;
 };
 name = Light;
 weightClass = Light;
@@ -52860,8 +52864,8 @@ value = "Noto Serif Lao Med";
 );
 interpolationWeight = 110;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.84;
 "528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.16;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.84;
 };
 name = Medium;
 weightClass = Medium;
@@ -52930,8 +52934,8 @@ value = "Noto Serif Lao SemBd";
 );
 interpolationWeight = 130;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.64;
 "528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.36;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.64;
 };
 name = SemiBold;
 weightClass = SemiBold;
@@ -52996,8 +53000,8 @@ value = 0;
 );
 interpolationWeight = 152;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.42;
 "528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.58;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.42;
 };
 isBold = 1;
 linkStyle = Regular;
@@ -53068,8 +53072,8 @@ value = "Noto Serif Lao ExtBd";
 );
 interpolationWeight = 175;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.19;
 "528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.81;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.19;
 };
 name = ExtraBold;
 weightClass = ExtraBold;
@@ -53208,8 +53212,8 @@ value = "Noto Serif Lao SemCond Thin";
 interpolationWeight = 28;
 interpolationWidth = 89;
 instanceInterpolations = {
-"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.633333;
-"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.366667;
+"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.36667;
+"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.63333;
 };
 name = "SemiCondensed Thin";
 weightClass = Thin;
@@ -53280,10 +53284,10 @@ value = "Noto Serif Lao SemCond ExtLt";
 interpolationWeight = 42;
 interpolationWidth = 89;
 instanceInterpolations = {
-"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.260606;
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.106061;
-"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.527273;
-"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.106061;
+"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.10606;
+"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.26061;
+"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.52727;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.10606;
 };
 name = "SemiCondensed ExtraLight";
 weightClass = "Extra Light";
@@ -53354,10 +53358,10 @@ value = "Noto Serif Lao SemCond Light";
 interpolationWeight = 64;
 interpolationWidth = 89;
 instanceInterpolations = {
-"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.183333;
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.362121;
-"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.271212;
-"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.183333;
+"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.18333;
+"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.18333;
+"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.27121;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.36212;
 };
 name = "SemiCondensed Light";
 weightClass = Light;
@@ -53428,8 +53432,8 @@ value = "Noto Serif Lao SemCond";
 interpolationWeight = 94;
 interpolationWidth = 89;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.633333;
-"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.366667;
+"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.36667;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.63333;
 };
 name = SemiCondensed;
 widthClass = SemiCondensed;
@@ -53499,10 +53503,10 @@ value = "Noto Serif Lao SemCond Med";
 interpolationWeight = 110;
 interpolationWidth = 89;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.553333;
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.08;
-"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.286667;
+"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.28667;
 "528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.08;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.08;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.55333;
 };
 name = "SemiCondensed Medium";
 weightClass = Medium;
@@ -53573,10 +53577,10 @@ value = "Noto Serif Lao SemCond SemBd";
 interpolationWeight = 130;
 interpolationWidth = 89;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.453333;
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.18;
-"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.186667;
+"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.18667;
 "528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.18;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.18;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.45333;
 };
 name = "SemiCondensed SemiBold";
 weightClass = SemiBold;
@@ -53647,10 +53651,10 @@ value = "Noto Serif Lao SemCond";
 interpolationWeight = 152;
 interpolationWidth = 89;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.236667;
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.183333;
-"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.183333;
-"528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.396667;
+"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.18333;
+"528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.39667;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.18333;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.23667;
 };
 isBold = 1;
 linkStyle = SemiCondensed;
@@ -53723,10 +53727,10 @@ value = "Noto Serif Lao SemCond ExtBd";
 interpolationWeight = 175;
 interpolationWidth = 89;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.095;
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.271667;
 "004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.095;
-"528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.538333;
+"528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.53833;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.27167;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.095;
 };
 name = "SemiCondensed ExtraBold";
 weightClass = ExtraBold;
@@ -53797,8 +53801,8 @@ value = "Noto Serif Lao SemCond Blk";
 interpolationWeight = 194;
 interpolationWidth = 89;
 instanceInterpolations = {
-"528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.633333;
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.366667;
+"528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.63333;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.36667;
 };
 name = "SemiCondensed Black";
 weightClass = Black;
@@ -53869,8 +53873,8 @@ value = "Noto Serif Lao Cond Thin";
 interpolationWeight = 28;
 interpolationWidth = 79;
 instanceInterpolations = {
-"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.3;
 "15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.7;
+"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.3;
 };
 name = "Condensed Thin";
 weightClass = Thin;
@@ -53941,10 +53945,10 @@ value = "Noto Serif Lao Cond ExtLt";
 interpolationWeight = 42;
 interpolationWidth = 79;
 instanceInterpolations = {
-"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.593939;
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.106061;
-"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.193939;
-"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.106061;
+"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.10606;
+"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.59394;
+"169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.19394;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.10606;
 };
 name = "Condensed ExtraLight";
 weightClass = "Extra Light";
@@ -54015,10 +54019,10 @@ value = "Noto Serif Lao Cond Light";
 interpolationWeight = 64;
 interpolationWidth = 79;
 instanceInterpolations = {
-"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.304545;
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.15;
+"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.39546;
+"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.30455;
 "169B4CCF-67AF-4042-AA6F-C8E438F95C30" = 0.15;
-"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.395455;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.15;
 };
 name = "Condensed Light";
 weightClass = Light;
@@ -54089,8 +54093,8 @@ value = "Noto Serif Lao Cond";
 interpolationWeight = 94;
 interpolationWidth = 79;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.3;
 "004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.7;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.3;
 };
 name = Condensed;
 widthClass = Condensed;
@@ -54160,10 +54164,10 @@ value = "Noto Serif Lao Cond Med";
 interpolationWeight = 110;
 interpolationWidth = 79;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.22;
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.08;
 "004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.62;
 "528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.08;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.08;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.22;
 };
 name = "Condensed Medium";
 weightClass = Medium;
@@ -54234,10 +54238,10 @@ value = "Noto Serif Lao Cond SemBd";
 interpolationWeight = 130;
 interpolationWidth = 79;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.15;
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.21;
 "004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.49;
 "528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.15;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.21;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.15;
 };
 name = "Condensed SemiBold";
 weightClass = SemiBold;
@@ -54308,10 +54312,10 @@ value = "Noto Serif Lao Cond";
 interpolationWeight = 152;
 interpolationWidth = 79;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.15;
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.43;
 "004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.27;
 "528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.15;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.43;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.15;
 };
 isBold = 1;
 linkStyle = Condensed;
@@ -54384,10 +54388,10 @@ value = "Noto Serif Lao Cond ExtBd";
 interpolationWeight = 175;
 interpolationWidth = 79;
 instanceInterpolations = {
-"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.095;
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.605;
 "004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.095;
 "528596C4-5B9B-4A0D-91B5-66A38EFFCD2C" = 0.205;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.605;
+"A12FF52C-901E-4F1C-B651-FD65F325A5D0" = 0.095;
 };
 name = "Condensed ExtraBold";
 weightClass = ExtraBold;
@@ -54601,8 +54605,8 @@ value = "Noto Serif Lao ExtCond ExtLt";
 interpolationWeight = 42;
 interpolationWidth = 70;
 instanceInterpolations = {
-"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.787879;
-"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.212121;
+"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.21212;
+"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.78788;
 };
 name = "ExtraCondensed ExtraLight";
 weightClass = "Extra Light";
@@ -54673,8 +54677,8 @@ value = "Noto Serif Lao ExtCond Light";
 interpolationWeight = 64;
 interpolationWidth = 70;
 instanceInterpolations = {
-"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.454545;
-"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.545455;
+"004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.54546;
+"15894915-CD0E-4C5A-A33F-EBC469CF719E" = 0.45454;
 };
 name = "ExtraCondensed Light";
 weightClass = Light;
@@ -54815,8 +54819,8 @@ value = "Noto Serif Lao ExtCond Med";
 interpolationWeight = 110;
 interpolationWidth = 70;
 instanceInterpolations = {
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.16;
 "004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.84;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.16;
 };
 name = "ExtraCondensed Medium";
 weightClass = Medium;
@@ -54887,8 +54891,8 @@ value = "Noto Serif Lao ExtCond SemBd";
 interpolationWeight = 130;
 interpolationWidth = 70;
 instanceInterpolations = {
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.36;
 "004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.64;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.36;
 };
 name = "ExtraCondensed SemiBold";
 weightClass = SemiBold;
@@ -54959,8 +54963,8 @@ value = "Noto Serif Lao ExtCond";
 interpolationWeight = 152;
 interpolationWidth = 70;
 instanceInterpolations = {
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.58;
 "004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.42;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.58;
 };
 isBold = 1;
 linkStyle = ExtraCondensed;
@@ -55033,8 +55037,8 @@ value = "Noto Serif Lao ExtCond ExtBd";
 interpolationWeight = 175;
 interpolationWidth = 70;
 instanceInterpolations = {
-"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.81;
 "004437BA-C458-42A1-B8EC-F9F2993A06FB" = 0.19;
+"5B84B61E-AB9F-4F38-98DA-7F1AA4E54ED0" = 0.81;
 };
 name = "ExtraCondensed ExtraBold";
 weightClass = ExtraBold;
@@ -55154,5 +55158,5 @@ manufacturer = "Monotype Imaging Inc.";
 manufacturerURL = "http://www.google.com/get/noto/";
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 0;
+versionMinor = 2;
 }
