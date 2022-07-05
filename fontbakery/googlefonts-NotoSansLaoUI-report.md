@@ -5,18 +5,11 @@ Fontbakery version: 0.8.9
 <details><summary><b>[1] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
 
 
-* 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf'] [code: single-directory]
-</div></details><br></div></details><details><summary><b>[11] NotoSansLaoUI-MM[wght].ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking file is named canonically. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/canonical_filename">com.google.fonts/check/canonical_filename</a>)</summary><div>
+* 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSansLaoUI/googlefonts/ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf'] [code: single-directory]
+</div></details><br></div></details><details><summary><b>[13] NotoSansLaoUI-Black.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** The file 'NotoSansLaoUI-MM[wght].ttf' must be renamed to 'NotoSansLaoUI[wdth,wght].ttf' according to the Google Fonts naming policy for variable fonts. [code: bad-varfont-filename]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -30,7 +23,7 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -44,104 +37,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- maiEk-lao
-
-	- maiKanVowel-lao
-
-	- maiTho-lao
+	- maiTi-lao
 
 	- iiVowel-lao
 
-	- niggahita-lao
-
-	- uVowel-lao
-
-	- maiTi-lao
-
-	- karan-lao
-
 	- loVowel-lao
 
-	- euVowel-lao 
-
-	- And 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
-</div></details><details><summary>🔥 <b>FAIL:</b> Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/fvar.html#com.adobe.fonts/check/varfont/valid_default_instance_nameids">com.adobe.fonts/check/varfont/valid_default_instance_nameids</a>)</summary><div>
-
-
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 283. [code: invalid-default-instance-subfamily-nameid:283]
-</div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
-
-
-* ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
-</div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
-
-
-* ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
-
-	- nbspace
- [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
-
-
-* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), dotaccentcomb (U+0307), gravecomb (U+0300) and 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
-</div></details><br></div></details><details><summary><b>[13] NotoSansLaoUI-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2017 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
-</div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyph names do not comply with naming conventions: koKai-lao, khoKhai-lao, khoKhuay-lao, ngoNgu-lao, coCok-lao, soSang-lao, nyoNyung-lao, doDek-lao, toTa-lao, thoThong-lao and 98 more.
-
-Use -F or --full-lists to disable shortening of long lists.
-
- A glyph name must be entirely comprised of characters from the following set: A-Z a-z 0-9 .(period) _(underscore). A glyph name must not start with a digit or period. There are a few exceptions such as the special glyph ".notdef". The glyph names "twocents", "a1", and "_" are all valid, while "2cents" and ".twocents" are not. [code: found-invalid-names]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- maiEk-lao
+	- niggahita-lao
 
 	- maiKanVowel-lao
 
-	- maiTho-lao
-
-	- iiVowel-lao
-
-	- niggahita-lao
-
-	- uVowel-lao
-
-	- maiTi-lao
+	- maiKonVowel-lao
 
 	- karan-lao
 
-	- loVowel-lao
+	- iVowel-lao
 
-	- euVowel-lao 
+	- uuVowel-lao
+
+	- maiCatawa-lao 
 
 	- And 5 more.
 
@@ -242,13 +156,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 6 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansLaoUI-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansLaoUI-Bold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -262,7 +173,7 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -276,25 +187,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- maiEk-lao
-
-	- maiKanVowel-lao
-
-	- maiTho-lao
+	- maiTi-lao
 
 	- iiVowel-lao
 
+	- loVowel-lao
+
 	- niggahita-lao
 
-	- uVowel-lao
+	- maiKanVowel-lao
 
-	- maiTi-lao
+	- maiKonVowel-lao
 
 	- karan-lao
 
-	- loVowel-lao
+	- iVowel-lao
 
-	- euVowel-lao 
+	- uuVowel-lao
+
+	- maiCatawa-lao 
 
 	- And 5 more.
 
@@ -388,13 +299,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 5 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansLaoUI-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansLaoUI-ExtraBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -408,7 +316,7 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -422,25 +330,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- maiEk-lao
-
-	- maiKanVowel-lao
-
-	- maiTho-lao
+	- maiTi-lao
 
 	- iiVowel-lao
 
+	- loVowel-lao
+
 	- niggahita-lao
 
-	- uVowel-lao
+	- maiKanVowel-lao
 
-	- maiTi-lao
+	- maiKonVowel-lao
 
 	- karan-lao
 
-	- loVowel-lao
+	- iVowel-lao
 
-	- euVowel-lao 
+	- uuVowel-lao
+
+	- maiCatawa-lao 
 
 	- And 5 more.
 
@@ -539,13 +447,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* Wgrave (U+1E80): B<<517.0,457.0>-<511.0,491.0>-<508.0,512.0>>/B<<508.0,512.0>-<506.0,491.0>-<500.0,457.0>> = 13.570434385161475 
 
 	* And Wgrave (U+1E80): B<<705.0,216.0>-<711.0,181.0>-<714.0,155.0>>/B<<714.0,155.0>-<717.0,179.0>-<723.5,214.5>> = 13.70696100407981 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansLaoUI-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansLaoUI-ExtraLight.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -559,7 +464,7 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -573,25 +478,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- maiEk-lao
-
-	- maiKanVowel-lao
-
-	- maiTho-lao
+	- maiTi-lao
 
 	- iiVowel-lao
 
+	- loVowel-lao
+
 	- niggahita-lao
 
-	- uVowel-lao
+	- maiKanVowel-lao
 
-	- maiTi-lao
+	- maiKonVowel-lao
 
 	- karan-lao
 
-	- loVowel-lao
+	- iVowel-lao
 
-	- euVowel-lao 
+	- uuVowel-lao
+
+	- maiCatawa-lao 
 
 	- And 5 more.
 
@@ -692,13 +597,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 87 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
-</div></details><br></div></details><details><summary><b>[14] NotoSansLaoUI-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[14] NotoSansLaoUI-Light.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -712,7 +614,7 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -726,25 +628,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- maiEk-lao
-
-	- maiKanVowel-lao
-
-	- maiTho-lao
+	- maiTi-lao
 
 	- iiVowel-lao
 
+	- loVowel-lao
+
 	- niggahita-lao
 
-	- uVowel-lao
+	- maiKanVowel-lao
 
-	- maiTi-lao
+	- maiKonVowel-lao
 
 	- karan-lao
 
-	- loVowel-lao
+	- iVowel-lao
 
-	- euVowel-lao 
+	- uuVowel-lao
+
+	- maiCatawa-lao 
 
 	- And 5 more.
 
@@ -851,13 +753,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
 
 	* soSeua-lao (U+0EAA): L<<479.0,83.0>--<478.0,327.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[13] NotoSansLaoUI-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansLaoUI-Medium.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -871,7 +770,7 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -885,25 +784,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- maiEk-lao
-
-	- maiKanVowel-lao
-
-	- maiTho-lao
+	- maiTi-lao
 
 	- iiVowel-lao
 
+	- loVowel-lao
+
 	- niggahita-lao
 
-	- uVowel-lao
+	- maiKanVowel-lao
 
-	- maiTi-lao
+	- maiKonVowel-lao
 
 	- karan-lao
 
-	- loVowel-lao
+	- iVowel-lao
 
-	- euVowel-lao 
+	- uuVowel-lao
+
+	- maiCatawa-lao 
 
 	- And 5 more.
 
@@ -990,13 +889,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* Wdieresis (U+1E84): B<<479.0,550.0>-<473.0,575.0>-<472.0,587.0>>/B<<472.0,587.0>-<471.0,575.0>-<465.5,550.0>> = 9.527283381452328 
 
 	* And Wgrave (U+1E80): B<<479.0,550.0>-<473.0,575.0>-<472.0,587.0>>/B<<472.0,587.0>-<471.0,575.0>-<465.5,550.0>> = 9.527283381452328 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[10] NotoSansLaoUI-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[10] NotoSansLaoUI-Regular.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -1010,7 +906,7 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -1024,25 +920,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- maiEk-lao
-
-	- maiKanVowel-lao
-
-	- maiTho-lao
+	- maiTi-lao
 
 	- iiVowel-lao
 
+	- loVowel-lao
+
 	- niggahita-lao
 
-	- uVowel-lao
+	- maiKanVowel-lao
 
-	- maiTi-lao
+	- maiKonVowel-lao
 
 	- karan-lao
 
-	- loVowel-lao
+	- iVowel-lao
 
-	- euVowel-lao 
+	- uuVowel-lao
+
+	- maiCatawa-lao 
 
 	- And 5 more.
 
@@ -1080,13 +976,10 @@ The following glyphs do not have the recommended number of contours:
 	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), dotaccentcomb (U+0307), gravecomb (U+0300) and 5 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
-</div></details><br></div></details><details><summary><b>[13] NotoSansLaoUI-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansLaoUI-SemiBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -1100,7 +993,7 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -1114,25 +1007,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- maiEk-lao
-
-	- maiKanVowel-lao
-
-	- maiTho-lao
+	- maiTi-lao
 
 	- iiVowel-lao
 
+	- loVowel-lao
+
 	- niggahita-lao
 
-	- uVowel-lao
+	- maiKanVowel-lao
 
-	- maiTi-lao
+	- maiKonVowel-lao
 
 	- karan-lao
 
-	- loVowel-lao
+	- iVowel-lao
 
-	- euVowel-lao 
+	- uuVowel-lao
+
+	- maiCatawa-lao 
 
 	- And 5 more.
 
@@ -1221,13 +1114,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* Wgrave (U+1E80): B<<684.5,198.0>-<692.0,160.0>-<695.0,130.0>>/B<<695.0,130.0>-<700.0,167.0>-<710.5,217.5>> = 13.406644859516216 
 
 	* And khmuNyo-lao (U+0EDF): B<<312.5,231.5>-<286.0,252.0>-<282.0,285.0>>/L<<282.0,285.0>--<282.0,232.0>> = 6.911227119024662 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansLaoUI-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansLaoUI-Thin.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -1241,7 +1131,7 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -1255,25 +1145,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- maiEk-lao
-
-	- maiKanVowel-lao
-
-	- maiTho-lao
+	- maiTi-lao
 
 	- iiVowel-lao
 
+	- loVowel-lao
+
 	- niggahita-lao
 
-	- uVowel-lao
+	- maiKanVowel-lao
 
-	- maiTi-lao
+	- maiKonVowel-lao
 
 	- karan-lao
 
-	- loVowel-lao
+	- iVowel-lao
 
-	- euVowel-lao 
+	- uuVowel-lao
+
+	- maiCatawa-lao 
 
 	- And 5 more.
 
@@ -1330,17 +1220,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* exclamdown (U+00A1): L<<122.0,354.0>--<124.0,-186.0>> 
 
 	* And exclamdown (U+00A1): L<<96.0,-186.0>--<98.0,354.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[11] NotoSansLaoUI-MM[wdth,wght].ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking file is named canonically. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/canonical_filename">com.google.fonts/check/canonical_filename</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSansLaoUI-MM[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+
+
+* 💔 **ERROR** Failed with IndexError: list index out of range
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking file is named canonically. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/canonical_filename">com.google.fonts/check/canonical_filename</a>)</summary><div>
 
 
 * 🔥 **FAIL** The file 'NotoSansLaoUI-MM[wdth,wght].ttf' must be renamed to 'NotoSansLaoUI[wdth,wght].ttf' according to the Google Fonts naming policy for variable fonts. [code: bad-varfont-filename]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -1354,7 +1241,7 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/slim-variable-ttf/NotoSansLaoUI-MM[wght].ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Black.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Bold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-ExtraLight.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Light.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Medium.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Regular.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-SemiBold.ttf', 'fonts/NotoSansLaoUI/googlefonts/ttf/NotoSansLaoUI-Thin.ttf', 'fonts/NotoSansLaoUI/googlefonts/variable-ttf/NotoSansLaoUI-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -1368,25 +1255,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- maiEk-lao
-
-	- maiKanVowel-lao
-
-	- maiTho-lao
+	- maiTi-lao
 
 	- iiVowel-lao
 
+	- loVowel-lao
+
 	- niggahita-lao
 
-	- uVowel-lao
+	- maiKanVowel-lao
 
-	- maiTi-lao
+	- maiKonVowel-lao
 
 	- karan-lao
 
-	- loVowel-lao
+	- iVowel-lao
 
-	- euVowel-lao 
+	- uuVowel-lao
+
+	- maiCatawa-lao 
 
 	- And 5 more.
 
@@ -1418,8 +1305,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 71 | 65 | 1251 | 78 | 970 | 0 |
-| 0% | 3% | 3% | 51% | 3% | 40% | 0% |
+| 10 | 53 | 62 | 1139 | 62 | 889 | 0 |
+| 0% | 2% | 3% | 51% | 3% | 40% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
