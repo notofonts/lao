@@ -1,5 +1,8 @@
 {
 .appVersion = "3109";
+DisplayStrings = (
+"/dottedCircle"
+);
 copyright = "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/lao)";
 customParameters = (
 {
@@ -34723,9 +34726,23 @@ unicode = 200D;
 },
 {
 glyphname = dottedCircle;
-lastChange = "2017-06-05 18:40:43 +0000";
+lastChange = "2022-07-05 05:52:08 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+position = "{573, -25}";
+},
+{
+name = top;
+position = "{437, 756}";
+},
+{
+name = top2;
+position = "{417, 536}";
+}
+);
 layerId = "64BC062E-13E4-450B-B24E-D8A474022433";
 paths = (
 {
@@ -35004,6 +35021,20 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{556, -32}";
+},
+{
+name = top;
+position = "{480, 766}";
+},
+{
+name = top2;
+position = "{390, 536}";
+}
+);
 layerId = "6449CA81-A7C3-4005-93E5-765657812F1B";
 paths = (
 {
@@ -35282,6 +35313,20 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{527, -37}";
+},
+{
+name = top;
+position = "{494, 793}";
+},
+{
+name = top2;
+position = "{340, 536}";
+}
+);
 layerId = "E5D3352E-10FF-4C03-AD9F-F95B1FD01257";
 paths = (
 {
@@ -35560,6 +35605,20 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{570, -25}";
+},
+{
+name = top;
+position = "{431, 756}";
+},
+{
+name = top2;
+position = "{411, 536}";
+}
+);
 layerId = "009F2F33-BFE3-455D-BDCF-6F386AA465CF";
 paths = (
 {
@@ -35838,6 +35897,20 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{570, -25}";
+},
+{
+name = top;
+position = "{452, 756}";
+},
+{
+name = top2;
+position = "{411, 536}";
+}
+);
 layerId = "AA55D700-EA4F-438C-81A6-FEFC4FC5520F";
 paths = (
 {
@@ -36116,6 +36189,20 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{535, -35}";
+},
+{
+name = top;
+position = "{479, 786}";
+},
+{
+name = top2;
+position = "{352, 536}";
+}
+);
 layerId = "71F2606D-B934-4F95-8EC7-C80FA20C45E9";
 paths = (
 {
