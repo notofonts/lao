@@ -1,5 +1,5 @@
 {
-.appVersion = "1350";
+.appVersion = "3109";
 DisplayStrings = (
 "/uuVowel-lao/dottedCircle/virama-lao"
 );
@@ -78,19 +78,6 @@ customParameters = (
 {
 name = "Enforce Compatibility Check";
 value = 0;
-},
-{
-name = Axes;
-value = (
-{
-Name = Weight;
-Tag = wght;
-},
-{
-Name = Width;
-Tag = wdth;
-}
-);
 },
 {
 name = glyphOrder;
@@ -297,34 +284,6 @@ value = (
 );
 },
 {
-name = license;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
-},
-{
-name = licenseURL;
-value = "http://scripts.sil.org/OFL";
-},
-{
-name = vendorID;
-value = GOOG;
-},
-{
-name = description;
-value = "Design by The Fontpad Ltd";
-},
-{
-name = trademark;
-value = "Noto is a trademark of Google LLC.";
-},
-{
-name = versionString;
-value = "Version 1.00";
-},
-{
-name = sampleText;
-value = "ກຂຄຆງ";
-},
-{
 name = "Family Alignment Zones";
 value = (
 "{885, 10}",
@@ -366,6 +325,47 @@ value = 1;
 {
 name = "Get Hints From Master";
 value = "6E668239-F79A-4803-9842-9160852853A7";
+},
+{
+name = license;
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
+},
+{
+name = licenseURL;
+value = "http://scripts.sil.org/OFL";
+},
+{
+name = vendorID;
+value = GOOG;
+},
+{
+name = description;
+value = "Design by The Fontpad Ltd";
+},
+{
+name = trademark;
+value = "Noto is a trademark of Google LLC.";
+},
+{
+name = versionString;
+value = "Version 1.00";
+},
+{
+name = sampleText;
+value = "ກຂຄຆງ";
+},
+{
+name = Axes;
+value = (
+{
+Name = Weight;
+Tag = wght;
+},
+{
+Name = Width;
+Tag = wdth;
+}
+);
 }
 );
 date = "2020-12-17 08:58:02 +0000";
@@ -374,8 +374,7 @@ designerURL = "http://www.fontpad.co.uk";
 familyName = "Noto Sans Lao Looped";
 featurePrefixes = (
 {
-automatic = 1;
-code = "languagesystem DFLT dflt;\012\012languagesystem lao dflt;\012";
+code = "languagesystem DFLT dflt;\012languagesystem lao dflt;\012languagesystem latn dflt;\012";
 name = Languagesystems;
 }
 );
@@ -429,7 +428,7 @@ fontMaster = (
 {
 alignmentZones = (
 "{880, 8}",
-"{713, 8}",
+"{714, 7}",
 "{670, 8}",
 "{645, -5}",
 "{550, 8}",
@@ -501,19 +500,19 @@ value = "Lao_Numerals:0.85, 0.6, 0.75, 0.25; 8; (0,510); (-172); (670);";
 },
 {
 name = superscriptXOffset;
-value = "0";
+value = 0;
 },
 {
 name = superscriptXSize;
-value = "846";
+value = 846;
 },
 {
 name = superscriptYOffset;
-value = "293";
+value = 293;
 },
 {
 name = superscriptYSize;
-value = "798";
+value = 798;
 },
 {
 name = winAscent;
@@ -575,7 +574,7 @@ xHeight = 528;
 {
 alignmentZones = (
 "{885, 10}",
-"{715, 10}",
+"{714, 11}",
 "{680, 10}",
 "{640, -5}",
 "{553, 10}",
@@ -646,19 +645,19 @@ value = "Lao_Numerals:0.85, 0.6, 0.75, 0.25; 10; (0,513); (-167); (680);";
 },
 {
 name = superscriptXOffset;
-value = "0";
+value = 0;
 },
 {
 name = superscriptXSize;
-value = "891";
+value = 891;
 },
 {
 name = superscriptYOffset;
-value = "269";
+value = 269;
 },
 {
 name = superscriptYSize;
-value = "874";
+value = 874;
 },
 {
 name = winAscent;
@@ -792,19 +791,19 @@ value = "Lao_Numerals:0.85, 0.6, 0.75, 0.25; 15; (0,522); (-173); (695);";
 },
 {
 name = superscriptXOffset;
-value = "0";
+value = 0;
 },
 {
 name = superscriptXSize;
-value = "942";
+value = 942;
 },
 {
 name = superscriptYOffset;
-value = "248";
+value = 248;
 },
 {
 name = superscriptYSize;
-value = "855";
+value = 855;
 },
 {
 name = winAscent;
@@ -938,19 +937,19 @@ value = "Lao_Numerals:0.85, 0.6, 0.75, 0.25; 8; (0,508); (-170); (668);";
 },
 {
 name = superscriptXOffset;
-value = "0";
+value = 0;
 },
 {
 name = superscriptXSize;
-value = "859";
+value = 859;
 },
 {
 name = superscriptYOffset;
-value = "294";
+value = 294;
 },
 {
 name = superscriptYSize;
-value = "796";
+value = 796;
 },
 {
 name = winAscent;
@@ -1015,7 +1014,7 @@ xHeight = 527;
 {
 alignmentZones = (
 "{883, 10}",
-"{713, 10}",
+"{714, 9}",
 "{678, 10}",
 "{638, -5}",
 "{551, 10}",
@@ -1086,19 +1085,19 @@ value = "Lao_Numerals:0.85, 0.6, 0.75, 0.25; 10; (0,511); (-165); (678);";
 },
 {
 name = superscriptXOffset;
-value = "0";
+value = 0;
 },
 {
 name = superscriptXSize;
-value = "897";
+value = 897;
 },
 {
 name = superscriptYOffset;
-value = "270";
+value = 270;
 },
 {
 name = superscriptYSize;
-value = "836";
+value = 836;
 },
 {
 name = winAscent;
@@ -1235,19 +1234,19 @@ value = "Lao_Numerals:0.85, 0.6, 0.75, 0.25; 15; (0,520); (-171); (693);";
 },
 {
 name = superscriptXOffset;
-value = "0";
+value = 0;
 },
 {
 name = superscriptXSize;
-value = "914";
+value = 914;
 },
 {
 name = superscriptYOffset;
-value = "255";
+value = 255;
 },
 {
 name = superscriptYSize;
-value = "855";
+value = 855;
 },
 {
 name = winAscent;
@@ -1534,7 +1533,7 @@ width = 272;
 {
 associatedMasterId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
 layerId = "B35FF21D-7527-460B-B346-290D598C0D21";
-name = "Thin [87]";
+name = "[87]";
 width = 272;
 },
 {
@@ -1552,7 +1551,7 @@ width = 192;
 {
 associatedMasterId = "FFE3C573-8034-42D7-BBA7-2D1C8826F1F5";
 layerId = "52E65366-38E3-4EBA-8CF9-A6DFDB892CB8";
-name = "Thin [87]";
+name = "[87]";
 width = 272;
 },
 {
@@ -7580,7 +7579,7 @@ type = Stem;
 }
 );
 layerId = "6C720EF2-573D-49A1-A88F-F6EC5C5E47C9";
-name = "Regular [100]";
+name = "[100]";
 paths = (
 {
 closed = 1;
@@ -7715,7 +7714,7 @@ position = "{426, 608}";
 );
 associatedMasterId = "CACD10EA-8E27-4203-9979-86A2B0F7ED74";
 layerId = "81C05DD4-3B03-4B23-A5AD-582678458DA2";
-name = "RegularCondensed [100]";
+name = "[100]";
 paths = (
 {
 closed = 1;
@@ -25119,7 +25118,7 @@ nodes = (
 );
 };
 layerId = "A67163E9-221E-4063-A4F3-1F8F0F2FB90B";
-name = "Thin [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -25465,7 +25464,7 @@ type = Stem;
 }
 );
 layerId = "24C56DA4-F87C-45A6-A8FA-ED1F4E73D0D9";
-name = "Regular [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -25565,7 +25564,7 @@ position = "{615, 608}";
 );
 associatedMasterId = "EC79AED6-C145-434E-AE62-F6F3D2AFA8D1";
 layerId = "A5886AEF-7883-4208-9F07-5232B7CC6F67";
-name = "Black [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -25859,7 +25858,7 @@ nodes = (
 );
 };
 layerId = "F34F27B5-8F5A-484F-83EC-09AC4C5CB289";
-name = "Thin [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -26153,7 +26152,7 @@ nodes = (
 );
 };
 layerId = "F1CF2832-4942-48BE-9D47-9E7526CC227A";
-name = "Regular [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -26351,7 +26350,7 @@ position = "{514, 608}";
 );
 associatedMasterId = "96C6A4AF-11F2-4EC9-996B-29C760E40A38";
 layerId = "338E9F08-00A0-4A03-865B-66E05ADA4804";
-name = "Black [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -27267,7 +27266,7 @@ nodes = (
 );
 };
 layerId = "BE5CA1A7-6781-48F7-AC64-F44098860982";
-name = "Thin [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -27712,7 +27711,7 @@ type = Stem;
 }
 );
 layerId = "49F0B7E6-8203-4715-8444-F18B7A347BF8";
-name = "Regular [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -27845,7 +27844,7 @@ position = "{615, 608}";
 );
 associatedMasterId = "EC79AED6-C145-434E-AE62-F6F3D2AFA8D1";
 layerId = "CE4F1C43-E206-4543-B673-6CF0671BBE86";
-name = "Black [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -28109,7 +28108,7 @@ position = "{379, 608}";
 );
 associatedMasterId = "FFE3C573-8034-42D7-BBA7-2D1C8826F1F5";
 layerId = "C02E2960-11EB-4F65-905C-F653BFF2AE75";
-name = "Thin [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -28502,7 +28501,7 @@ nodes = (
 );
 };
 layerId = "0C90BDAC-5C1B-4677-BC70-BF160556D4C2";
-name = "Regular [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -28766,7 +28765,7 @@ position = "{514, 608}";
 );
 associatedMasterId = "96C6A4AF-11F2-4EC9-996B-29C760E40A38";
 layerId = "E0433240-E622-481F-9A17-6A3068F7612B";
-name = "Black [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -29780,7 +29779,7 @@ position = "{622, 608}";
 );
 associatedMasterId = "EC79AED6-C145-434E-AE62-F6F3D2AFA8D1";
 layerId = "216419A5-F2C8-47FE-B98F-A07729EEF321";
-name = "Black [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -29926,7 +29925,7 @@ position = "{519, 608}";
 );
 associatedMasterId = "96C6A4AF-11F2-4EC9-996B-29C760E40A38";
 layerId = "9F83A997-1D6B-43F4-9D73-7DBC8FD3C6CE";
-name = "BlackCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -30072,7 +30071,7 @@ position = "{430, 608}";
 );
 associatedMasterId = "CACD10EA-8E27-4203-9979-86A2B0F7ED74";
 layerId = "8426DB69-1164-4603-A615-698FDCD8AD30";
-name = "RegularCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -30248,7 +30247,7 @@ type = Stem;
 }
 );
 layerId = "08B4B7B9-4EB3-4915-81D8-297F7127E212";
-name = "Regular [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -30394,7 +30393,7 @@ position = "{545, 608}";
 );
 associatedMasterId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
 layerId = "A8EAE584-EC51-4ACD-AB0F-52A4E08D17AC";
-name = "Thin [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -30540,7 +30539,7 @@ position = "{389, 608}";
 );
 associatedMasterId = "FFE3C573-8034-42D7-BBA7-2D1C8826F1F5";
 layerId = "7BB3D31B-84EE-4FDE-9304-FE780C730AE8";
-name = "ThinCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -31521,7 +31520,7 @@ position = "{635, 608}";
 );
 associatedMasterId = "EC79AED6-C145-434E-AE62-F6F3D2AFA8D1";
 layerId = "426FFD44-156A-431E-AC0A-14F01B5DCBDB";
-name = "Black [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -31659,7 +31658,7 @@ position = "{436, 608}";
 );
 associatedMasterId = "CACD10EA-8E27-4203-9979-86A2B0F7ED74";
 layerId = "3D4F709B-CB9D-4BBB-888C-E01DDB66AD15";
-name = "RegularCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -31797,7 +31796,7 @@ position = "{532, 608}";
 );
 associatedMasterId = "96C6A4AF-11F2-4EC9-996B-29C760E40A38";
 layerId = "D4E8E070-6BD0-46C3-9182-214940EC2D66";
-name = "BlackCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -31960,7 +31959,7 @@ type = TopGhost;
 }
 );
 layerId = "30061B7E-47FE-4EF4-918A-C090ABABC1DB";
-name = "Regular [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -32098,7 +32097,7 @@ position = "{544, 608}";
 );
 associatedMasterId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
 layerId = "21AA4332-203D-4751-AE29-6BE02CC0AE61";
-name = "Thin [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -32236,7 +32235,7 @@ position = "{390, 608}";
 );
 associatedMasterId = "FFE3C573-8034-42D7-BBA7-2D1C8826F1F5";
 layerId = "48950727-D0D5-4FF3-9E08-801CBC7891E8";
-name = "ThinCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -37179,7 +37178,7 @@ position = "{666, 608}";
 );
 associatedMasterId = "EC79AED6-C145-434E-AE62-F6F3D2AFA8D1";
 layerId = "46D346F4-9542-4780-A63F-492149171C5B";
-name = "Black [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -37355,7 +37354,7 @@ position = "{468, 608}";
 );
 associatedMasterId = "CACD10EA-8E27-4203-9979-86A2B0F7ED74";
 layerId = "EA7D0423-317A-4C69-8A04-D3F974C3EB33";
-name = "RegularCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -37531,7 +37530,7 @@ position = "{553, 608}";
 );
 associatedMasterId = "96C6A4AF-11F2-4EC9-996B-29C760E40A38";
 layerId = "9013290F-4FB5-4A96-8A65-DFF328B21092";
-name = "BlackCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -37743,7 +37742,7 @@ type = BottomGhost;
 }
 );
 layerId = "3A018DE4-DE2F-4E96-A39E-9E7BB44DB120";
-name = "Regular [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -37919,7 +37918,7 @@ position = "{605, 608}";
 );
 associatedMasterId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
 layerId = "FB0F49D1-EEDC-4D0C-ADE1-C42686D44BEA";
-name = "Thin [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -38095,7 +38094,7 @@ position = "{432, 608}";
 );
 associatedMasterId = "FFE3C573-8034-42D7-BBA7-2D1C8826F1F5";
 layerId = "CD89AA83-8C88-4CD1-BE09-4AE4536231C6";
-name = "ThinCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -39154,7 +39153,7 @@ position = "{626, 608}";
 );
 associatedMasterId = "EC79AED6-C145-434E-AE62-F6F3D2AFA8D1";
 layerId = "E82ED9A2-C178-461E-8FBB-8F2B7FDBEBC6";
-name = "Black [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -39300,7 +39299,7 @@ position = "{431, 608}";
 );
 associatedMasterId = "CACD10EA-8E27-4203-9979-86A2B0F7ED74";
 layerId = "F4508D35-827B-414F-9E1E-A5370CFA03F5";
-name = "RegularCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -39446,7 +39445,7 @@ position = "{524, 608}";
 );
 associatedMasterId = "96C6A4AF-11F2-4EC9-996B-29C760E40A38";
 layerId = "190A8B65-D903-46E9-90D8-754B83BDABB8";
-name = "BlackCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -39623,7 +39622,7 @@ type = TopGhost;
 }
 );
 layerId = "ED826503-136B-451A-9E7B-0CBD273E0CEB";
-name = "Regular [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -39769,7 +39768,7 @@ position = "{539, 608}";
 );
 associatedMasterId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
 layerId = "09BD21A8-B6F9-4334-8F95-FC2D9296E224";
-name = "Thin [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -39915,7 +39914,7 @@ position = "{385, 608}";
 );
 associatedMasterId = "FFE3C573-8034-42D7-BBA7-2D1C8826F1F5";
 layerId = "10AA6058-EEB0-4427-8768-1FD0C5D6D7C7";
-name = "ThinCondensed [110]";
+name = "[110]";
 paths = (
 {
 closed = 1;
@@ -79364,7 +79363,7 @@ unicode = 2060;
 },
 {
 glyphname = hyphen;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:24:40 +0000";
 layers = (
 {
 anchors = (
@@ -79565,8 +79564,6 @@ nodes = (
 width = 325;
 }
 );
-leftKerningGroup = hyphen.right;
-rightKerningGroup = hyphen.left;
 unicode = 002D;
 },
 {
@@ -79843,7 +79840,7 @@ unicode = 2012;
 },
 {
 glyphname = endash;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:07 +0000";
 layers = (
 {
 anchors = (
@@ -80044,13 +80041,11 @@ nodes = (
 width = 500;
 }
 );
-leftKerningGroup = hyphen.right;
-rightKerningGroup = hyphen.left;
 unicode = 2013;
 },
 {
 glyphname = emdash;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:07 +0000";
 layers = (
 {
 anchors = (
@@ -80251,8 +80246,6 @@ nodes = (
 width = 1000;
 }
 );
-leftKerningGroup = hyphen.right;
-rightKerningGroup = hyphen.left;
 unicode = 2014;
 },
 {
@@ -82612,7 +82605,7 @@ unicode = 0026;
 },
 {
 glyphname = parenleft;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:24:40 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -82765,12 +82758,11 @@ nodes = (
 width = 326;
 }
 );
-rightKerningGroup = paren.left;
 unicode = 0028;
 },
 {
 glyphname = parenright;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:24:40 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -82923,7 +82915,6 @@ nodes = (
 width = 326;
 }
 );
-leftKerningGroup = Paren.right;
 unicode = 0029;
 },
 {
@@ -83091,7 +83082,7 @@ unicode = 002A;
 },
 {
 glyphname = comma;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:24:40 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -83214,13 +83205,11 @@ nodes = (
 width = 273;
 }
 );
-leftKerningGroup = period.right;
-rightKerningGroup = period.left;
 unicode = 002C;
 },
 {
 glyphname = period;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:24:40 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -83361,8 +83350,6 @@ nodes = (
 width = 273;
 }
 );
-leftKerningGroup = period.right;
-rightKerningGroup = period.left;
 unicode = 002E;
 },
 {
@@ -83464,7 +83451,7 @@ unicode = 002F;
 },
 {
 glyphname = colon;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:24:40 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -83707,13 +83694,12 @@ nodes = (
 width = 280;
 }
 );
-leftKerningGroup = colon;
 note = colon;
 unicode = 003A;
 },
 {
 glyphname = semicolon;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:24:40 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -83938,7 +83924,6 @@ nodes = (
 width = 280;
 }
 );
-leftKerningGroup = colon;
 note = semicolon;
 unicode = 003B;
 },
@@ -84288,7 +84273,7 @@ unicode = 003F;
 },
 {
 glyphname = guillemetleft;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:07 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -84471,13 +84456,11 @@ nodes = (
 width = 560;
 }
 );
-leftKerningGroup = guillemotleft;
-rightKerningGroup = guillemotleft;
 unicode = 00AB;
 },
 {
 glyphname = guillemetright;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:07 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -84660,13 +84643,11 @@ nodes = (
 width = 560;
 }
 );
-leftKerningGroup = guillemotright;
-rightKerningGroup = guillemotright;
 unicode = 00BB;
 },
 {
 glyphname = quoteleft;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:07 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -84789,13 +84770,11 @@ nodes = (
 width = 273;
 }
 );
-leftKerningGroup = quoteleft;
-rightKerningGroup = quote.left;
 unicode = 2018;
 },
 {
 glyphname = quoteright;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:07 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -84918,13 +84897,11 @@ nodes = (
 width = 273;
 }
 );
-leftKerningGroup = quote.right;
-rightKerningGroup = quote.left;
 unicode = 2019;
 },
 {
 glyphname = quotedblleft;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:07 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -85131,13 +85108,11 @@ nodes = (
 width = 503;
 }
 );
-leftKerningGroup = quoteleft;
-rightKerningGroup = quote.left;
 unicode = 201C;
 },
 {
 glyphname = quotedblright;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:07 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -85344,8 +85319,6 @@ nodes = (
 width = 503;
 }
 );
-leftKerningGroup = quote.right;
-rightKerningGroup = quote.left;
 unicode = 201D;
 },
 {
@@ -85749,7 +85722,7 @@ unicode = 2022;
 },
 {
 glyphname = ellipsis;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:07 +0000";
 layers = (
 {
 components = (
@@ -85872,12 +85845,11 @@ layerId = "96C6A4AF-11F2-4EC9-996B-29C760E40A38";
 width = 823;
 }
 );
-leftKerningGroup = period.right;
 unicode = 2026;
 },
 {
 glyphname = guilsinglleft;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:29 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -85988,13 +85960,11 @@ nodes = (
 width = 321;
 }
 );
-leftKerningGroup = guillemotleft;
-rightKerningGroup = guillemotleft;
 unicode = 2039;
 },
 {
 glyphname = guilsinglright;
-lastChange = "2020-12-17 08:36:01 +0000";
+lastChange = "2022-08-28 10:25:29 +0000";
 layers = (
 {
 layerId = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -86105,18 +86075,12 @@ nodes = (
 width = 321;
 }
 );
-leftKerningGroup = guillemotright;
-rightKerningGroup = guillemotright;
 unicode = 203A;
 }
 );
 instances = (
 {
 customParameters = (
-{
-name = weightClass;
-value = 100;
-},
 {
 name = panose;
 value = (
@@ -86131,10 +86095,6 @@ value = (
 2,
 4
 );
-},
-{
-name = styleMapFamilyName;
-value = "Noto Sans Lao Looped Thin";
 },
 {
 name = "Instance Preview";
@@ -86186,6 +86146,14 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-50 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
+name = styleMapFamilyName;
+value = "Noto Sans Lao Looped Thin";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Thin";
 },
@@ -86204,10 +86172,6 @@ value = "Noto Sans Lao Looped";
 {
 name = preferredSubfamilyName;
 value = Thin;
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-50 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 26;
@@ -86219,10 +86183,6 @@ weightClass = Thin;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 200;
-},
 {
 name = panose;
 value = (
@@ -86288,6 +86248,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-60 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped ExtraLight";
 },
@@ -86310,10 +86274,6 @@ value = ExtraLight;
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped ExtLight";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-60 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 39;
@@ -86326,10 +86286,6 @@ weightClass = ExtraLight;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 300;
-},
 {
 name = panose;
 value = (
@@ -86344,10 +86300,6 @@ value = (
 2,
 4
 );
-},
-{
-name = styleMapFamilyName;
-value = "Noto Sans Lao Looped Light";
 },
 {
 name = "Instance Preview";
@@ -86399,6 +86351,14 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-70 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
+name = styleMapFamilyName;
+value = "Noto Sans Lao Looped Light";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Light";
 },
@@ -86417,10 +86377,6 @@ value = "Noto Sans Lao Looped";
 {
 name = preferredSubfamilyName;
 value = Light;
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-70 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 58;
@@ -86433,10 +86389,6 @@ weightClass = Light;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 400;
-},
 {
 name = panose;
 value = (
@@ -86535,10 +86487,6 @@ name = Regular;
 {
 customParameters = (
 {
-name = weightClass;
-value = 500;
-},
-{
 name = panose;
 value = (
 2,
@@ -86603,6 +86551,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-100 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Medium";
 },
@@ -86625,10 +86577,6 @@ value = Medium;
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped Medium";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-100 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 108;
@@ -86641,10 +86589,6 @@ weightClass = Medium;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 600;
-},
 {
 name = panose;
 value = (
@@ -86710,6 +86654,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-110 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = postscriptFontName;
 value = "NotoSansLaoLooped-SemiBold";
 },
@@ -86732,10 +86680,6 @@ value = "Noto Sans Lao Looped SemiBold";
 {
 name = compatibleFullName;
 value = "Noto Sans Lao Looped SemiBold";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-110 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 128;
@@ -86748,10 +86692,6 @@ weightClass = SemiBold;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 700;
-},
 {
 name = panose;
 value = (
@@ -86817,6 +86757,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-125 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Bold";
 },
@@ -86839,10 +86783,6 @@ value = Bold;
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped Bold";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-125 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 151;
@@ -86857,10 +86797,6 @@ weightClass = Bold;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 800;
-},
 {
 name = panose;
 value = (
@@ -86926,6 +86862,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-140 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped ExtraBold";
 },
@@ -86948,10 +86888,6 @@ value = ExtraBold;
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped ExtraBold";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-140 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 169;
@@ -86964,10 +86900,6 @@ weightClass = ExtraBold;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 900;
-},
 {
 name = panose;
 value = (
@@ -87033,6 +86965,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-150 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Black";
 },
@@ -87055,10 +86991,6 @@ value = Black;
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped Black";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-150 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 190;
@@ -87070,10 +87002,6 @@ weightClass = Black;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 100;
-},
 {
 name = panose;
 value = (
@@ -87139,6 +87067,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-50 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped SemiCondensed Thin";
 },
@@ -87161,10 +87093,6 @@ value = "SemiCondensed Thin";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped SmCd Thin";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-50 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 26;
@@ -87179,10 +87107,6 @@ widthClass = SemiCondensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 200;
-},
 {
 name = panose;
 value = (
@@ -87248,6 +87172,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-60 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped SemiCondensed ExtraLight";
 },
@@ -87270,10 +87198,6 @@ value = "SemiCondensed ExtraLight";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped SmCd ExtLt";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-60 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 39;
@@ -87290,10 +87214,6 @@ widthClass = SemiCondensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 300;
-},
 {
 name = panose;
 value = (
@@ -87359,6 +87279,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-70 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped SemiCondensed Light";
 },
@@ -87381,10 +87305,6 @@ value = "SemiCondensed Light";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped SmCd Lt";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-70 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 58;
@@ -87401,10 +87321,6 @@ widthClass = SemiCondensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 400;
-},
 {
 name = panose;
 value = (
@@ -87506,10 +87422,6 @@ widthClass = SemiCondensed;
 {
 customParameters = (
 {
-name = weightClass;
-value = 500;
-},
-{
 name = panose;
 value = (
 2,
@@ -87574,6 +87486,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-100 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped SemiCondensed Medium";
 },
@@ -87596,10 +87512,6 @@ value = "SemiCondensed Medium";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped SmCd Med";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-100 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 108;
@@ -87616,10 +87528,6 @@ widthClass = SemiCondensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 600;
-},
 {
 name = panose;
 value = (
@@ -87685,6 +87593,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-110 0 0 0>;\012	} adjustMaiTiOnFoFai;\012";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped SemiCondensed SemiBold";
 },
@@ -87707,10 +87619,6 @@ value = "SemiCondensed SemiBold";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped SmCd SmBd";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-110 0 0 0>;\012	} adjustMaiTiOnFoFai;\012";
 }
 );
 interpolationWeight = 128;
@@ -87727,10 +87635,6 @@ widthClass = SemiCondensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 700;
-},
 {
 name = panose;
 value = (
@@ -87796,6 +87700,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-125 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped SemiCondensed Bold";
 },
@@ -87818,10 +87726,6 @@ value = "SemiCondensed Bold";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped SmCd Bold";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-125 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 151;
@@ -87840,10 +87744,6 @@ widthClass = SemiCondensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 800;
-},
 {
 name = panose;
 value = (
@@ -87909,6 +87809,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-140 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped SemiCondensed ExtraBold";
 },
@@ -87931,10 +87835,6 @@ value = "SemiCondensed ExtraBold";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped SmCd ExBd";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-140 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 169;
@@ -87951,10 +87851,6 @@ widthClass = SemiCondensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 900;
-},
 {
 name = panose;
 value = (
@@ -88020,6 +87916,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-150 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped SemiCondensed Black";
 },
@@ -88042,10 +87942,6 @@ value = "SemiCondensed Black";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped SmCd Blk";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-150 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 190;
@@ -88061,10 +87957,6 @@ widthClass = SemiCondensed;
 {
 customParameters = (
 {
-name = weightClass;
-value = 100;
-},
-{
 name = panose;
 value = (
 2,
@@ -88078,10 +87970,6 @@ value = (
 2,
 4
 );
-},
-{
-name = styleMapFamilyName;
-value = "Noto Sans Lao Looped Cond Thin";
 },
 {
 name = "Instance Preview";
@@ -88133,6 +88021,14 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-50 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
+name = styleMapFamilyName;
+value = "Noto Sans Lao Looped Cond Thin";
+},
+{
 name = postscriptFontName;
 value = "NotoSansLaoLooped-CondensedThin";
 },
@@ -88151,10 +88047,6 @@ value = "Condensed Thin";
 {
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Condensed Thin";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-50 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 26;
@@ -88169,10 +88061,6 @@ widthClass = Condensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 200;
-},
 {
 name = panose;
 value = (
@@ -88238,6 +88126,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-60 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Condensed ExtraLight";
 },
@@ -88260,10 +88152,6 @@ value = "Condensed ExtraLight";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped Cond ExLt";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-60 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 39;
@@ -88280,10 +88168,6 @@ widthClass = Condensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 300;
-},
 {
 name = panose;
 value = (
@@ -88349,6 +88233,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-70 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Condensed Light";
 },
@@ -88371,10 +88259,6 @@ value = "Condensed Light";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped Cond Lt";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-70 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 58;
@@ -88391,10 +88275,6 @@ widthClass = Condensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 400;
-},
 {
 name = panose;
 value = (
@@ -88496,10 +88376,6 @@ widthClass = Condensed;
 {
 customParameters = (
 {
-name = weightClass;
-value = 500;
-},
-{
 name = panose;
 value = (
 2,
@@ -88513,10 +88389,6 @@ value = (
 2,
 4
 );
-},
-{
-name = styleMapFamilyName;
-value = "Noto Sans Lao Looped Cond Med";
 },
 {
 name = "Instance Preview";
@@ -88568,6 +88440,14 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-100 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
+name = styleMapFamilyName;
+value = "Noto Sans Lao Looped Cond Med";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Condensed Medium";
 },
@@ -88586,10 +88466,6 @@ value = "Noto Sans Lao Looped";
 {
 name = preferredSubfamilyName;
 value = "Condensed Medium";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-100 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 108;
@@ -88606,10 +88482,6 @@ widthClass = Condensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 600;
-},
 {
 name = panose;
 value = (
@@ -88675,6 +88547,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-110 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Condensed SemiBold";
 },
@@ -88697,10 +88573,6 @@ value = "Condensed SemiBold";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped Cond SmBd";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-110 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 128;
@@ -88717,10 +88589,6 @@ widthClass = Condensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 700;
-},
 {
 name = panose;
 value = (
@@ -88786,6 +88654,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-125 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Condensed Bold";
 },
@@ -88808,10 +88680,6 @@ value = "Condensed Bold";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped Cond Bold";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-125 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 151;
@@ -88830,10 +88698,6 @@ widthClass = Condensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 800;
-},
 {
 name = panose;
 value = (
@@ -88899,6 +88763,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-140 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped Condensed ExtraBold";
 },
@@ -88921,10 +88789,6 @@ value = "Condensed ExtraBold";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped Cond ExBd";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-140 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 169;
@@ -88942,10 +88806,6 @@ widthClass = Condensed;
 {
 customParameters = (
 {
-name = weightClass;
-value = 900;
-},
-{
 name = panose;
 value = (
 2,
@@ -88959,10 +88819,6 @@ value = (
 2,
 4
 );
-},
-{
-name = styleMapFamilyName;
-value = "Noto Sans Lao Looped Cond Blk";
 },
 {
 name = "Instance Preview";
@@ -89012,6 +88868,14 @@ value = (
 "oO-lao",
 "hoHeuan-lao"
 );
+},
+{
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-150 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
+name = styleMapFamilyName;
+value = "Noto Sans Lao Looped Cond Blk";
 },
 {
 name = compatibleFullName;
@@ -89032,10 +88896,6 @@ value = "Noto Sans Lao Looped";
 {
 name = preferredSubfamilyName;
 value = "Condensed Black";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-150 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 190;
@@ -89050,10 +88910,6 @@ widthClass = Condensed;
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 100;
-},
 {
 name = panose;
 value = (
@@ -89117,6 +88973,10 @@ value = (
 "oO-lao",
 "hoHeuan-lao"
 );
+},
+{
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-50 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 },
 {
 name = compatibleFullName;
@@ -89141,10 +89001,6 @@ value = "ExtraCondensed Thin";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped ExCd Thin";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-50 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 26;
@@ -89158,10 +89014,6 @@ widthClass = "Extra Condensed";
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 200;
-},
 {
 name = panose;
 value = (
@@ -89227,6 +89079,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-60 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped ExtraCondensed ExtraLight";
 },
@@ -89249,10 +89105,6 @@ value = "ExtraCondensed ExtraLight";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped ExCd ExLt";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-60 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 39;
@@ -89267,10 +89119,6 @@ widthClass = "Extra Condensed";
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 300;
-},
 {
 name = panose;
 value = (
@@ -89336,6 +89184,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-70 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped ExtraCondensed Light";
 },
@@ -89358,10 +89210,6 @@ value = "ExtraCondensed Light";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped ExCd Lt";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-70 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 58;
@@ -89376,10 +89224,6 @@ widthClass = "Extra Condensed";
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 400;
-},
 {
 name = panose;
 value = (
@@ -89480,10 +89324,6 @@ widthClass = "Extra Condensed";
 {
 customParameters = (
 {
-name = weightClass;
-value = 500;
-},
-{
 name = panose;
 value = (
 2,
@@ -89548,6 +89388,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-100 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped ExtraCondensed Medium";
 },
@@ -89570,10 +89414,6 @@ value = "ExtraCondensed Medium";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped ExCd Med";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-100 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 108;
@@ -89588,10 +89428,6 @@ widthClass = "Extra Condensed";
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 600;
-},
 {
 name = panose;
 value = (
@@ -89657,6 +89493,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-110 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped ExtraCondensed SemiBold";
 },
@@ -89679,10 +89519,6 @@ value = "ExtraCondensed SemiBold";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped ExCd SmBd";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-110 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 128;
@@ -89697,10 +89533,6 @@ widthClass = "Extra Condensed";
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 700;
-},
 {
 name = panose;
 value = (
@@ -89766,6 +89598,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-125 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped ExtraCondensed Bold";
 },
@@ -89788,10 +89624,6 @@ value = "ExtraCondensed Bold";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped ExCd Bold";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-125 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 151;
@@ -89808,10 +89640,6 @@ widthClass = "Extra Condensed";
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 800;
-},
 {
 name = panose;
 value = (
@@ -89877,6 +89705,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-140 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped ExtraCondensed ExtraBold";
 },
@@ -89899,10 +89731,6 @@ value = "ExtraCondensed ExtraBold";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped ExCd ExBd";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-140 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 169;
@@ -89917,10 +89745,6 @@ widthClass = "Extra Condensed";
 },
 {
 customParameters = (
-{
-name = weightClass;
-value = 900;
-},
 {
 name = panose;
 value = (
@@ -89986,6 +89810,10 @@ value = (
 );
 },
 {
+name = "Replace Feature";
+value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-150 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
+},
+{
 name = compatibleFullName;
 value = "Noto Sans Lao Looped ExtraCondensed Black";
 },
@@ -90008,10 +89836,6 @@ value = "ExtraCondensed Black";
 {
 name = styleMapFamilyName;
 value = "Noto Sans Lao Looped ExCd Blk";
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-150 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 interpolationWeight = 190;
