@@ -1,8 +1,8 @@
 buildVariable: true
-familyName: Noto Looped Lao UI
+familyName: Noto Sans Lao Looped
 googleFonts: true
 includeSubsets:
 - from: Noto Sans
   name: GF_Latin_Core
 sources:
-- NotoLoopedLaoUI.glyphs
+- NotoSansLaoLooped.glyphs

@@ -342,7 +342,7 @@ value = "6E668239-F79A-4803-9842-9160852853A7";
 date = "2020-12-17 09:58:29 +0000";
 designer = "Mark Frömberg, Ben Mitchell";
 designerURL = "http://www.fontpad.co.uk";
-familyName = "Noto Looped Lao UI";
+familyName = "Noto Sans Lao Looped UI";
 featurePrefixes = (
 {
 automatic = 1;
@@ -62203,7 +62203,7 @@ value = (
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Thin";
+value = "Noto Sans Lao Looped UI Thin";
 },
 {
 name = "Instance Preview";
@@ -62256,19 +62256,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Thin";
+value = "Noto Sans Lao Looped UI Thin";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-Thin";
+value = "NotoSansLaoLoopedUI-Thin";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Thin";
+value = "Noto Sans Lao Looped UI Thin";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -62358,19 +62358,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraLight";
+value = "Noto Sans Lao Looped UI ExtraLight";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraLight";
+value = "NotoSansLaoLoopedUI-ExtraLight";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraLight";
+value = "Noto Sans Lao Looped UI ExtraLight";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -62378,7 +62378,7 @@ value = ExtraLight;
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExtLight";
+value = "Noto Sans Lao Looped UI ExtLight";
 },
 {
 name = "Replace Feature";
@@ -62416,7 +62416,7 @@ value = (
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Light";
+value = "Noto Sans Lao Looped UI Light";
 },
 {
 name = "Instance Preview";
@@ -62469,19 +62469,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Light";
+value = "Noto Sans Lao Looped UI Light";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-Light";
+value = "NotoSansLaoLoopedUI-Light";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Light";
+value = "Noto Sans Lao Looped UI Light";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -62572,19 +62572,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Regular";
+value = "Noto Sans Lao Looped UI Regular";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-Regular";
+value = "NotoSansLaoLoopedUI-Regular";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Regular";
+value = "Noto Sans Lao Looped UI Regular";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -62592,7 +62592,7 @@ value = Regular;
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Regular";
+value = "Noto Sans Lao Looped UI Regular";
 }
 );
 interpolationWeight = 90;
@@ -62673,19 +62673,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Medium";
+value = "Noto Sans Lao Looped UI Medium";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-Medium";
+value = "NotoSansLaoLoopedUI-Medium";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Medium";
+value = "Noto Sans Lao Looped UI Medium";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -62693,7 +62693,7 @@ value = Medium;
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Medium";
+value = "Noto Sans Lao Looped UI Medium";
 },
 {
 name = "Replace Feature";
@@ -62780,15 +62780,15 @@ value = (
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-SemiBold";
+value = "NotoSansLaoLoopedUI-SemiBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI SemiBold";
+value = "Noto Sans Lao Looped UI SemiBold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -62796,11 +62796,11 @@ value = SemiBold;
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI SemiBold";
+value = "Noto Sans Lao Looped UI SemiBold";
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI SemiBold";
+value = "Noto Sans Lao Looped UI SemiBold";
 },
 {
 name = "Replace Feature";
@@ -62887,19 +62887,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Bold";
+value = "Noto Sans Lao Looped UI Bold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-Bold";
+value = "NotoSansLaoLoopedUI-Bold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Bold";
+value = "Noto Sans Lao Looped UI Bold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -62907,7 +62907,7 @@ value = Bold;
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Bold";
+value = "Noto Sans Lao Looped UI Bold";
 },
 {
 name = "Replace Feature";
@@ -62996,19 +62996,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraBold";
+value = "Noto Sans Lao Looped UI ExtraBold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraBold";
+value = "NotoSansLaoLoopedUI-ExtraBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraBold";
+value = "Noto Sans Lao Looped UI ExtraBold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -63016,7 +63016,7 @@ value = ExtraBold;
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExtraBold";
+value = "Noto Sans Lao Looped UI ExtraBold";
 },
 {
 name = "Replace Feature";
@@ -63103,19 +63103,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Black";
+value = "Noto Sans Lao Looped UI Black";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-Black";
+value = "NotoSansLaoLoopedUI-Black";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Black";
+value = "Noto Sans Lao Looped UI Black";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -63123,7 +63123,7 @@ value = Black;
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Black";
+value = "Noto Sans Lao Looped UI Black";
 },
 {
 name = "Replace Feature";
@@ -63209,19 +63209,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI SemiCondensed Thin";
+value = "Noto Sans Lao Looped UI SemiCondensed Thin";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-SemiCondensedThin";
+value = "NotoSansLaoLoopedUI-SemiCondensedThin";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI SemiCondensed Thin";
+value = "Noto Sans Lao Looped UI SemiCondensed Thin";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -63229,7 +63229,7 @@ value = "SemiCondensed Thin";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI SmCd Thin";
+value = "Noto Sans Lao Looped UI SmCd Thin";
 },
 {
 name = "Replace Feature";
@@ -63318,19 +63318,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI SemiCondensed ExtraLight";
+value = "Noto Sans Lao Looped UI SemiCondensed ExtraLight";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-SemiCondensedExtraLight";
+value = "NotoSansLaoLoopedUI-SemiCondensedExtraLight";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI SemiCondensed ExtraLight";
+value = "Noto Sans Lao Looped UI SemiCondensed ExtraLight";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -63338,7 +63338,7 @@ value = "SemiCondensed ExtraLight";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI SmCd ExtLt";
+value = "Noto Sans Lao Looped UI SmCd ExtLt";
 },
 {
 name = "Replace Feature";
@@ -63429,19 +63429,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI SemiCondensed Light";
+value = "Noto Sans Lao Looped UI SemiCondensed Light";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-SemiCondensedLight";
+value = "NotoSansLaoLoopedUI-SemiCondensedLight";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI SemiCondensed Light";
+value = "Noto Sans Lao Looped UI SemiCondensed Light";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -63449,7 +63449,7 @@ value = "SemiCondensed Light";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI SmCd Lt";
+value = "Noto Sans Lao Looped UI SmCd Lt";
 },
 {
 name = "Replace Feature";
@@ -63540,19 +63540,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI SemiCondensed";
+value = "Noto Sans Lao Looped UI SemiCondensed";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-SemiCondensed";
+value = "NotoSansLaoLoopedUI-SemiCondensed";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI SemiCondensed";
+value = "Noto Sans Lao Looped UI SemiCondensed";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -63560,7 +63560,7 @@ value = SemiCondensed;
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI SemiCond";
+value = "Noto Sans Lao Looped UI SemiCond";
 }
 );
 interpolationWeight = 90;
@@ -63644,19 +63644,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI SemiCondensed Medium";
+value = "Noto Sans Lao Looped UI SemiCondensed Medium";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-SemiCondensedMedium";
+value = "NotoSansLaoLoopedUI-SemiCondensedMedium";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI SemiCondensed Medium";
+value = "Noto Sans Lao Looped UI SemiCondensed Medium";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -63664,7 +63664,7 @@ value = "SemiCondensed Medium";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI SmCd Med";
+value = "Noto Sans Lao Looped UI SmCd Med";
 },
 {
 name = "Replace Feature";
@@ -63755,19 +63755,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI SemiCondensed SemiBold";
+value = "Noto Sans Lao Looped UI SemiCondensed SemiBold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-SemiCondensedSemiBold";
+value = "NotoSansLaoLoopedUI-SemiCondensedSemiBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI SemiCondensed SemiBold";
+value = "Noto Sans Lao Looped UI SemiCondensed SemiBold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -63775,7 +63775,7 @@ value = "SemiCondensed SemiBold";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI SmCd SmBd";
+value = "Noto Sans Lao Looped UI SmCd SmBd";
 },
 {
 name = "Replace Feature";
@@ -63866,19 +63866,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI SemiCondensed Bold";
+value = "Noto Sans Lao Looped UI SemiCondensed Bold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-SemiCondensedBold";
+value = "NotoSansLaoLoopedUI-SemiCondensedBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI SemiCondensed Bold";
+value = "Noto Sans Lao Looped UI SemiCondensed Bold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -63886,7 +63886,7 @@ value = "SemiCondensed Bold";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI SmCd Bold";
+value = "Noto Sans Lao Looped UI SmCd Bold";
 },
 {
 name = "Replace Feature";
@@ -63979,19 +63979,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI SemiCondensed ExtraBold";
+value = "Noto Sans Lao Looped UI SemiCondensed ExtraBold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-SemiCondensedExtraBold";
+value = "NotoSansLaoLoopedUI-SemiCondensedExtraBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI SemiCondensed ExtraBold";
+value = "Noto Sans Lao Looped UI SemiCondensed ExtraBold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -63999,7 +63999,7 @@ value = "SemiCondensed ExtraBold";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI SmCd ExBd";
+value = "Noto Sans Lao Looped UI SmCd ExBd";
 },
 {
 name = "Replace Feature";
@@ -64090,19 +64090,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI SemiCondensed Black";
+value = "Noto Sans Lao Looped UI SemiCondensed Black";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-SemiCondensedBlack";
+value = "NotoSansLaoLoopedUI-SemiCondensedBlack";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI SemiCondensed Black";
+value = "Noto Sans Lao Looped UI SemiCondensed Black";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -64110,7 +64110,7 @@ value = "SemiCondensed Black";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI SmCd Blk";
+value = "Noto Sans Lao Looped UI SmCd Blk";
 },
 {
 name = "Replace Feature";
@@ -64150,7 +64150,7 @@ value = (
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Cond Thin";
+value = "Noto Sans Lao Looped UI Cond Thin";
 },
 {
 name = "Instance Preview";
@@ -64203,15 +64203,15 @@ value = (
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-CondensedThin";
+value = "NotoSansLaoLoopedUI-CondensedThin";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Condensed Thin";
+value = "Noto Sans Lao Looped UI Condensed Thin";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -64219,7 +64219,7 @@ value = "Condensed Thin";
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Condensed Thin";
+value = "Noto Sans Lao Looped UI Condensed Thin";
 },
 {
 name = "Replace Feature";
@@ -64308,19 +64308,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Condensed ExtraLight";
+value = "Noto Sans Lao Looped UI Condensed ExtraLight";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-CondensedExtraLight";
+value = "NotoSansLaoLoopedUI-CondensedExtraLight";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Condensed ExtraLight";
+value = "Noto Sans Lao Looped UI Condensed ExtraLight";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -64328,7 +64328,7 @@ value = "Condensed ExtraLight";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Cond ExLt";
+value = "Noto Sans Lao Looped UI Cond ExLt";
 },
 {
 name = "Replace Feature";
@@ -64419,19 +64419,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Condensed Light";
+value = "Noto Sans Lao Looped UI Condensed Light";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-CondensedLight";
+value = "NotoSansLaoLoopedUI-CondensedLight";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Condensed Light";
+value = "Noto Sans Lao Looped UI Condensed Light";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -64439,7 +64439,7 @@ value = "Condensed Light";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Cond Lt";
+value = "Noto Sans Lao Looped UI Cond Lt";
 },
 {
 name = "Replace Feature";
@@ -64530,19 +64530,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Condensed";
+value = "Noto Sans Lao Looped UI Condensed";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-Condensed";
+value = "NotoSansLaoLoopedUI-Condensed";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Condensed";
+value = "Noto Sans Lao Looped UI Condensed";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -64550,7 +64550,7 @@ value = Condensed;
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Condensed";
+value = "Noto Sans Lao Looped UI Condensed";
 }
 );
 interpolationWeight = 90;
@@ -64585,7 +64585,7 @@ value = (
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Cond Med";
+value = "Noto Sans Lao Looped UI Cond Med";
 },
 {
 name = "Instance Preview";
@@ -64638,19 +64638,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Condensed Medium";
+value = "Noto Sans Lao Looped UI Condensed Medium";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-CondensedMedium";
+value = "NotoSansLaoLoopedUI-CondensedMedium";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Condensed Medium";
+value = "Noto Sans Lao Looped UI Condensed Medium";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -64745,19 +64745,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Condensed SemiBold";
+value = "Noto Sans Lao Looped UI Condensed SemiBold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-CondensedSemiBold";
+value = "NotoSansLaoLoopedUI-CondensedSemiBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Condensed SemiBold";
+value = "Noto Sans Lao Looped UI Condensed SemiBold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -64765,7 +64765,7 @@ value = "Condensed SemiBold";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Cond SmBd";
+value = "Noto Sans Lao Looped UI Cond SmBd";
 },
 {
 name = "Replace Feature";
@@ -64856,19 +64856,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Condensed Bold";
+value = "Noto Sans Lao Looped UI Condensed Bold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-CondensedBold";
+value = "NotoSansLaoLoopedUI-CondensedBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Condensed Bold";
+value = "Noto Sans Lao Looped UI Condensed Bold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -64876,7 +64876,7 @@ value = "Condensed Bold";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Cond Bold";
+value = "Noto Sans Lao Looped UI Cond Bold";
 },
 {
 name = "Replace Feature";
@@ -64969,19 +64969,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Condensed ExtraBold";
+value = "Noto Sans Lao Looped UI Condensed ExtraBold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-CondensedExtraBold";
+value = "NotoSansLaoLoopedUI-CondensedExtraBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Condensed ExtraBold";
+value = "Noto Sans Lao Looped UI Condensed ExtraBold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -64989,7 +64989,7 @@ value = "Condensed ExtraBold";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Cond ExBd";
+value = "Noto Sans Lao Looped UI Cond ExBd";
 },
 {
 name = "Replace Feature";
@@ -65031,7 +65031,7 @@ value = (
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI Cond Blk";
+value = "Noto Sans Lao Looped UI Cond Blk";
 },
 {
 name = "Instance Preview";
@@ -65084,19 +65084,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI Condensed Black";
+value = "Noto Sans Lao Looped UI Condensed Black";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-CondensedBlack";
+value = "NotoSansLaoLoopedUI-CondensedBlack";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI Condensed Black";
+value = "Noto Sans Lao Looped UI Condensed Black";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -65189,19 +65189,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraCondensed Thin";
+value = "Noto Sans Lao Looped UI ExtraCondensed Thin";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraCondensedThin";
+value = "NotoSansLaoLoopedUI-ExtraCondensedThin";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraCondensed Thin";
+value = "Noto Sans Lao Looped UI ExtraCondensed Thin";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -65209,7 +65209,7 @@ value = "ExtraCondensed Thin";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExCd Thin";
+value = "Noto Sans Lao Looped UI ExCd Thin";
 },
 {
 name = "Replace Feature";
@@ -65297,19 +65297,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraCondensed ExtraLight";
+value = "Noto Sans Lao Looped UI ExtraCondensed ExtraLight";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraCondensedExtraLight";
+value = "NotoSansLaoLoopedUI-ExtraCondensedExtraLight";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraCondensed ExtraLight";
+value = "Noto Sans Lao Looped UI ExtraCondensed ExtraLight";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -65317,7 +65317,7 @@ value = "ExtraCondensed ExtraLight";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExCd ExLt";
+value = "Noto Sans Lao Looped UI ExCd ExLt";
 },
 {
 name = "Replace Feature";
@@ -65406,19 +65406,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraCondensed Light";
+value = "Noto Sans Lao Looped UI ExtraCondensed Light";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraCondensedLight";
+value = "NotoSansLaoLoopedUI-ExtraCondensedLight";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraCondensed Light";
+value = "Noto Sans Lao Looped UI ExtraCondensed Light";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -65426,7 +65426,7 @@ value = "ExtraCondensed Light";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExCd Lt";
+value = "Noto Sans Lao Looped UI ExCd Lt";
 },
 {
 name = "Replace Feature";
@@ -65515,19 +65515,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraCondensed";
+value = "Noto Sans Lao Looped UI ExtraCondensed";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraCondensed";
+value = "NotoSansLaoLoopedUI-ExtraCondensed";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraCondensed";
+value = "Noto Sans Lao Looped UI ExtraCondensed";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -65535,7 +65535,7 @@ value = ExtraCondensed;
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExtraCond";
+value = "Noto Sans Lao Looped UI ExtraCond";
 }
 );
 interpolationWeight = 90;
@@ -65618,19 +65618,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraCondensed Medium";
+value = "Noto Sans Lao Looped UI ExtraCondensed Medium";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraCondensedMedium";
+value = "NotoSansLaoLoopedUI-ExtraCondensedMedium";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraCondensed Medium";
+value = "Noto Sans Lao Looped UI ExtraCondensed Medium";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -65638,7 +65638,7 @@ value = "ExtraCondensed Medium";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExCd Med";
+value = "Noto Sans Lao Looped UI ExCd Med";
 },
 {
 name = "Replace Feature";
@@ -65727,19 +65727,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraCondensed SemiBold";
+value = "Noto Sans Lao Looped UI ExtraCondensed SemiBold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraCondensedSemiBold";
+value = "NotoSansLaoLoopedUI-ExtraCondensedSemiBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraCondensed SemiBold";
+value = "Noto Sans Lao Looped UI ExtraCondensed SemiBold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -65747,7 +65747,7 @@ value = "ExtraCondensed SemiBold";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExCd SmBd";
+value = "Noto Sans Lao Looped UI ExCd SmBd";
 },
 {
 name = "Replace Feature";
@@ -65836,19 +65836,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraCondensed Bold";
+value = "Noto Sans Lao Looped UI ExtraCondensed Bold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraCondensedBold";
+value = "NotoSansLaoLoopedUI-ExtraCondensedBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraCondensed Bold";
+value = "Noto Sans Lao Looped UI ExtraCondensed Bold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -65856,7 +65856,7 @@ value = "ExtraCondensed Bold";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExCd Bold";
+value = "Noto Sans Lao Looped UI ExCd Bold";
 },
 {
 name = "Replace Feature";
@@ -65947,19 +65947,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraCondensed ExtraBold";
+value = "Noto Sans Lao Looped UI ExtraCondensed ExtraBold";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraCondensedExtraBold";
+value = "NotoSansLaoLoopedUI-ExtraCondensedExtraBold";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraCondensed ExtraBold";
+value = "Noto Sans Lao Looped UI ExtraCondensed ExtraBold";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -65967,7 +65967,7 @@ value = "ExtraCondensed ExtraBold";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExCd ExBd";
+value = "Noto Sans Lao Looped UI ExCd ExBd";
 },
 {
 name = "Replace Feature";
@@ -66056,19 +66056,19 @@ value = (
 },
 {
 name = compatibleFullName;
-value = "Noto Looped Lao UI ExtraCondensed Black";
+value = "Noto Sans Lao Looped UI ExtraCondensed Black";
 },
 {
 name = postscriptFontName;
-value = "NotoLoopedLaoUI-ExtraCondensedBlack";
+value = "NotoSansLaoLoopedUI-ExtraCondensedBlack";
 },
 {
 name = postscriptFullName;
-value = "Noto Looped Lao UI ExtraCondensed Black";
+value = "Noto Sans Lao Looped UI ExtraCondensed Black";
 },
 {
 name = preferredFamilyName;
-value = "Noto Looped Lao UI";
+value = "Noto Sans Lao Looped UI";
 },
 {
 name = preferredSubfamilyName;
@@ -66076,7 +66076,7 @@ value = "ExtraCondensed Black";
 },
 {
 name = styleMapFamilyName;
-value = "Noto Looped Lao UI ExCd Blk";
+value = "Noto Sans Lao Looped UI ExCd Blk";
 },
 {
 name = "Replace Feature";
