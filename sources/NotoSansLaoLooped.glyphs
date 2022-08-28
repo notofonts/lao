@@ -73,7 +73,7 @@ code = "# Only for KERN feature\012iiVowel-lao\012euuVowel-lao";
 name = _laoKernTop02;
 }
 );
-copyright = "Copyright 2020 Google LLC. All rights reserved";
+copyright = "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/lao)";
 customParameters = (
 {
 name = "Enforce Compatibility Check";
@@ -328,11 +328,11 @@ value = "6E668239-F79A-4803-9842-9160852853A7";
 },
 {
 name = license;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
 },
 {
 name = licenseURL;
-value = "http://scripts.sil.org/OFL";
+value = "https://scripts.sil.org/OFL";
 },
 {
 name = vendorID;
@@ -348,24 +348,11 @@ value = "Noto is a trademark of Google LLC.";
 },
 {
 name = versionString;
-value = "Version 1.00";
+value = "Version 1.001";
 },
 {
 name = sampleText;
 value = "ກຂຄຆງ";
-},
-{
-name = Axes;
-value = (
-{
-Name = Weight;
-Tag = wght;
-},
-{
-Name = Width;
-Tag = wdth;
-}
-);
 }
 );
 date = "2020-12-17 08:58:02 +0000";
@@ -1001,7 +988,6 @@ horizontalStems = (
 23
 );
 id = "FFE3C573-8034-42D7-BBA7-2D1C8826F1F5";
-name = ThinCondensed;
 verticalStems = (
 24,
 24
@@ -1149,7 +1135,6 @@ horizontalStems = (
 66
 );
 id = "CACD10EA-8E27-4203-9979-86A2B0F7ED74";
-name = RegularCondensed;
 verticalStems = (
 78,
 78
@@ -1298,7 +1283,6 @@ horizontalStems = (
 146
 );
 id = "96C6A4AF-11F2-4EC9-996B-29C760E40A38";
-name = BlackCondensed;
 verticalStems = (
 172,
 152
@@ -92138,5 +92122,5 @@ O,
 };
 };
 versionMajor = 1;
-versionMinor = 0;
+versionMinor = 1;
 }
