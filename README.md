@@ -13,6 +13,12 @@
 [Shaping]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnotofonts%2Flao%2Fgh-pages%2Fbadges%2FShapingChecks.json
 [Universal]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnotofonts%2Flao%2Fgh-pages%2Fbadges%2FUniversal.json
 
+## Notes
+
+Ben Mitchell wrote up some notes on the design of Noto Lao's numerals in
+[this Twitter
+thread](https://twitter.com/OhBendy/status/1472181382357135364?t=Sh0iIbQlBoZsTHe3PtUQjg&s=19).
+
 ## Building
 
 Fonts are built automatically by GitHub Actions - take a look in the "Actions" tab for the latest build.
