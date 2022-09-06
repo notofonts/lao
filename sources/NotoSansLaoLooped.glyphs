@@ -1,7 +1,7 @@
 {
 .appVersion = "3109";
 DisplayStrings = (
-"/uuVowel-lao/dottedCircle/virama-lao"
+"/maiEk-lao/maiEk-lao.ss03"
 );
 classes = (
 {
@@ -353,6 +353,19 @@ value = "Version 1.001";
 {
 name = sampleText;
 value = "ກຂຄຆງ";
+},
+{
+name = Axes;
+value = (
+{
+Name = Weight;
+Tag = wght;
+},
+{
+Name = Width;
+Tag = wdth;
+}
+);
 }
 );
 date = "2020-12-17 08:58:02 +0000";
@@ -396,15 +409,18 @@ name = sups;
 automatic = 1;
 code = "sub coCok-lao by coCok-lao.ss01;\012";
 name = ss01;
+notes = "Name: Alternate coCok";
 },
 {
 automatic = 1;
 code = "sub lla-lao by lla-lao.ss02;\012";
 name = ss02;
+notes = "Name: Alternate lla";
 },
 {
 code = "lookup contextualToneMarks { ### some users may prefer right-aligned tonemarks when followed by post-base vowel signs, but not if the base is preceded by a prebase vowel sign ###\012	lookupflag UseMarkFilteringSet @laoAboveMarks; # ignore any sub-Lo in the sequence;\012	ignore sub @laoPrebaseVowels @laoBaseConsonants @laoToneMarks';\012	sub [maiEk-lao maiTho-lao maiTi-lao maiCatawa-lao]' @laoPostbaseVowels by [maiEk-lao.ss03 maiTho-lao.ss03 maiTi-lao.ss03 maiCatawa-lao.ss03];\012	 } contextualToneMarks;\012";
 name = ss03;
+notes = "Name: Right align tone marks before postbase vowels";
 },
 {
 code = "# Automatic Code End\012\012lookup LaoContexualKerning {\012lookupflag UseMarkFilteringSet @laoAboveMarks; # This needs to be here to make sure any below marks do not have effect\012#\012# 1 -- top marks followed by Ascending vowels\012#\012# 1a) maiTi-lao\012# pos maiTi-lao' oVowel-lao <-50 0 0 0>; # ??? Not working ???\012pos maiTi-lao oVowel-lao' <110 0 110 0>;\012pos @_laoKernTop02 oVowel-lao' <30 0 30 0>; # 1/2\012pos @_laoKernTop02 @laoToneMarksSmall oVowel-lao' <30 0 30 0>; # 2/2\012pos maiTi-lao ayMaiMuanVowel-lao' <40 0 40 0>;\012pos maiTi-lao aiMaiMayVowel-lao' <20 0 20 0>;\012# Attention: top-right curved consonantes are kerned to oVowel, hence we need bigger values here.\012#\012# 2 -- Ascending vowels + ascending consonants + wide top marks (replaced by .narrow by here)\012# foFon-lao not needed, enough space. foFai-lao anyway neither.\012#\012# 2a) -\"- + poPa / yoYa + maiTi-lao.narrow\012pos oVowel-lao poPa-lao' maiTi-lao.narrow <30 0 30 0>;\012pos oVowel-lao yoYa-lao' maiTi-lao.narrow <40 0 40 0>;\012pos ayMaiMuanVowel-lao poPa-lao' maiTi-lao.narrow <70 0 70 0>;\012pos ayMaiMuanVowel-lao yoYa-lao' maiTi-lao.narrow <80 0 80 0>;\012pos aiMaiMayVowel-lao poPa-lao' maiTi-lao.narrow <40 0 40 0>;\012pos aiMaiMayVowel-lao yoYa-lao' maiTi-lao.narrow <50 0 50 0>;\012#\012} LaoContexualKerning;\012";
@@ -475,7 +491,7 @@ value = "Lao_Superscript Numerals:0.9, 0.8, 0.3, 0.3; 6; (307,408); (171); (845)
 },
 {
 name = underlineThickness;
-value = 24;
+value = 70;
 },
 {
 name = underlinePosition;
@@ -519,7 +535,7 @@ value = -350;
 },
 {
 name = typoLineGap;
-value = 200;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -531,7 +547,7 @@ value = -350;
 },
 {
 name = hheaLineGap;
-value = 200;
+value = 0;
 },
 {
 name = strikeoutPosition;
@@ -664,7 +680,7 @@ value = -350;
 },
 {
 name = typoLineGap;
-value = 200;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -676,7 +692,7 @@ value = -350;
 },
 {
 name = hheaLineGap;
-value = 200;
+value = 0;
 },
 {
 name = strikeoutPosition;
@@ -766,7 +782,7 @@ value = "Lao_Superscript Numerals:0.9, 0.8, 0.3, 0.3; 10; (273,452); (123); (865
 },
 {
 name = underlineThickness;
-value = 130;
+value = 70;
 },
 {
 name = underlinePosition;
@@ -810,7 +826,7 @@ value = -350;
 },
 {
 name = typoLineGap;
-value = 200;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -822,7 +838,7 @@ value = -350;
 },
 {
 name = hheaLineGap;
-value = 200;
+value = 0;
 },
 {
 name = strikeoutPosition;
@@ -912,7 +928,7 @@ value = "Lao_Superscript Numerals:0.9, 0.8, 0.3, 0.3; 6; (308,406); (173); (843)
 },
 {
 name = underlineThickness;
-value = 24;
+value = 70;
 },
 {
 name = underlinePosition;
@@ -956,7 +972,7 @@ value = -350;
 },
 {
 name = typoLineGap;
-value = 200;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -968,7 +984,7 @@ value = -350;
 },
 {
 name = hheaLineGap;
-value = 200;
+value = 0;
 },
 {
 name = strikeoutPosition;
@@ -1103,7 +1119,7 @@ value = -350;
 },
 {
 name = typoLineGap;
-value = 200;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -1115,7 +1131,7 @@ value = -350;
 },
 {
 name = hheaLineGap;
-value = 200;
+value = 0;
 },
 {
 name = strikeoutPosition;
@@ -1207,7 +1223,7 @@ value = "Lao_Superscript Numerals:0.9, 0.8, 0.3, 0.3; 10; (274,450); (125); (863
 },
 {
 name = underlineThickness;
-value = 130;
+value = 70;
 },
 {
 name = underlinePosition;
@@ -1251,7 +1267,7 @@ value = -350;
 },
 {
 name = typoLineGap;
-value = 200;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -1263,7 +1279,7 @@ value = -350;
 },
 {
 name = hheaLineGap;
-value = 200;
+value = 0;
 },
 {
 name = strikeoutPosition;
