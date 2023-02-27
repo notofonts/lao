@@ -1,0 +1,7376 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - Glyphs</title>
+    
+    <style type="text/css">
+    
+
+        html{
+	  font-family: sans-serif;
+	}
+	.box-title{
+	  width: 100%;
+	  float: left;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	  width: 100%;
+	  float: left;
+	}
+	.box-text{
+		float: left;
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	  z-index: 100;
+	}
+	#font-toggle{
+	  display: block;
+	  font-weight: 700;
+	  cursor: pointer;
+	  -webkit-user-select: none; /* Safari */        
+	  -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* IE10+/Edge */
+	  user-select: none; /* Standard */
+	  text-align: center;
+	  color: white;
+	  background-color: black;
+	  width: 50px;
+	  display: block;
+	  padding: 10px;
+	}
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	font-family: sans-serif;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	font-size: 12pt;
+	line-height: 15pt;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	padding: 10px;
+	visibility: visible;
+	}
+	.tooltipleft {
+		float:left;
+		width: 249px;
+	}
+	.tooltipright {
+		float:right;
+		width:250px;
+	}
+
+			/* Stuff needed for the table differ */
+            body {
+                font-family: Helvetica;
+            }
+            .node {
+                font-family: courier;
+                cursor: pointer;
+                position: relative;
+                left: 30px;
+                padding: 5px;
+                display: block;
+                border: 1px dashed grey;
+            }
+            .header {
+            font-weight: bold;
+            }
+            .attrib-old{
+                color: red;
+                cursor: text;
+            }
+            .attrib-new{
+                color: green;
+                cursor: text;
+            }
+            .leaf {
+            font-weight: bold;
+            }
+            .old .cell .new {
+            	display:  none;
+            }
+            .new .cell .old {
+            	display:  none;
+            }
+            .both .cell .old {
+            	opacity: 0.75;
+            	color:  red;
+            }
+            .both .cell .new {
+            	opacity: 0.75;
+            	position: absolute;
+            	top: 0;
+            	color:  green;
+            }
+			.spacer {
+				display:block;
+				float:left;
+				width:100%;
+			}
+
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-SemiCondensed.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-SemiCondensedMedium.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-Medium.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedMedium.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-SemiCondensedExtraBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraCondensedExtraBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-SemiCondensedSemiBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedSemiBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-Regular.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-SemiCondensedBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-Black.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-Bold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedExtraBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraCondensedSemiBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedBlack.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraCondensedExtraLight.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-SemiCondensedBlack.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraCondensedBlack.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedLight.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-Condensed.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraLight.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedThin.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-SemiCondensedLight.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-Thin.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraCondensedMedium.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraCondensedLight.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraCondensedBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedExtraLight.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraCondensed.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-Light.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-ExtraCondensedThin.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-SemiCondensedThin.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-SemiCondensedExtraLight.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-SemiBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao[wght].ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 200 700;
+    font-stretch: 62% 100%;
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao[wdth,wght].ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 100 900;
+    font-stretch: 62% 100%;
+    font-style: normal;
+}
+	  
+
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-SemiCondensedThin.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-Regular.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraCondensedSemiBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedExtraBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedLight.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraCondensedBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-SemiCondensedExtraLight.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-SemiCondensedBlack.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-Black.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-Medium.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-SemiCondensed.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-SemiCondensedSemiBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-SemiBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedThin.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-SemiCondensedExtraBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraLight.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-Bold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-Light.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedBlack.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraCondensed.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraCondensedThin.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedExtraLight.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraCondensedExtraBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraCondensedExtraLight.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedSemiBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-Condensed.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-SemiCondensedBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-Thin.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-SemiCondensedMedium.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraCondensedBlack.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedMedium.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraCondensedMedium.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-ExtraCondensedLight.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-SemiCondensedLight.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+
+	  
+
+	  
+	    .old-Noto-Serif-Lao-SemiCondensed{
+    font-family: "old Noto Serif Lao";
+    font-weight: 400;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-SemiCondensed-Medium{
+    font-family: "old Noto Serif Lao";
+    font-weight: 500;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Medium{
+    font-family: "old Noto Serif Lao";
+    font-weight: 500;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Condensed-Bold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 700;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Condensed-Medium{
+    font-family: "old Noto Serif Lao";
+    font-weight: 500;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-SemiCondensed-ExtraBold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 800;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraCondensed-ExtraBold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 800;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-SemiCondensed-SemiBold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 600;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Condensed-SemiBold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 600;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Regular{
+    font-family: "old Noto Serif Lao";
+    font-weight: 400;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-SemiCondensed-Bold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 700;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Black{
+    font-family: "old Noto Serif Lao";
+    font-weight: 900;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Bold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 700;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Condensed-ExtraBold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 800;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraCondensed-SemiBold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 600;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Condensed-Black{
+    font-family: "old Noto Serif Lao";
+    font-weight: 900;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraCondensed-ExtraLight{
+    font-family: "old Noto Serif Lao";
+    font-weight: 200;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-SemiCondensed-Black{
+    font-family: "old Noto Serif Lao";
+    font-weight: 900;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraCondensed-Black{
+    font-family: "old Noto Serif Lao";
+    font-weight: 900;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Condensed-Light{
+    font-family: "old Noto Serif Lao";
+    font-weight: 300;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraBold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 800;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Condensed{
+    font-family: "old Noto Serif Lao";
+    font-weight: 400;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraLight{
+    font-family: "old Noto Serif Lao";
+    font-weight: 200;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Condensed-Thin{
+    font-family: "old Noto Serif Lao";
+    font-weight: 100;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-SemiCondensed-Light{
+    font-family: "old Noto Serif Lao";
+    font-weight: 300;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Thin{
+    font-family: "old Noto Serif Lao";
+    font-weight: 100;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraCondensed-Medium{
+    font-family: "old Noto Serif Lao";
+    font-weight: 500;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraCondensed-Light{
+    font-family: "old Noto Serif Lao";
+    font-weight: 300;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraCondensed-Bold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 700;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Condensed-ExtraLight{
+    font-family: "old Noto Serif Lao";
+    font-weight: 200;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraCondensed{
+    font-family: "old Noto Serif Lao";
+    font-weight: 400;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Light{
+    font-family: "old Noto Serif Lao";
+    font-weight: 300;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-ExtraCondensed-Thin{
+    font-family: "old Noto Serif Lao";
+    font-weight: 100;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-SemiCondensed-Thin{
+    font-family: "old Noto Serif Lao";
+    font-weight: 100;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-SemiCondensed-ExtraLight{
+    font-family: "old Noto Serif Lao";
+    font-weight: 200;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-SemiBold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 600;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-SemiCondensed-SemiBold{
+    font-family: "old Noto Serif Lao";
+    font-weight: 600.0;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Lao-Condensed-Medium{
+    font-family: "old Noto Serif Lao";
+    font-weight: 500.0;
+    font-stretch: 75.0%;
+    font-style: normal;
+}
+	  
+
+	  
+	    .new-Noto-Serif-Lao-SemiCondensed-Thin{
+    font-family: "new Noto Serif Lao";
+    font-weight: 100;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Regular{
+    font-family: "new Noto Serif Lao";
+    font-weight: 400;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraCondensed-SemiBold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 600;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Condensed-ExtraBold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 800;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Condensed-Light{
+    font-family: "new Noto Serif Lao";
+    font-weight: 300;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraCondensed-Bold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 700;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-SemiCondensed-ExtraLight{
+    font-family: "new Noto Serif Lao";
+    font-weight: 200;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-SemiCondensed-Black{
+    font-family: "new Noto Serif Lao";
+    font-weight: 900;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Black{
+    font-family: "new Noto Serif Lao";
+    font-weight: 900;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Medium{
+    font-family: "new Noto Serif Lao";
+    font-weight: 500;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-SemiCondensed{
+    font-family: "new Noto Serif Lao";
+    font-weight: 400;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-SemiCondensed-SemiBold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 600;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-SemiBold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 600;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Condensed-Bold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 700;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Condensed-Thin{
+    font-family: "new Noto Serif Lao";
+    font-weight: 100;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-SemiCondensed-ExtraBold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 800;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraLight{
+    font-family: "new Noto Serif Lao";
+    font-weight: 200;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Bold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 700;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Light{
+    font-family: "new Noto Serif Lao";
+    font-weight: 300;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Condensed-Black{
+    font-family: "new Noto Serif Lao";
+    font-weight: 900;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraCondensed{
+    font-family: "new Noto Serif Lao";
+    font-weight: 400;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraCondensed-Thin{
+    font-family: "new Noto Serif Lao";
+    font-weight: 100;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraBold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 800;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Condensed-ExtraLight{
+    font-family: "new Noto Serif Lao";
+    font-weight: 200;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraCondensed-ExtraBold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 800;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraCondensed-ExtraLight{
+    font-family: "new Noto Serif Lao";
+    font-weight: 200;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Condensed-SemiBold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 600;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Condensed{
+    font-family: "new Noto Serif Lao";
+    font-weight: 400;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-SemiCondensed-Bold{
+    font-family: "new Noto Serif Lao";
+    font-weight: 700;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Thin{
+    font-family: "new Noto Serif Lao";
+    font-weight: 100;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-SemiCondensed-Medium{
+    font-family: "new Noto Serif Lao";
+    font-weight: 500;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraCondensed-Black{
+    font-family: "new Noto Serif Lao";
+    font-weight: 900;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-Condensed-Medium{
+    font-family: "new Noto Serif Lao";
+    font-weight: 500;
+    font-stretch: 75%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraCondensed-Medium{
+    font-family: "new Noto Serif Lao";
+    font-weight: 500;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-ExtraCondensed-Light{
+    font-family: "new Noto Serif Lao";
+    font-weight: 300;
+    font-stretch: 62.5%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Lao-SemiCondensed-Light{
+    font-family: "new Noto Serif Lao";
+    font-weight: 300;
+    font-stretch: 87.5%;
+    font-style: normal;
+}
+	  
+
+	  
+	
+.cell{
+  position: relative;
+  z-index: -1;
+  float: left;
+  background-color: #fcfcfc;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  width: 30.0px;
+  line-height: 30.0px;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div id="nav">
+        <div id="font-toggle">old</div>
+     </div>
+    
+    <div id="content">
+	<h2>
+<b>Text</b>
+</h2>
+	
+  
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiCondensed 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiCondensed" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiCondensed-Medium 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiCondensed-Medium" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Medium 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Medium" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Condensed-Bold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Condensed-Bold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Condensed-Medium 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Condensed-Medium" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiCondensed-ExtraBold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiCondensed-ExtraBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraCondensed-ExtraBold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraCondensed-ExtraBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiCondensed-SemiBold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiCondensed-SemiBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Condensed-SemiBold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Condensed-SemiBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Regular 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Regular" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiCondensed-Bold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiCondensed-Bold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Black 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Black" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Bold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Bold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Condensed-ExtraBold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Condensed-ExtraBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraCondensed-SemiBold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraCondensed-SemiBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Condensed-Black 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Condensed-Black" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraCondensed-ExtraLight 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraCondensed-ExtraLight" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiCondensed-Black 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiCondensed-Black" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraCondensed-Black 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraCondensed-Black" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Condensed-Light 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Condensed-Light" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraBold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Condensed 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Condensed" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraLight 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraLight" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Condensed-Thin 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Condensed-Thin" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiCondensed-Light 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiCondensed-Light" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Thin 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Thin" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraCondensed-Medium 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraCondensed-Medium" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraCondensed-Light 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraCondensed-Light" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraCondensed-Bold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraCondensed-Bold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Condensed-ExtraLight 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Condensed-ExtraLight" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraCondensed 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraCondensed" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Light 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Light" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-ExtraCondensed-Thin 20pt</div>
+	  <span class="old-Noto-Serif-Lao-ExtraCondensed-Thin" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiCondensed-Thin 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiCondensed-Thin" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiCondensed-ExtraLight 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiCondensed-ExtraLight" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiBold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-SemiCondensed-SemiBold 20pt</div>
+	  <span class="old-Noto-Serif-Lao-SemiCondensed-SemiBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Lao-Condensed-Medium 20pt</div>
+	  <span class="old-Noto-Serif-Lao-Condensed-Medium" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">ກ</div>
+	    
+	      <div class="cell">ຂ</div>
+	    
+	      <div class="cell">ຄ</div>
+	    
+	      <div class="cell">ງ</div>
+	    
+	      <div class="cell">ຈ</div>
+	    
+	      <div class="cell">ຊ</div>
+	    
+	      <div class="cell">ຍ</div>
+	    
+	      <div class="cell">ດ</div>
+	    
+	      <div class="cell">ຕ</div>
+	    
+	      <div class="cell">ຖ</div>
+	    
+	      <div class="cell">ທ</div>
+	    
+	      <div class="cell">ນ</div>
+	    
+	      <div class="cell">ບ</div>
+	    
+	      <div class="cell">ປ</div>
+	    
+	      <div class="cell">ຜ</div>
+	    
+	      <div class="cell">ຝ</div>
+	    
+	      <div class="cell">ພ</div>
+	    
+	      <div class="cell">ຟ</div>
+	    
+	      <div class="cell">ມ</div>
+	    
+	      <div class="cell">ຢ</div>
+	    
+	      <div class="cell">ຣ</div>
+	    
+	      <div class="cell">ລ</div>
+	    
+	      <div class="cell">ວ</div>
+	    
+	      <div class="cell">ສ</div>
+	    
+	      <div class="cell">ຫ</div>
+	    
+	      <div class="cell">ອ</div>
+	    
+	      <div class="cell">ຮ</div>
+	    
+	      <div class="cell">ຯ</div>
+	    
+	      <div class="cell">ະ</div>
+	    
+	      <div class="cell">ັ</div>
+	    
+	      <div class="cell">າ</div>
+	    
+	      <div class="cell">ຳ</div>
+	    
+	      <div class="cell">ິ</div>
+	    
+	      <div class="cell">ີ</div>
+	    
+	      <div class="cell">ຶ</div>
+	    
+	      <div class="cell">ື</div>
+	    
+	      <div class="cell">ຸ</div>
+	    
+	      <div class="cell">ູ</div>
+	    
+	      <div class="cell">ົ</div>
+	    
+	      <div class="cell">ຼ</div>
+	    
+	      <div class="cell">ຽ</div>
+	    
+	      <div class="cell">ເ</div>
+	    
+	      <div class="cell">ແ</div>
+	    
+	      <div class="cell">ໂ</div>
+	    
+	      <div class="cell">ໃ</div>
+	    
+	      <div class="cell">ໄ</div>
+	    
+	      <div class="cell">ໆ</div>
+	    
+	      <div class="cell">່</div>
+	    
+	      <div class="cell">້</div>
+	    
+	      <div class="cell">໊</div>
+	    
+	      <div class="cell">໋</div>
+	    
+	      <div class="cell">໌</div>
+	    
+	      <div class="cell">ໍ</div>
+	    
+	      <div class="cell">໐</div>
+	    
+	      <div class="cell">໑</div>
+	    
+	      <div class="cell">໒</div>
+	    
+	      <div class="cell">໓</div>
+	    
+	      <div class="cell">໔</div>
+	    
+	      <div class="cell">໕</div>
+	    
+	      <div class="cell">໖</div>
+	    
+	      <div class="cell">໗</div>
+	    
+	      <div class="cell">໘</div>
+	    
+	      <div class="cell">໙</div>
+	    
+	      <div class="cell">ໜ</div>
+	    
+	      <div class="cell">ໝ</div>
+	    
+	      <div class="cell">ໞ</div>
+	    
+	      <div class="cell">ໟ</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">₭</div>
+	    
+	      <div class="cell">◌</div>
+	    
+          </span>
+       </div>
+    
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "old"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	  items = document.getElementsByClassName("box");
+	  console.log("Click from "+POSITION)
+	  
+	  if (POSITION === "old") {
+	  POSITION = "new"
+	  for (item of items) {
+	    item.firstElementChild.textContent = item.firstElementChild.textContent.replace("old", "new")
+            item.lastElementChild.className = item.lastElementChild.className.replace("old", "new")
+	    fontToggle.textContent = "new"
+	  }
+
+	  } else {
+	  POSITION = "old"
+	  for (item of items) {
+	    item.firstElementChild.textContent = item.firstElementChild.textContent.replace("new", "old")
+            item.lastElementChild.className = item.lastElementChild.className.replace("new", "old")
+	    fontToggle.textContent = "old"
+	  }
+	}
+	}
+	if (fontToggle !== null) {
+		fontToggle.addEventListener("click", switchFonts);
+	}
+
+    const divs = document.querySelectorAll('.node');
+    divs.forEach(el => el.addEventListener('click', event => {
+    var children = event.target.querySelectorAll(".node");
+    children.forEach(function(e) {
+        if (e.style.display === "none") {
+            e.style.display = "block";
+        } else {
+            e.style.display = "none";
+        }
+    })
+    }));
+    
+	
+
+    </script>
+</html>

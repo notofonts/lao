@@ -1,8 +1,8 @@
 ## Fontbakery report
 
-Fontbakery version: 0.8.10
+Fontbakery version: 0.8.11b0
 
-<details><summary><b>[3] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
+<details><summary><b>[4] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
 
 
 * 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSansLaoLoopedUI/googlefonts/ttf', 'fonts/NotoSansLaoLoopedUI/googlefonts/variable-ttf'] [code: single-directory]
@@ -10,6 +10,10 @@ Fontbakery version: 0.8.10
 
 
 * 🔥 **FAIL** PANOSE proportion is not the same across this family. In order to fix this, please make sure that the panose.bProportion value is the same in the OS/2 table of all of this family font files. [code: inconsistency]
+</div></details><details><summary>🔥 <b>FAIL:</b> Check that OS/2.fsSelection bold & italic settings are unique for each NameID1 (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/os2.html#com.adobe.fonts/check/family/bold_italic_unique_for_nameid1">com.adobe.fonts/check/family/bold_italic_unique_for_nameid1</a>)</summary><div>
+
+
+* 🔥 **FAIL** Family 'Noto Sans Lao Looped UI' has 2 fonts (should be no more than 1) with the same OS/2.fsSelection bold & italic settings: Bold=False, Italic=False [code: unique-fsselection]
 </div></details><details><summary>🔥 <b>FAIL:</b> Fonts have consistent underline thickness? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/post.html#com.google.fonts/check/family/underline_thickness">com.google.fonts/check/family/underline_thickness</a>)</summary><div>
 
 
@@ -26,7 +30,7 @@ Detected underlineThickness values are:
 	fonts/NotoSansLaoLoopedUI/googlefonts/ttf/NotoSansLaoLoopedUI-Thin.ttf: 24
 	fonts/NotoSansLaoLoopedUI/googlefonts/variable-ttf/NotoSansLaoLoopedUI[wdth,wght].ttf: 70
  [code: inconsistent-underline-thickness]
-</div></details><br></div></details><details><summary><b>[12] NotoSansLaoLoopedUI-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansLaoLoopedUI-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 🔥 **FAIL** Missing required codepoints:
@@ -61,7 +65,7 @@ Detected underlineThickness values are:
 	- 0x0039 (DIGIT NINE)
  
 
-	- And 293 more.
+	- 291 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics">com.google.fonts/check/vertical_metrics</a>)</summary><div>
@@ -74,6 +78,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * 🔥 **FAIL** .notdef glyphs were found when attempting to render Noto Sans Lao Looped UI Black [code: render-own-name]
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -107,7 +115,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- uni0EA5.BRACKET.110 
 
-	- And uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.110
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
@@ -138,7 +146,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* quoteleft (U+2018): X=96.0,Y=713.0 (should be at cap-height 714?) 
 
-	* And 13 more.
+	* 13 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
@@ -166,7 +174,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* uni0E9F (U+0E9F) contains a short segment B<<325.0,432.0>-<325.0,432.0>-<325.0,432.0>> 
 
-	* And 38 more.
+	* 38 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -176,8 +184,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 	* uni0EC8 (U+0EC8): L<<224.0,827.0>--<224.0,746.0>> -> L<<224.0,746.0>--<215.0,605.0>> 
 
-	* And uni0EC8 (U+0EC8): L<<60.0,605.0>--<50.0,746.0>> -> L<<50.0,746.0>--<50.0,827.0>> [code: found-colinear-vectors]
-</div></details><br></div></details><details><summary><b>[11] NotoSansLaoLoopedUI-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+	* uni0EC8 (U+0EC8): L<<60.0,605.0>--<50.0,746.0>> -> L<<50.0,746.0>--<50.0,827.0>> [code: found-colinear-vectors]
+</div></details><br></div></details><details><summary><b>[12] NotoSansLaoLoopedUI-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 🔥 **FAIL** Missing required codepoints:
@@ -212,7 +220,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 	- 0x0039 (DIGIT NINE)
  
 
-	- And 293 more.
+	- 291 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics">com.google.fonts/check/vertical_metrics</a>)</summary><div>
@@ -225,6 +233,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * 🔥 **FAIL** .notdef glyphs were found when attempting to render Noto Sans Lao Looped UI [code: render-own-name]
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -251,7 +263,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 	- uni0EA5.BRACKET.110 
 
-	- And uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.110
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
@@ -282,7 +294,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 	* uni0ECA (U+0ECA): X=50.0,Y=715.0 (should be at cap-height 714?) 
 
-	* And 15 more.
+	* 15 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
@@ -310,7 +322,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* uni0E9E (U+0E9E) contains a short segment B<<307.0,435.0>-<307.0,434.0>-<307.0,433.0>> 
 
-	* And 23 more.
+	* 23 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -320,8 +332,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 	* uni0EC8 (U+0EC8): L<<188.0,813.0>--<188.0,737.0>> -> L<<188.0,737.0>--<181.0,607.0>> 
 
-	* And uni0EC8 (U+0EC8): L<<58.0,607.0>--<50.0,737.0>> -> L<<50.0,737.0>--<50.0,813.0>> [code: found-colinear-vectors]
-</div></details><br></div></details><details><summary><b>[13] NotoSansLaoLoopedUI-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+	* uni0EC8 (U+0EC8): L<<58.0,607.0>--<50.0,737.0>> -> L<<50.0,737.0>--<50.0,813.0>> [code: found-colinear-vectors]
+</div></details><br></div></details><details><summary><b>[14] NotoSansLaoLoopedUI-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 🔥 **FAIL** Missing required codepoints:
@@ -356,7 +368,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 	- 0x0039 (DIGIT NINE)
  
 
-	- And 293 more.
+	- 291 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics">com.google.fonts/check/vertical_metrics</a>)</summary><div>
@@ -369,6 +381,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * 🔥 **FAIL** .notdef glyphs were found when attempting to render Noto Sans Lao Looped UI ExtraBold [code: render-own-name]
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -402,7 +418,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- uni0EA5.BRACKET.110 
 
-	- And uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.110
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
@@ -433,7 +449,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* uni0EB3 (U+0EB3): X=-204.0,Y=712.0 (should be at cap-height 714?) 
 
-	* And 23 more.
+	* 23 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
@@ -461,7 +477,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* uni0EA2 (U+0EA2) contains a short segment L<<314.0,205.0>--<295.0,205.0>> 
 
-	* And 18 more.
+	* 18 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -471,14 +487,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 	* uni0EC8 (U+0EC8): L<<205.0,820.0>--<205.0,741.0>> -> L<<205.0,741.0>--<197.0,606.0>> 
 
-	* And uni0EC8 (U+0EC8): L<<59.0,606.0>--<50.0,741.0>> -> L<<50.0,741.0>--<50.0,820.0>> [code: found-colinear-vectors]
+	* uni0EC8 (U+0EC8): L<<59.0,606.0>--<50.0,741.0>> -> L<<50.0,741.0>--<50.0,820.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* uni0EB9 (U+0EB9): L<<122.0,-208.0>--<122.0,-208.0>>/B<<122.0,-208.0>-<88.0,-203.0>-<69.0,-182.0>> = 8.365886124032546 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansLaoLoopedUI-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[14] NotoSansLaoLoopedUI-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 🔥 **FAIL** Missing required codepoints:
@@ -513,7 +529,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 	- 0x0039 (DIGIT NINE)
  
 
-	- And 293 more.
+	- 291 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics">com.google.fonts/check/vertical_metrics</a>)</summary><div>
@@ -526,6 +542,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * 🔥 **FAIL** .notdef glyphs were found when attempting to render Noto Sans Lao Looped UI ExtraLight [code: render-own-name]
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -559,7 +579,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- uni0EA5.BRACKET.110 
 
-	- And uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.110
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
@@ -590,7 +610,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* question (U+003F): X=137.5,Y=1.5 (should be at baseline 0?) 
 
-	* And 16 more.
+	* 16 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
@@ -618,7 +638,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* uni0EAD (U+0EAD) contains a short segment L<<503.0,314.0>--<501.0,314.0>> 
 
-	* And 5 more.
+	* 5 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -628,14 +648,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 	* uni0EC8 (U+0EC8): L<<55.0,614.0>--<50.0,715.0>> -> L<<50.0,715.0>--<50.0,786.0>> 
 
-	* And uni0EC8 (U+0EC8): L<<87.0,786.0>--<87.0,715.0>> -> L<<87.0,715.0>--<82.0,614.0>> [code: found-colinear-vectors]
+	* uni0EC8 (U+0EC8): L<<87.0,786.0>--<87.0,715.0>> -> L<<87.0,715.0>--<82.0,614.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* uni0ED8 (U+0ED8): B<<450.0,-115.0>-<450.0,-112.0>-<451.0,-111.0>>/B<<451.0,-111.0>-<416.0,-142.0>-<378.0,-161.0>> = 3.468229258917096 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansLaoLoopedUI-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansLaoLoopedUI-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 🔥 **FAIL** Missing required codepoints:
@@ -670,7 +690,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 	- 0x0039 (DIGIT NINE)
  
 
-	- And 293 more.
+	- 291 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics">com.google.fonts/check/vertical_metrics</a>)</summary><div>
@@ -683,6 +703,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * 🔥 **FAIL** .notdef glyphs were found when attempting to render Noto Sans Lao Looped UI Light [code: render-own-name]
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -716,7 +740,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- uni0EA5.BRACKET.110 
 
-	- And uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.110
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
@@ -745,7 +769,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* uni25CC (U+25CC): X=326.0,Y=-2.0 (should be at baseline 0?) 
 
-	* And uni25CC (U+25CC): X=326.0,Y=-2.0 (should be at baseline 0?) [code: found-misalignments]
+	* uni25CC (U+25CC): X=326.0,Y=-2.0 (should be at baseline 0?) [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
 
 
@@ -771,7 +795,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* uni0EDD (U+0EDD) contains a short segment B<<675.0,166.0>-<694.0,166.0>-<711.0,160.0>> 
 
-	* And uni0EDD (U+0EDD) contains a short segment B<<186.0,360.0>-<176.0,359.0>-<166.0,359.0>> [code: found-short-segments]
+	* uni0EDD (U+0EDD) contains a short segment B<<186.0,360.0>-<176.0,359.0>-<166.0,359.0>> [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
 
 
@@ -779,8 +803,8 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* uni0EC8 (U+0EC8): L<<104.0,789.0>--<104.0,718.0>> -> L<<104.0,718.0>--<99.0,613.0>> 
 
-	* And uni0EC8 (U+0EC8): L<<55.0,613.0>--<50.0,718.0>> -> L<<50.0,718.0>--<50.0,789.0>> [code: found-colinear-vectors]
-</div></details><br></div></details><details><summary><b>[12] NotoSansLaoLoopedUI-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+	* uni0EC8 (U+0EC8): L<<55.0,613.0>--<50.0,718.0>> -> L<<50.0,718.0>--<50.0,789.0>> [code: found-colinear-vectors]
+</div></details><br></div></details><details><summary><b>[13] NotoSansLaoLoopedUI-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 🔥 **FAIL** Missing required codepoints:
@@ -815,7 +839,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 	- 0x0039 (DIGIT NINE)
  
 
-	- And 293 more.
+	- 291 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics">com.google.fonts/check/vertical_metrics</a>)</summary><div>
@@ -828,6 +852,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * 🔥 **FAIL** .notdef glyphs were found when attempting to render Noto Sans Lao Looped UI Medium [code: render-own-name]
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -861,7 +889,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- uni0EA5.BRACKET.110 
 
-	- And uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.110
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
@@ -886,7 +914,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* uni25CC (U+25CC): X=326.0,Y=-2.0 (should be at baseline 0?) 
 
-	* And uni25CC (U+25CC): X=326.0,Y=-2.0 (should be at baseline 0?) [code: found-misalignments]
+	* uni25CC (U+25CC): X=326.0,Y=-2.0 (should be at baseline 0?) [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
 
 
@@ -912,7 +940,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* uni0EA1 (U+0EA1) contains a short segment B<<127.0,193.0>-<134.0,193.0>-<141.0,193.0>> 
 
-	* And 23 more.
+	* 23 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -922,8 +950,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 	* uni0EC8 (U+0EC8): L<<149.0,798.0>--<149.0,727.0>> -> L<<149.0,727.0>--<143.0,609.0>> 
 
-	* And uni0EC8 (U+0EC8): L<<56.0,609.0>--<50.0,727.0>> -> L<<50.0,727.0>--<50.0,798.0>> [code: found-colinear-vectors]
-</div></details><br></div></details><details><summary><b>[12] NotoSansLaoLoopedUI-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+	* uni0EC8 (U+0EC8): L<<56.0,609.0>--<50.0,727.0>> -> L<<50.0,727.0>--<50.0,798.0>> [code: found-colinear-vectors]
+</div></details><br></div></details><details><summary><b>[13] NotoSansLaoLoopedUI-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 🔥 **FAIL** Missing required codepoints:
@@ -958,7 +986,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 	- 0x0039 (DIGIT NINE)
  
 
-	- And 293 more.
+	- 291 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics">com.google.fonts/check/vertical_metrics</a>)</summary><div>
@@ -971,6 +999,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * 🔥 **FAIL** .notdef glyphs were found when attempting to render Noto Sans Lao Looped UI [code: render-own-name]
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -1004,7 +1036,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- uni0EA5.BRACKET.110 
 
-	- And uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.110
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
@@ -1035,7 +1067,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* ellipsis (U+2026): X=90.0,Y=2.0 (should be at baseline 0?) 
 
-	* And 6 more.
+	* 6 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
@@ -1063,7 +1095,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* uni0E9F (U+0E9F) contains a short segment B<<278.0,440.0>-<278.0,439.0>-<278.0,439.0>> 
 
-	* And 27 more.
+	* 27 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -1073,8 +1105,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 	* uni0EC8 (U+0EC8): L<<132.0,792.0>--<132.0,723.0>> -> L<<132.0,723.0>--<127.0,610.0>> 
 
-	* And uni0EC8 (U+0EC8): L<<55.0,610.0>--<50.0,723.0>> -> L<<50.0,723.0>--<50.0,792.0>> [code: found-colinear-vectors]
-</div></details><br></div></details><details><summary><b>[12] NotoSansLaoLoopedUI-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+	* uni0EC8 (U+0EC8): L<<55.0,610.0>--<50.0,723.0>> -> L<<50.0,723.0>--<50.0,792.0>> [code: found-colinear-vectors]
+</div></details><br></div></details><details><summary><b>[13] NotoSansLaoLoopedUI-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 🔥 **FAIL** Missing required codepoints:
@@ -1109,7 +1141,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 	- 0x0039 (DIGIT NINE)
  
 
-	- And 293 more.
+	- 291 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics">com.google.fonts/check/vertical_metrics</a>)</summary><div>
@@ -1122,6 +1154,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * 🔥 **FAIL** .notdef glyphs were found when attempting to render Noto Sans Lao Looped UI SemiBold [code: render-own-name]
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -1155,7 +1191,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- uni0EA5.BRACKET.110 
 
-	- And uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.110
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
@@ -1180,7 +1216,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* uni25CC (U+25CC): X=326.0,Y=-2.0 (should be at baseline 0?) 
 
-	* And uni25CC (U+25CC): X=326.0,Y=-2.0 (should be at baseline 0?) [code: found-misalignments]
+	* uni25CC (U+25CC): X=326.0,Y=-2.0 (should be at baseline 0?) [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
 
 
@@ -1206,7 +1242,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* uni0E9A (U+0E9A) contains a short segment B<<296.0,437.0>-<296.0,435.0>-<296.0,435.0>> 
 
-	* And 32 more.
+	* 32 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -1216,8 +1252,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 	* uni0EC8 (U+0EC8): L<<167.0,805.0>--<167.0,732.0>> -> L<<167.0,732.0>--<160.0,608.0>> 
 
-	* And uni0EC8 (U+0EC8): L<<57.0,608.0>--<50.0,732.0>> -> L<<50.0,732.0>--<50.0,805.0>> [code: found-colinear-vectors]
-</div></details><br></div></details><details><summary><b>[14] NotoSansLaoLoopedUI-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+	* uni0EC8 (U+0EC8): L<<57.0,608.0>--<50.0,732.0>> -> L<<50.0,732.0>--<50.0,805.0>> [code: found-colinear-vectors]
+</div></details><br></div></details><details><summary><b>[15] NotoSansLaoLoopedUI-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 🔥 **FAIL** Missing required codepoints:
@@ -1252,7 +1288,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 	- 0x0039 (DIGIT NINE)
  
 
-	- And 293 more.
+	- 291 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics">com.google.fonts/check/vertical_metrics</a>)</summary><div>
@@ -1265,6 +1301,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * 🔥 **FAIL** .notdef glyphs were found when attempting to render Noto Sans Lao Looped UI Thin [code: render-own-name]
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -1298,7 +1338,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- uni0EA5.BRACKET.110 
 
-	- And uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.110
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
@@ -1329,7 +1369,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* question (U+003F): X=138.0,Y=1.0 (should be at baseline 0?) 
 
-	* And 15 more.
+	* 15 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
@@ -1357,7 +1397,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* uni0E9F (U+0E9F) contains a short segment B<<209.0,388.0>-<200.0,382.0>-<189.0,378.5>> 
 
-	* And 26 more.
+	* 26 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -1367,7 +1407,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 	* uni0EC8 (U+0EC8): L<<55.0,615.0>--<50.0,713.0>> -> L<<50.0,713.0>--<50.0,785.0>> 
 
-	* And uni0EC8 (U+0EC8): L<<76.0,785.0>--<76.0,713.0>> -> L<<76.0,713.0>--<71.0,615.0>> [code: found-colinear-vectors]
+	* uni0EC8 (U+0EC8): L<<76.0,785.0>--<76.0,713.0>> -> L<<76.0,713.0>--<71.0,615.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -1375,7 +1415,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 	* uni0EB0 (U+0EB0): B<<224.0,347.5>-<203.0,328.0>-<171.0,328.0>>/B<<171.0,328.0>-<183.0,325.0>-<199.0,323.0>> = 14.036243467926457 
 
-	* And uni0EB0 (U+0EB0): B<<224.0,99.5>-<203.0,80.0>-<171.0,80.0>>/B<<171.0,80.0>-<183.0,77.0>-<199.0,75.0>> = 14.036243467926457 [code: found-jaggy-segments]
+	* uni0EB0 (U+0EB0): B<<224.0,99.5>-<203.0,80.0>-<171.0,80.0>>/B<<171.0,80.0>-<183.0,77.0>-<199.0,75.0>> = 14.036243467926457 [code: found-jaggy-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any semi-vertical or semi-horizontal lines? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_semi_vertical">com.google.fonts/check/outline_semi_vertical</a>)</summary><div>
 
 
@@ -1383,8 +1423,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 	* exclam (U+0021): L<<100.0,174.0>--<98.0,714.0>> 
 
-	* And exclam (U+0021): L<<127.0,714.0>--<125.0,174.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[14] NotoSansLaoLoopedUI[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check font names are correct (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_names">com.google.fonts/check/font_names</a>)</summary><div>
+	* exclam (U+0021): L<<127.0,714.0>--<125.0,174.0>> [code: found-semi-vertical]
+</div></details><br></div></details><details><summary><b>[15] NotoSansLaoLoopedUI[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check font names are correct (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_names">com.google.fonts/check/font_names</a>)</summary><div>
 
 
 * 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
@@ -1431,7 +1471,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 	- 0x0039 (DIGIT NINE)
  
 
-	- And 293 more.
+	- 291 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vertical_metrics">com.google.fonts/check/vertical_metrics</a>)</summary><div>
@@ -1444,6 +1484,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * 🔥 **FAIL** .notdef glyphs were found when attempting to render Noto Sans Lao Looped UI [code: render-own-name]
+</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+
+
+* 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -1471,7 +1515,7 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- saraUlao.ngoNgu 
 
-	- And saraUulao.ngoNgu
+	- saraUulao.ngoNgu
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
@@ -1507,15 +1551,16 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	* uni0EA5 (U+0EA5): X=397.5,Y=1.5 (should be at baseline 0?) 
 
-	* And 14 more.
+	* 14 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><br></div></details>
+
 ### Summary
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 3 | 43 | 82 | 1097 | 65 | 845 | 0 |
+| 3 | 54 | 82 | 1150 | 65 | 902 | 0 |
 | 0% | 2% | 4% | 51% | 3% | 40% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
