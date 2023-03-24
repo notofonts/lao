@@ -1,5 +1,8 @@
 {
 .appVersion = "3133";
+DisplayStrings = (
+"/koKai-lao/niggahita-lao/maiEk-lao/space/koKai-lao/niggahita-lao/maiTho-lao/space/koKai-lao/niggahita-lao/maiTi-lao/space/koKai-lao/niggahita-lao/maiCatawa-lao/space/koKai-lao/niggahita-lao/karan-lao \012/koKai-lao/maiEk-lao/amVowel-lao/space/koKai-lao/maiTho-lao/amVowel-lao/space/koKai-lao/maiTi-lao/amVowel-lao/space/koKai-lao/maiCatawa-lao/amVowel-lao/space/koKai-lao/karan-lao/amVowel-lao"
+);
 classes = (
 {
 code = "koKai-lao\012khoKhai-lao\012khoKhuay-lao\012gha-lao\012ngoNgu-lao\012coCok-lao\012cha-lao\012jha-lao\012nya-lao\012tta-lao\012ttha-lao\012dda-lao\012ddha-lao\012nna-lao\012soSang-lao\012nyoNyung-lao\012doDek-lao\012toTa-lao\012thoThong-lao\012thoThung-lao\012dha-lao\012noNok-lao\012boBae-lao\012poPa-lao\012phoPhueng-lao\012foFon-lao\012phoPhu-lao\012foFai-lao\012bha-lao\012moMa-lao\012yoYa-lao\012roRot-lao\012loLing-lao\012woWi-lao\012sha-lao\012ssa-lao\012soSeua-lao\012lla-lao\012lla-lao.ss01\012hoHaan-lao\012oO-lao\012hoHeuan-lao\012hoNo-lao\012hoMo-lao\012khmuGo-lao\012khmuNyo-lao\012nyoVowel-lao\012\012dottedCircle\012";
@@ -303,7 +306,7 @@ code = "feature ss01;\012";
 name = aalt;
 },
 {
-code = "lookup laoDecomposeSaraAm { \012	# this is not strictly necessary since shaping engine already takes care of it;\012	sub amVowel-lao by niggahita-lao aaVowel-lao;  # ກຳ\012	} laoDecomposeSaraAm;\012\012lookup laoContextualNikkahita { \012	# When nikkahit is part of saraAm it aligns on the right side of a base, but not on ascending consonants;\012	lookupflag UseMarkFilteringSet @laoNikkahita; ### we need to ignore any tonemarks and belowmarks like subscript Lo;\012	ignore sub @laoAscendingConsonants niggahita-lao';\012	sub niggahita-lao' aaVowel-lao by niggahita-lao.right; # ກຳ ປຳ\012	} laoContextualNikkahita;\012\012lookup laoNarrowAboveMarks {\012	# Use .narrow abovemarks if the base consonant has an ascender;\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	sub @laoAscendingConsonants [maiKanVowel-lao iVowel-lao iiVowel-lao euVowel-lao euuVowel-lao maiKonVowel-lao maiEk-lao maiTho-lao maiTi-lao maiCatawa-lao karan-lao yamakkan-lao]' by [maiKanVowel-lao.narrow iVowel-lao.narrow iiVowel-lao.narrow euVowel-lao.narrow euuVowel-lao.narrow maiKonVowel-lao.narrow maiEk-lao.narrow maiTho-lao.narrow maiTi-lao.narrow maiCatawa-lao.narrow karan-lao.narrow yamakkan-lao.narrow]; # ປັ ປິ ປ້ ປ໊\012	} laoNarrowAboveMarks;\012\012lookup laoCentreYamakkan {\012	# Move yamakkan to centre position when followed by an ascending vowel;\012	lookupflag UseMarkFilteringSet @laoYamakkan;\012	sub yamakkan-lao' @laoAscendingVowels by yamakkan-lao.centre; # ກ໎ໂ\012	} laoCentreYamakkan;\012\012lookup laoCentredAboveMarks {\012	# Move maiKan and maiKong to centre positions if the cluster has a prebase vowel;\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	sub @laoPrebaseVowels @laoBaseConsonants [maiKanVowel-lao maiKonVowel-lao]' by [maiKanVowel-lao.center maiKonVowel-lao.center]; # ເກັ ເກຼັ\012	sub @laoPrebaseVowels @laoBaseConsonants @laoYamakkan [maiKanVowel-lao maiKonVowel-lao]' by [maiKanVowel-lao.center maiKonVowel-lao.center]; # ເກ໎ັ\012	} laoCentredAboveMarks;\012\012lookup laoNarrowBelowMarks {\012	# Use .narrow versions of belowmarks if the base consonant has a descender;\012	lookupflag UseMarkFilteringSet @laoBelowMarks;\012	sub @laoDescendingConsonants [uVowel-lao uuVowel-lao loVowel-lao]' by [uVowel-lao.narrow uuVowel-lao.narrow loVowel-lao.narrow]; # ຌຸ ຐູ ຊຼ ຖູ\012	} laoNarrowBelowMarks;\012\012lookup laoSmallBelowMarks {\012	# Use .small belowmarks under ngoNgo and following any other belowmarks;\012	lookupflag UseMarkFilteringSet @laoBelowMarks;\012	sub ngoNgu-lao [uVowel-lao uuVowel-lao]' by [uVowel-lao.small uuVowel-lao.small]; # ງູ \012	sub @laoBelowMarks [uVowel-lao uuVowel-lao loVowel-lao]' by [uVowel-lao.small uuVowel-lao.small loVowel-lao.small]; # ຫຼູ # loVowel.small is unlikely to ever be needed, but somebody drew the glyph so here we are.\012	} laoSmallBelowMarks;\012\012lookup laoAboveLigs {\012	# Create abovemark ligatures with nikkahita;\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	# The shaping engine reorders tonemark + nikkahita to nikahita + tonemark when part of saraAm.\012	# These rules create ligatures when nikkahita.right (as part of saraAm) is followed by a reordered tonemark\012	sub niggahita-lao.right maiEk-lao by niggahita_maiEk-lao.right; # ກ່ຳ\012	sub niggahita-lao.right maiTho-lao by niggahita_maiTho-lao.right; # ກ້ຳ\012	sub niggahita-lao.right maiTi-lao by niggahita_maiTi-lao.right; # ກ໊ຳ\012	sub niggahita-lao.right maiCatawa-lao by niggahita_maiCatawa-lao.right; # ກ໋ຳ \012	# These rules form ligatures of centred niggahita followed by a tonemark;\012	sub niggahita-lao [maiEk-lao maiEk-lao.narrow] by niggahita_maiEk-lao; # ກໍ່ ປ່ຳ\012	sub niggahita-lao [maiTho-lao maiTho-lao.narrow] by niggahita_maiTho-lao; # ກໍ້ ປ້ຳ\012	sub niggahita-lao [maiTi-lao maiTi-lao.narrow] by niggahita_maiTi-lao; # ກໍ໊ ປ໊ຳ\012	sub niggahita-lao [maiCatawa-lao maiCatawa-lao.narrow] by niggahita_maiCatawa-lao; # ກໍ໋ ປ໋ຳ\012	# these rules correctly shape incorrect input sequences where the tonemark is entered before a standalone nikkahita;\012	sub [maiEk-lao maiEk-lao.narrow] niggahita-lao by niggahita_maiEk-lao; # ກ່ໍ ປ່ໍ\012	sub [maiTho-lao maiTho-lao.narrow] niggahita-lao by niggahita_maiTho-lao; # ກ້ໍ ປ້ໍ\012	sub [maiTi-lao maiTi-lao.narrow] niggahita-lao by niggahita_maiTi-lao; # ກ໊ໍ ປ໊ໍ\012	sub [maiCatawa-lao maiCatawa-lao.narrow] niggahita-lao by niggahita_maiCatawa-lao; # ກ໋ໍ ປ໋ໍ\012	} laoAboveLigs;\012\012lookup laoSmallToneMarks {\012	# Use .small versions of tonemarks above any other marks above;\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	sub @laoAboveMarks [maiEk-lao maiTho-lao maiTi-lao maiCatawa-lao karan-lao]' by [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small]; # ກິ້ ປິ້ \012	} laoSmallToneMarks;\012\012lookup laoTonemarksAboveMaiKanMaiKong {\012	# Use .smallright tonemarks above default (right side) maiKan and maiKong\012	sub [maiKanVowel-lao maiKonVowel-lao] [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small niggahita-lao]' by [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright niggahita-lao.right]; # ກັ້ ກົ້\012	} laoTonemarksAboveMaiKanMaiKong;\012\012lookup laoSmallRight {\012	# Any tonemarks above .smallright tonemarks will also switch to .smallright versions (extremely unlikely to occur)\012	sub [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright] [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small]' by [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright]; # ກັ້້ ກົ້້\012	} laoSmallRight;\012";
+code = "lookup laoDecomposeSaraAm { \012	# this is not strictly necessary since shaping engine already takes care of it;\012	sub amVowel-lao by niggahita-lao aaVowel-lao;  # ກຳ\012	} laoDecomposeSaraAm;\012\012lookup laoContextualNikkahita { \012	# When nikkahit is part of saraAm it aligns on the right side of a base, but not on ascending consonants;\012	lookupflag UseMarkFilteringSet @laoNikkahita; ### we need to ignore any tonemarks and belowmarks like subscript Lo;\012	ignore sub @laoAscendingConsonants niggahita-lao';\012	sub niggahita-lao' aaVowel-lao by niggahita-lao.right; # ກຳ ປຳ\012	} laoContextualNikkahita;\012\012lookup laoNarrowAboveMarks {\012	# Use .narrow abovemarks if the base consonant has an ascender;\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	sub @laoAscendingConsonants [maiKanVowel-lao iVowel-lao iiVowel-lao euVowel-lao euuVowel-lao maiKonVowel-lao maiEk-lao maiTho-lao maiTi-lao maiCatawa-lao karan-lao yamakkan-lao]' by [maiKanVowel-lao.narrow iVowel-lao.narrow iiVowel-lao.narrow euVowel-lao.narrow euuVowel-lao.narrow maiKonVowel-lao.narrow maiEk-lao.narrow maiTho-lao.narrow maiTi-lao.narrow maiCatawa-lao.narrow karan-lao.narrow yamakkan-lao.narrow]; # ປັ ປິ ປ້ ປ໊\012	} laoNarrowAboveMarks;\012\012lookup laoCentreYamakkan {\012	# Move yamakkan to centre position when followed by an ascending vowel;\012	lookupflag UseMarkFilteringSet @laoYamakkan;\012	sub yamakkan-lao' @laoAscendingVowels by yamakkan-lao.centre; # ກ໎ໂ\012	} laoCentreYamakkan;\012\012lookup laoCentredAboveMarks {\012	# Move maiKan and maiKong to centre positions if the cluster has a prebase vowel;\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	sub @laoPrebaseVowels @laoBaseConsonants [maiKanVowel-lao maiKonVowel-lao]' by [maiKanVowel-lao.center maiKonVowel-lao.center]; # ເກັ ເກຼັ\012	sub @laoPrebaseVowels @laoBaseConsonants @laoYamakkan [maiKanVowel-lao maiKonVowel-lao]' by [maiKanVowel-lao.center maiKonVowel-lao.center]; # ເກ໎ັ\012	} laoCentredAboveMarks;\012\012lookup laoNarrowBelowMarks {\012	# Use .narrow versions of belowmarks if the base consonant has a descender;\012	lookupflag UseMarkFilteringSet @laoBelowMarks;\012	sub @laoDescendingConsonants [uVowel-lao uuVowel-lao loVowel-lao]' by [uVowel-lao.narrow uuVowel-lao.narrow loVowel-lao.narrow]; # ຌຸ ຐູ ຊຼ ຖູ\012	} laoNarrowBelowMarks;\012\012lookup laoSmallBelowMarks {\012	# Use .small belowmarks under ngoNgo and following any other belowmarks;\012	lookupflag UseMarkFilteringSet @laoBelowMarks;\012	sub ngoNgu-lao [uVowel-lao uuVowel-lao]' by [uVowel-lao.small uuVowel-lao.small]; # ງູ \012	sub @laoBelowMarks [uVowel-lao uuVowel-lao loVowel-lao]' by [uVowel-lao.small uuVowel-lao.small loVowel-lao.small]; # ຫຼູ # loVowel.small is unlikely to ever be needed, but somebody drew the glyph so here we are.\012	} laoSmallBelowMarks;\012\012lookup laoAboveLigs {\012	# Create abovemark ligatures with nikkahita;\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	# The shaping engine reorders tonemark + nikkahita to nikahita + tonemark when part of saraAm.\012	# These rules create ligatures when nikkahita.right (as part of saraAm) is followed by a reordered tonemark\012	sub niggahita-lao.right maiEk-lao by niggahita_maiEk-lao.right; # ກ່ຳ\012	sub niggahita-lao.right maiTho-lao by niggahita_maiTho-lao.right; # ກ້ຳ\012	sub niggahita-lao.right maiTi-lao by niggahita_maiTi-lao.right; # ກ໊ຳ\012	sub niggahita-lao.right maiCatawa-lao by niggahita_maiCatawa-lao.right; # ກ໋ຳ \012	# These rules form ligatures of centred niggahita followed by a tonemark;\012	sub niggahita-lao [maiEk-lao maiEk-lao.narrow] by niggahita_maiEk-lao; # ກໍ່ ປ່ຳ\012	sub niggahita-lao [maiTho-lao maiTho-lao.narrow] by niggahita_maiTho-lao; # ກໍ້ ປ້ຳ\012	sub niggahita-lao [maiTi-lao maiTi-lao.narrow] by niggahita_maiTi-lao; # ກໍ໊ ປ໊ຳ\012	sub niggahita-lao [maiCatawa-lao maiCatawa-lao.narrow] by niggahita_maiCatawa-lao; # ກໍ໋ ປ໋ຳ\012	# these rules correctly shape incorrect input sequences where the tonemark is entered before a standalone nikkahita;\012	sub [maiEk-lao maiEk-lao.narrow] niggahita-lao by niggahita_maiEk-lao; # ກ່ໍ ປ່ໍ\012	sub [maiTho-lao maiTho-lao.narrow] niggahita-lao by niggahita_maiTho-lao; # ກ້ໍ ປ້ໍ\012	sub [maiTi-lao maiTi-lao.narrow] niggahita-lao by niggahita_maiTi-lao; # ກ໊ໍ ປ໊ໍ\012	sub [maiCatawa-lao maiCatawa-lao.narrow] niggahita-lao by niggahita_maiCatawa-lao; # ກ໋ໍ ປ໋ໍ\012	} laoAboveLigs;\012\012lookup laoSmallToneMarks {\012	# Use .small versions of tonemarks above any other marks above;\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	sub @laoAboveMarks [maiEk-lao maiTho-lao maiTi-lao maiCatawa-lao karan-lao]' by [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small]; # ກິ້ ປິ້ \012	# this one doesn't have a ligature so let's make sure it works dynamically;\012	sub @laoNikkahita karan-lao' by karan-lao.small;\012	} laoSmallToneMarks;\012\012lookup laoTonemarksAboveMaiKanMaiKong {\012	# Use .smallright tonemarks above default (right side) maiKan and maiKong\012	sub [maiKanVowel-lao maiKonVowel-lao] [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small niggahita-lao]' by [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright niggahita-lao.right]; # ກັ້ ກົ້\012	} laoTonemarksAboveMaiKanMaiKong;\012\012lookup laoSmallRight {\012	# Any tonemarks above .smallright tonemarks will also switch to .smallright versions (extremely unlikely to occur)\012	sub [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright] [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small]' by [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright]; # ກັ້້ ກົ້້\012	} laoSmallRight;\012";
 name = ccmp;
 notes = "lookup laoRightLigs {\012	# move abovemark ligatures with nikkahita right when followed by sara aa, except if the consonant has an ascender, where the ligatures stay centred;\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	ignore sub @laoAscendingConsonants [niggahita_maiEk-lao niggahita_maiTho-lao niggahita_maiTi-lao niggahita_maiCatawa-lao]';\012	sub [niggahita_maiEk-lao niggahita_maiTho-lao niggahita_maiTi-lao niggahita_maiCatawa-lao]' aaVowel-lao by [niggahita_maiEk-lao.right niggahita_maiTho-lao.right niggahita_maiTi-lao.right niggahita_maiCatawa-lao.right]; # ກ້ຳ ປ້ຳ\012	} laoRightLigs;\012\012\012	# these rules don't seem to do anything because a nikkahita.right is always part of saraAm and a preceding tonemark is reordered after the nikkahita, at least in FontGoggles;\012	#sub maiEk-lao niggahita-lao.right by niggahita_maiEk-lao.right; # ກ່ຳ ປ່ຳ\012	#sub maiTho-lao niggahita-lao.right by niggahita_maiTho-lao.right; # ກ້ຳ ປ້ຳ\012	#sub maiTi-lao niggahita-lao.right by niggahita_maiTi-lao.right; # ກ໊ຳ ປ໊ຳ\012	#sub maiCatawa-lao niggahita-lao.right by niggahita_maiCatawa-lao.right; # ກ໋ຳ ປ໋ຳ";
 },
@@ -22776,7 +22779,7 @@ unicode = 0EA3;
 },
 {
 glyphname = "loLing-lao";
-lastChange = "2023-03-23 09:59:39 +0000";
+lastChange = "2023-03-24 15:06:23 +0000";
 layers = (
 {
 anchors = (
@@ -26950,7 +26953,7 @@ unicode = 0EAC;
 },
 {
 glyphname = "lla-lao.ss01";
-lastChange = "2023-03-23 10:06:00 +0000";
+lastChange = "2023-03-24 15:06:15 +0000";
 layers = (
 {
 anchors = (
@@ -27298,7 +27301,7 @@ nodes = (
 );
 }
 );
-width = 667;
+width = 666;
 },
 {
 anchors = (
@@ -47323,7 +47326,7 @@ rightMetricsKey = "=50";
 },
 {
 glyphname = "niggahita-lao.right";
-lastChange = "2023-02-08 15:48:23 +0000";
+lastChange = "2023-03-24 15:07:37 +0000";
 layers = (
 {
 anchors = (
@@ -47332,7 +47335,7 @@ name = _topright;
 position = "{173, 536}";
 },
 {
-name = topright;
+name = top;
 position = "{138, 758}";
 }
 );
@@ -47382,7 +47385,7 @@ name = _topright;
 position = "{226, 536}";
 },
 {
-name = topright;
+name = top;
 position = "{157, 778}";
 }
 );
@@ -47440,7 +47443,7 @@ name = _topright;
 position = "{330, 536}";
 },
 {
-name = topright;
+name = top;
 position = "{217, 806}";
 }
 );
@@ -47490,7 +47493,7 @@ name = _topright;
 position = "{149, 536}";
 },
 {
-name = topright;
+name = top;
 position = "{119, 758}";
 }
 );
@@ -47540,7 +47543,7 @@ name = _topright;
 position = "{207, 536}";
 },
 {
-name = topright;
+name = top;
 position = "{145, 777}";
 }
 );
@@ -47590,7 +47593,7 @@ name = _topright;
 position = "{289, 536}";
 },
 {
-name = topright;
+name = top;
 position = "{191, 803}";
 }
 );
