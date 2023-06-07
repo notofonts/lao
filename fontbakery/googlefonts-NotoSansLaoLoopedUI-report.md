@@ -1,6 +1,6 @@
 ## Fontbakery report
 
-Fontbakery version: 0.8.11b0
+Fontbakery version: 0.8.13
 
 <details><summary><b>[4] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
 
@@ -111,13 +111,13 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- saraUulao.ngoNgu
 
-	- space.BRACKET.87
+	- space.BRACKET.varAlt01
 
-	- uni0EA5.BRACKET.110 
+	- uni0EA5.BRACKET.varAlt01 
 
-	- uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.varAlt01
  [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
 
 * ⚠ **WARN** hhea lineGap is not equal to 0. [code: hhea]
@@ -259,13 +259,13 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 	- saraUulao.ngoNgu
 
-	- space.BRACKET.87
+	- space.BRACKET.varAlt01
 
-	- uni0EA5.BRACKET.110 
+	- uni0EA5.BRACKET.varAlt01 
 
-	- uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.varAlt01
  [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
 
 * ⚠ **WARN** hhea lineGap is not equal to 0. [code: hhea]
@@ -414,13 +414,13 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- saraUulao.ngoNgu
 
-	- space.BRACKET.87
+	- space.BRACKET.varAlt01
 
-	- uni0EA5.BRACKET.110 
+	- uni0EA5.BRACKET.varAlt01 
 
-	- uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.varAlt01
  [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
 
 * ⚠ **WARN** hhea lineGap is not equal to 0. [code: hhea]
@@ -575,13 +575,13 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- saraUulao.ngoNgu
 
-	- space.BRACKET.87
+	- space.BRACKET.varAlt01
 
-	- uni0EA5.BRACKET.110 
+	- uni0EA5.BRACKET.varAlt01 
 
-	- uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.varAlt01
  [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
 
 * ⚠ **WARN** hhea lineGap is not equal to 0. [code: hhea]
@@ -736,13 +736,13 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- saraUulao.ngoNgu
 
-	- space.BRACKET.87
+	- space.BRACKET.varAlt01
 
-	- uni0EA5.BRACKET.110 
+	- uni0EA5.BRACKET.varAlt01 
 
-	- uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.varAlt01
  [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
 
 * ⚠ **WARN** hhea lineGap is not equal to 0. [code: hhea]
@@ -885,13 +885,13 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- saraUulao.ngoNgu
 
-	- space.BRACKET.87
+	- space.BRACKET.varAlt01
 
-	- uni0EA5.BRACKET.110 
+	- uni0EA5.BRACKET.varAlt01 
 
-	- uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.varAlt01
  [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
 
 * ⚠ **WARN** hhea lineGap is not equal to 0. [code: hhea]
@@ -1032,13 +1032,13 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- saraUulao.ngoNgu
 
-	- space.BRACKET.87
+	- space.BRACKET.varAlt01
 
-	- uni0EA5.BRACKET.110 
+	- uni0EA5.BRACKET.varAlt01 
 
-	- uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.varAlt01
  [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
 
 * ⚠ **WARN** hhea lineGap is not equal to 0. [code: hhea]
@@ -1187,13 +1187,13 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- saraUulao.ngoNgu
 
-	- space.BRACKET.87
+	- space.BRACKET.varAlt01
 
-	- uni0EA5.BRACKET.110 
+	- uni0EA5.BRACKET.varAlt01 
 
-	- uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.varAlt01
  [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
 
 * ⚠ **WARN** hhea lineGap is not equal to 0. [code: hhea]
@@ -1334,13 +1334,13 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- saraUulao.ngoNgu
 
-	- space.BRACKET.87
+	- space.BRACKET.varAlt01
 
-	- uni0EA5.BRACKET.110 
+	- uni0EA5.BRACKET.varAlt01 
 
-	- uni0EAA.BRACKET.110
+	- uni0EAA.BRACKET.varAlt01
  [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
 
 * ⚠ **WARN** hhea lineGap is not equal to 0. [code: hhea]
@@ -1424,7 +1424,11 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 	* exclam (U+0021): L<<100.0,174.0>--<98.0,714.0>> 
 
 	* exclam (U+0021): L<<127.0,714.0>--<125.0,174.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[15] NotoSansLaoLoopedUI[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check font names are correct (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_names">com.google.fonts/check/font_names</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[15] NotoSansLaoLoopedUI[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check the OS/2 usWeightClass is appropriate for the font's best SubFamily name. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/usweightclass">com.google.fonts/check/usweightclass</a>)</summary><div>
+
+
+* 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
+</div></details><details><summary>💔 <b>ERROR:</b> Check font names are correct (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_names">com.google.fonts/check/font_names</a>)</summary><div>
 
 
 * 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
@@ -1517,15 +1521,10 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- saraUulao.ngoNgu
  [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
 
 
 * ⚠ **WARN** hhea lineGap is not equal to 0. [code: hhea]
-</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
-
-
-* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 uni034F (U+034F) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -1560,7 +1559,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 3 | 54 | 82 | 1150 | 65 | 902 | 0 |
+| 4 | 54 | 81 | 1171 | 65 | 932 | 0 |
 | 0% | 2% | 4% | 51% | 3% | 40% | 0% |
 
 **Note:** The following loglevels were omitted in this report:

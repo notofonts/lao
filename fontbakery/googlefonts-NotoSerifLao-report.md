@@ -1,6 +1,6 @@
 ## Fontbakery report
 
-Fontbakery version: 0.8.11b0
+Fontbakery version: 0.8.13
 
 <details><summary><b>[2] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
 
@@ -10,10 +10,20 @@ Fontbakery version: 0.8.11b0
 
 
 * 🔥 **FAIL** Family 'Noto Serif Lao' has 2 fonts (should be no more than 1) with the same OS/2.fsSelection bold & italic settings: Bold=False, Italic=False [code: unique-fsselection]
-</div></details><br></div></details><details><summary><b>[9] NotoSerifLao-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSerifLao-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
+
+
+* 🔥 **FAIL** The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌
+
+The dot of soft dotted characters should disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́ [code: soft-dotted]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking font version fields (head and name table). (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/head.html#com.google.fonts/check/font_version">com.google.fonts/check/font_version</a>)</summary><div>
+
+
+* 🔥 **FAIL** head version is "2.00301" while name version string (for platform 3, encoding 1) is "Version 2.002; ttfautohint (v1.8.4.7-5d5b)". [code: mismatch]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
@@ -32,7 +42,9 @@ Fontbakery version: 0.8.11b0
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- uni00A0.1
+	- uni00A0.1 
+
+	- uni0ECD.narrow
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -62,6 +74,11 @@ The following math glyphs have a different width, though:
 Width = 310:
 minus
  [code: width-outliers]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 uni0EBA (U+0EBA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -75,19 +92,19 @@ minus
 
 	* Q (U+0051): X=317.0,Y=-1.0 (should be at baseline 0?)
 
-	* c (U+0063): X=431.0,Y=535.0 (should be at x-height 536?)
+	* a (U+0061): X=308.0,Y=551.0 (should be at x-height 550?)
 
-	* f (U+0066): X=155.0,Y=713.5 (should be at cap-height 714?)
+	* b (U+0062): X=435.0,Y=549.0 (should be at x-height 550?)
 
-	* p (U+0070): X=337.5,Y=1.5 (should be at baseline 0?)
+	* c (U+0063): X=302.0,Y=551.0 (should be at x-height 550?)
 
-	* q (U+0071): X=386.0,Y=1.0 (should be at baseline 0?)
+	* d (U+0064): X=240.0,Y=549.0 (should be at x-height 550?)
 
-	* s (U+0073): X=376.5,Y=535.5 (should be at x-height 536?)
+	* e (U+0065): X=308.0,Y=551.0 (should be at x-height 550?)
 
-	* t (U+0074): X=93.0,Y=535.5 (should be at x-height 536?) 
+	* f (U+0066): X=155.0,Y=713.5 (should be at cap-height 714?) 
 
-	* 39 more.
+	* 49 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -100,6 +117,12 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* eogonek (U+0119): B<<282.5,-58.0>-<309.0,-25.0>-<346.0,-9.0>>/B<<346.0,-9.0>-<340.0,-10.0>-<333.5,-10.0>> = 13.922898849188117
 
 	* uni0EA3 (U+0EA3): B<<200.0,62.0>-<195.0,62.0>-<191.0,63.0>>/B<<191.0,63.0>-<216.0,51.0>-<239.0,46.5>> = 11.60476235637882
+
+	* uni0EA9 (U+0EA9): B<<359.5,202.0>-<308.0,233.0>-<298.0,284.0>>/L<<298.0,284.0>--<298.0,146.0>> = 11.09372301155785
+
+	* uni0EA9 (U+0EA9): L<<298.0,425.0>--<298.0,327.0>>/B<<298.0,327.0>-<304.0,357.0>-<326.5,374.0>> = 11.309932474020195
+
+	* uni0EAC (U+0EAC): B<<413.5,46.5>-<438.0,51.0>-<463.0,63.0>>/B<<463.0,63.0>-<459.0,62.0>-<454.0,62.0>> = 11.60476235637882
 
 	* uni0EAE (U+0EAE): B<<200.0,62.0>-<195.0,62.0>-<191.0,63.0>>/B<<191.0,63.0>-<216.0,51.0>-<239.0,46.5>> = 11.60476235637882
 
@@ -118,10 +141,20 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
 
 	* sterling (U+00A3): L<<454.0,335.0>--<295.0,336.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[8] NotoSerifLao-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSerifLao-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
+
+
+* 🔥 **FAIL** The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌
+
+The dot of soft dotted characters should disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́ [code: soft-dotted]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking font version fields (head and name table). (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/head.html#com.google.fonts/check/font_version">com.google.fonts/check/font_version</a>)</summary><div>
+
+
+* 🔥 **FAIL** head version is "2.00301" while name version string (for platform 3, encoding 1) is "Version 2.002; ttfautohint (v1.8.4.7-5d5b)". [code: mismatch]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
@@ -139,7 +172,9 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- uni00A0.1
+	- uni00A0.1 
+
+	- uni0ECD.narrow
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -169,6 +204,11 @@ The following math glyphs have a different width, though:
 Width = 310:
 minus
  [code: width-outliers]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 uni0EBA (U+0EBA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -184,17 +224,17 @@ minus
 
 	* J (U+004A): X=282.0,Y=-2.0 (should be at baseline 0?)
 
+	* a (U+0061): X=293.0,Y=549.0 (should be at x-height 550?)
+
 	* a (U+0061): X=264.5,Y=-1.5 (should be at baseline 0?)
 
-	* f (U+0066): X=320.0,Y=712.0 (should be at cap-height 714?)
+	* b (U+0062): X=401.0,Y=548.0 (should be at x-height 550?)
 
-	* p (U+0070): X=247.0,Y=1.5 (should be at baseline 0?)
+	* c (U+0063): X=292.0,Y=549.0 (should be at x-height 550?)
 
-	* t (U+0074): X=334.5,Y=-1.0 (should be at baseline 0?)
+	* d (U+0064): X=248.0,Y=548.0 (should be at x-height 550?) 
 
-	* sterling (U+00A3): X=68.0,Y=2.0 (should be at baseline 0?) 
-
-	* 36 more.
+	* 51 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -206,17 +246,27 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* uni0EA1 (U+0EA1): L<<269.0,553.0>--<269.0,111.0>> -> L<<269.0,111.0>--<269.0,110.0>>
 
-	* uni0ECB (U+0ECB): L<<-163.0,712.0>--<-173.0,712.0>> -> L<<-173.0,712.0>--<-263.0,721.0>>
+	* uni0ECB (U+0ECB): L<<249.0,785.0>--<339.0,794.0>> -> L<<339.0,794.0>--<349.0,794.0>>
 
-	* uni0ECB (U+0ECB): L<<-263.0,785.0>--<-173.0,794.0>> -> L<<-173.0,794.0>--<-163.0,794.0>>
+	* uni0ECB (U+0ECB): L<<349.0,712.0>--<339.0,712.0>> -> L<<339.0,712.0>--<249.0,721.0>>
 
-	* uni0ECB (U+0ECB): L<<-462.0,794.0>--<-452.0,794.0>> -> L<<-452.0,794.0>--<-362.0,785.0>> 
+	* uni0ECB (U+0ECB): L<<50.0,794.0>--<60.0,794.0>> -> L<<60.0,794.0>--<150.0,785.0>> 
 
 	* uni0EDD (U+0EDD): L<<752.0,422.0>--<752.0,93.0>> -> L<<752.0,93.0>--<752.0,92.0>> [code: found-colinear-vectors]
-</div></details><br></div></details><details><summary><b>[10] NotoSerifLao-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSerifLao-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
+
+
+* 🔥 **FAIL** The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌
+
+The dot of soft dotted characters should disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́ [code: soft-dotted]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking font version fields (head and name table). (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/head.html#com.google.fonts/check/font_version">com.google.fonts/check/font_version</a>)</summary><div>
+
+
+* 🔥 **FAIL** head version is "2.00301" while name version string (for platform 3, encoding 1) is "Version 2.002; ttfautohint (v1.8.4.7-5d5b)". [code: mismatch]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
@@ -241,7 +291,9 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- uni00A0.1
+	- uni00A0.1 
+
+	- uni0ECD.narrow
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -271,6 +323,11 @@ The following math glyphs have a different width, though:
 Width = 310:
 minus
  [code: width-outliers]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 uni0EBA (U+0EBA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -288,15 +345,15 @@ minus
 
 	* bracketright (U+005D): X=162.0,Y=1.0 (should be at baseline 0?)
 
+	* b (U+0062): X=420.0,Y=548.0 (should be at x-height 550?)
+
+	* d (U+0064): X=244.0,Y=548.0 (should be at x-height 550?)
+
 	* f (U+0066): X=157.5,Y=715.0 (should be at cap-height 714?)
 
-	* s (U+0073): X=365.5,Y=535.0 (should be at x-height 536?)
+	* r (U+0072): X=419.0,Y=548.0 (should be at x-height 550?) 
 
-	* t (U+0074): X=86.0,Y=534.0 (should be at x-height 536?)
-
-	* t (U+0074): X=352.5,Y=0.5 (should be at baseline 0?) 
-
-	* 48 more.
+	* 52 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -319,10 +376,20 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
 
 	* sterling (U+00A3): L<<444.0,335.0>--<285.0,336.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[9] NotoSerifLao-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSerifLao-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
+
+
+* 🔥 **FAIL** The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌
+
+The dot of soft dotted characters should disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́ [code: soft-dotted]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking font version fields (head and name table). (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/head.html#com.google.fonts/check/font_version">com.google.fonts/check/font_version</a>)</summary><div>
+
+
+* 🔥 **FAIL** head version is "2.00301" while name version string (for platform 3, encoding 1) is "Version 2.002; ttfautohint (v1.8.4.7-5d5b)". [code: mismatch]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -339,7 +406,9 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- uni00A0.1
+	- uni00A0.1 
+
+	- uni0ECD.narrow
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -369,6 +438,11 @@ The following math glyphs have a different width, though:
 Width = 310:
 minus
  [code: width-outliers]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 uni0EBA (U+0EBA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -380,21 +454,21 @@ minus
 
 	* W (U+0057): X=533.0,Y=713.0 (should be at cap-height 714?)
 
+	* a (U+0061): X=248.0,Y=543.0 (should be at x-height 544?)
+
+	* c (U+0063): X=265.0,Y=543.0 (should be at x-height 544?)
+
+	* e (U+0065): X=261.0,Y=543.0 (should be at x-height 544?)
+
 	* f (U+0066): X=349.0,Y=716.0 (should be at cap-height 714?)
 
-	* w (U+0077): X=411.0,Y=535.0 (should be at x-height 536?)
+	* g (U+0067): X=251.0,Y=543.0 (should be at x-height 544?)
 
-	* w (U+0077): X=452.0,Y=535.0 (should be at x-height 536?)
+	* g (U+0067): X=487.5,Y=545.5 (should be at x-height 544?)
 
-	* sterling (U+00A3): X=359.5,Y=-2.0 (should be at baseline 0?)
+	* h (U+0068): X=322.0,Y=543.0 (should be at x-height 544?) 
 
-	* sterling (U+00A3): X=91.0,Y=2.0 (should be at baseline 0?)
-
-	* Gbreve (U+011E): X=486.5,Y=-1.0 (should be at baseline 0?)
-
-	* Gdotaccent (U+0120): X=486.5,Y=-1.0 (should be at baseline 0?) 
-
-	* 18 more.
+	* 31 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -402,23 +476,23 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs have colinear vectors:
 
-	* uni0EC8 (U+0EC8): L<<-247.0,818.0>--<-247.0,740.0>> -> L<<-247.0,740.0>--<-256.0,636.0>>
+	* uni0EC8 (U+0EC8): L<<59.0,636.0>--<50.0,740.0>> -> L<<50.0,740.0>--<50.0,818.0>>
 
-	* uni0EC8 (U+0EC8): L<<-277.0,636.0>--<-286.0,740.0>> -> L<<-286.0,740.0>--<-286.0,818.0>>
+	* uni0EC8 (U+0EC8): L<<89.0,818.0>--<89.0,740.0>> -> L<<89.0,740.0>--<80.0,636.0>>
 
-	* uni0ECB (U+0ECB): L<<-161.0,719.0>--<-175.0,719.0>> -> L<<-175.0,719.0>--<-251.0,724.0>>
+	* uni0ECB (U+0ECB): L<<140.0,636.0>--<140.0,646.0>> -> L<<140.0,646.0>--<145.0,724.0>>
 
-	* uni0ECB (U+0ECB): L<<-247.0,835.0>--<-247.0,825.0>> -> L<<-247.0,825.0>--<-251.0,747.0>>
+	* uni0ECB (U+0ECB): L<<145.0,747.0>--<140.0,825.0>> -> L<<140.0,825.0>--<140.0,835.0>>
 
-	* uni0ECB (U+0ECB): L<<-251.0,724.0>--<-247.0,646.0>> -> L<<-247.0,646.0>--<-247.0,636.0>>
+	* uni0ECB (U+0ECB): L<<174.0,724.0>--<179.0,646.0>> -> L<<179.0,646.0>--<179.0,636.0>>
 
-	* uni0ECB (U+0ECB): L<<-251.0,747.0>--<-175.0,752.0>> -> L<<-175.0,752.0>--<-161.0,752.0>>
+	* uni0ECB (U+0ECB): L<<174.0,747.0>--<251.0,752.0>> -> L<<251.0,752.0>--<265.0,752.0>>
 
-	* uni0ECB (U+0ECB): L<<-281.0,747.0>--<-286.0,825.0>> -> L<<-286.0,825.0>--<-286.0,835.0>>
+	* uni0ECB (U+0ECB): L<<179.0,835.0>--<179.0,825.0>> -> L<<179.0,825.0>--<174.0,747.0>>
 
-	* uni0ECB (U+0ECB): L<<-286.0,636.0>--<-286.0,646.0>> -> L<<-286.0,646.0>--<-281.0,724.0>> 
+	* uni0ECB (U+0ECB): L<<265.0,719.0>--<251.0,719.0>> -> L<<251.0,719.0>--<174.0,724.0>> 
 
-	* uni0ECB (U+0ECB): L<<-376.0,752.0>--<-362.0,752.0>> -> L<<-362.0,752.0>--<-281.0,747.0>> [code: found-colinear-vectors]
+	* uni0ECB (U+0ECB): L<<50.0,752.0>--<64.0,752.0>> -> L<<64.0,752.0>--<145.0,747.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -428,6 +502,12 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 	* uni0E84 (U+0E84): B<<112.0,181.5>-<97.0,150.0>-<96.0,125.0>>/L<<96.0,125.0>--<96.0,126.0>> = 2.2906100426384346
 
+	* uni0E89 (U+0E89): L<<224.0,126.0>--<225.0,122.0>>/L<<225.0,122.0>--<225.0,229.0>> = 14.036243467926484
+
+	* uni0E8E (U+0E8E): B<<112.0,181.5>-<97.0,150.0>-<96.0,125.0>>/L<<96.0,125.0>--<96.0,126.0>> = 2.2906100426384346
+
+	* uni0E92 (U+0E92): L<<114.0,378.0>--<114.0,125.0>>/L<<114.0,125.0>--<115.0,129.0>> = 14.036243467926484
+
 	* uni0E95 (U+0E95): L<<114.0,378.0>--<114.0,125.0>>/L<<114.0,125.0>--<115.0,129.0>> = 14.036243467926484
 
 	* uni0EDC (U+0EDC): L<<160.0,126.0>--<160.0,419.0>>/L<<160.0,419.0>--<159.0,415.0>> = 14.036243467926484
@@ -435,10 +515,20 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* uni0EDD (U+0EDD): L<<160.0,126.0>--<160.0,419.0>>/L<<160.0,419.0>--<159.0,415.0>> = 14.036243467926484 
 
 	* uni0EDD (U+0EDD): L<<592.0,108.0>--<593.0,104.0>>/L<<593.0,104.0>--<593.0,440.0>> = 14.036243467926484 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[8] NotoSerifLao-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSerifLao-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
+
+
+* 🔥 **FAIL** The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌
+
+The dot of soft dotted characters should disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́ [code: soft-dotted]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking font version fields (head and name table). (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/head.html#com.google.fonts/check/font_version">com.google.fonts/check/font_version</a>)</summary><div>
+
+
+* 🔥 **FAIL** head version is "2.00301" while name version string (for platform 3, encoding 1) is "Version 2.002; ttfautohint (v1.8.4.7-5d5b)". [code: mismatch]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
@@ -453,7 +543,9 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- uni00A0.1
+	- uni00A0.1 
+
+	- uni0ECD.narrow
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -483,6 +575,11 @@ The following math glyphs have a different width, though:
 Width = 310:
 minus
  [code: width-outliers]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 uni0EBA (U+0EBA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -494,21 +591,21 @@ minus
 
 	* bracketright (U+005D): X=145.5,Y=714.5 (should be at cap-height 714?)
 
-	* t (U+0074): X=297.0,Y=1.0 (should be at baseline 0?)
+	* a (U+0061): X=258.0,Y=544.0 (should be at x-height 546?)
 
-	* w (U+0077): X=412.0,Y=534.0 (should be at x-height 536?)
+	* b (U+0062): X=339.0,Y=545.0 (should be at x-height 546?)
 
-	* w (U+0077): X=462.0,Y=534.0 (should be at x-height 536?)
+	* c (U+0063): X=271.0,Y=544.0 (should be at x-height 546?)
 
-	* y (U+0079): X=269.0,Y=-1.0 (should be at baseline 0?)
+	* d (U+0064): X=258.0,Y=545.0 (should be at x-height 546?)
 
-	* sterling (U+00A3): X=354.5,Y=-2.0 (should be at baseline 0?)
+	* e (U+0065): X=268.0,Y=544.0 (should be at x-height 546?)
 
-	* sterling (U+00A3): X=79.0,Y=-1.0 (should be at baseline 0?)
+	* g (U+0067): X=253.0,Y=544.0 (should be at x-height 546?)
 
-	* sterling (U+00A3): X=460.5,Y=1.0 (should be at baseline 0?) 
+	* g (U+0067): X=498.0,Y=548.0 (should be at x-height 546?) 
 
-	* 59 more.
+	* 73 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -516,23 +613,35 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs have colinear vectors:
 
-	* uni0ECB (U+0ECB): L<<-158.0,721.0>--<-170.0,721.0>> -> L<<-170.0,721.0>--<-254.0,728.0>>
+	* uni0E89 (U+0E89): L<<272.0,280.0>--<272.0,79.0>> -> L<<272.0,79.0>--<272.0,77.0>>
 
-	* uni0ECB (U+0ECB): L<<-248.0,852.0>--<-248.0,842.0>> -> L<<-248.0,842.0>--<-254.0,761.0>>
+	* uni0ECB (U+0ECB): L<<142.0,636.0>--<142.0,646.0>> -> L<<142.0,646.0>--<149.0,728.0>>
 
-	* uni0ECB (U+0ECB): L<<-254.0,728.0>--<-248.0,646.0>> -> L<<-248.0,646.0>--<-248.0,636.0>>
+	* uni0ECB (U+0ECB): L<<149.0,761.0>--<142.0,842.0>> -> L<<142.0,842.0>--<142.0,852.0>>
 
-	* uni0ECB (U+0ECB): L<<-254.0,761.0>--<-170.0,767.0>> -> L<<-170.0,767.0>--<-158.0,767.0>>
+	* uni0ECB (U+0ECB): L<<193.0,728.0>--<199.0,646.0>> -> L<<199.0,646.0>--<199.0,636.0>>
 
-	* uni0ECB (U+0ECB): L<<-298.0,761.0>--<-305.0,842.0>> -> L<<-305.0,842.0>--<-305.0,852.0>>
+	* uni0ECB (U+0ECB): L<<193.0,761.0>--<277.0,767.0>> -> L<<277.0,767.0>--<289.0,767.0>>
 
-	* uni0ECB (U+0ECB): L<<-305.0,636.0>--<-305.0,646.0>> -> L<<-305.0,646.0>--<-298.0,728.0>> 
+	* uni0ECB (U+0ECB): L<<199.0,852.0>--<199.0,842.0>> -> L<<199.0,842.0>--<193.0,761.0>>
 
-	* uni0ECB (U+0ECB): L<<-397.0,767.0>--<-385.0,767.0>> -> L<<-385.0,767.0>--<-298.0,761.0>> [code: found-colinear-vectors]
-</div></details><br></div></details><details><summary><b>[9] NotoSerifLao-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+	* uni0ECB (U+0ECB): L<<289.0,721.0>--<277.0,721.0>> -> L<<277.0,721.0>--<193.0,728.0>> 
+
+	* uni0ECB (U+0ECB): L<<50.0,767.0>--<62.0,767.0>> -> L<<62.0,767.0>--<149.0,761.0>> [code: found-colinear-vectors]
+</div></details><br></div></details><details><summary><b>[12] NotoSerifLao-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
+
+
+* 🔥 **FAIL** The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌
+
+The dot of soft dotted characters should disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́ [code: soft-dotted]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking font version fields (head and name table). (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/head.html#com.google.fonts/check/font_version">com.google.fonts/check/font_version</a>)</summary><div>
+
+
+* 🔥 **FAIL** head version is "2.00301" while name version string (for platform 3, encoding 1) is "Version 2.002; ttfautohint (v1.8.4.7-5d5b)". [code: mismatch]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
@@ -554,7 +663,9 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- uni00A0.1
+	- uni00A0.1 
+
+	- uni0ECD.narrow
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -584,6 +695,11 @@ The following math glyphs have a different width, though:
 Width = 310:
 minus
  [code: width-outliers]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 uni0EBA (U+0EBA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -605,11 +721,11 @@ minus
 
 	* bracketright (U+005D): X=37.0,Y=715.0 (should be at cap-height 714?)
 
-	* a (U+0061): X=183.5,Y=537.0 (should be at x-height 536?)
+	* a (U+0061): X=271.0,Y=1.5 (should be at baseline 0?)
 
-	* a (U+0061): X=271.0,Y=1.5 (should be at baseline 0?) 
+	* b (U+0062): X=25.0,Y=715.0 (should be at cap-height 714?) 
 
-	* 73 more.
+	* 72 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -617,15 +733,27 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs have colinear vectors:
 
-	* uni0ECB (U+0ECB): L<<-156.0,721.0>--<-166.0,721.0>> -> L<<-166.0,721.0>--<-259.0,730.0>>
+	* uni0E92 (U+0E92): L<<540.0,374.0>--<540.0,97.0>> -> L<<540.0,97.0>--<540.0,96.0>>
 
-	* uni0ECB (U+0ECB): L<<-259.0,781.0>--<-166.0,789.0>> -> L<<-166.0,789.0>--<-156.0,789.0>> 
+	* uni0ECB (U+0ECB): L<<227.0,781.0>--<320.0,789.0>> -> L<<320.0,789.0>--<330.0,789.0>>
 
-	* uni0ECB (U+0ECB): L<<-436.0,789.0>--<-426.0,789.0>> -> L<<-426.0,789.0>--<-333.0,781.0>> [code: found-colinear-vectors]
-</div></details><br></div></details><details><summary><b>[8] NotoSerifLao-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+	* uni0ECB (U+0ECB): L<<330.0,721.0>--<320.0,721.0>> -> L<<320.0,721.0>--<227.0,730.0>> 
+
+	* uni0ECB (U+0ECB): L<<50.0,789.0>--<60.0,789.0>> -> L<<60.0,789.0>--<153.0,781.0>> [code: found-colinear-vectors]
+</div></details><br></div></details><details><summary><b>[11] NotoSerifLao-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
+
+
+* 🔥 **FAIL** The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌
+
+The dot of soft dotted characters should disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́ [code: soft-dotted]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking font version fields (head and name table). (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/head.html#com.google.fonts/check/font_version">com.google.fonts/check/font_version</a>)</summary><div>
+
+
+* 🔥 **FAIL** head version is "2.00301" while name version string (for platform 3, encoding 1) is "Version 2.002; ttfautohint (v1.8.4.7-5d5b)". [code: mismatch]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
@@ -640,7 +768,9 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- uni00A0.1
+	- uni00A0.1 
+
+	- uni0ECD.narrow
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -670,6 +800,11 @@ The following math glyphs have a different width, though:
 Width = 310:
 minus
  [code: width-outliers]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 uni0EBA (U+0EBA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -689,13 +824,13 @@ minus
 
 	* G (U+0047): X=519.0,Y=1.5 (should be at baseline 0?)
 
-	* a (U+0061): X=182.0,Y=536.5 (should be at x-height 536?)
+	* g (U+0067): X=409.0,Y=548.0 (should be at x-height 550?)
 
-	* c (U+0063): X=360.0,Y=535.0 (should be at x-height 536?)
+	* g (U+0067): X=511.5,Y=551.5 (should be at x-height 550?)
 
 	* g (U+0067): X=161.0,Y=-0.5 (should be at baseline 0?) 
 
-	* 32 more.
+	* 35 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -703,23 +838,33 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs have colinear vectors:
 
-	* uni0ECB (U+0ECB): L<<-153.0,725.0>--<-163.0,725.0>> -> L<<-163.0,725.0>--<-257.0,733.0>>
+	* uni0ECB (U+0ECB): L<<146.0,636.0>--<146.0,646.0>> -> L<<146.0,646.0>--<154.0,733.0>>
 
-	* uni0ECB (U+0ECB): L<<-249.0,875.0>--<-249.0,865.0>> -> L<<-249.0,865.0>--<-257.0,779.0>>
+	* uni0ECB (U+0ECB): L<<154.0,779.0>--<146.0,865.0>> -> L<<146.0,865.0>--<146.0,875.0>>
 
-	* uni0ECB (U+0ECB): L<<-257.0,733.0>--<-249.0,646.0>> -> L<<-249.0,646.0>--<-249.0,636.0>>
+	* uni0ECB (U+0ECB): L<<219.0,733.0>--<227.0,646.0>> -> L<<227.0,646.0>--<227.0,636.0>>
 
-	* uni0ECB (U+0ECB): L<<-257.0,779.0>--<-163.0,787.0>> -> L<<-163.0,787.0>--<-153.0,787.0>>
+	* uni0ECB (U+0ECB): L<<219.0,779.0>--<313.0,787.0>> -> L<<313.0,787.0>--<323.0,787.0>>
 
-	* uni0ECB (U+0ECB): L<<-322.0,779.0>--<-330.0,865.0>> -> L<<-330.0,865.0>--<-330.0,875.0>>
+	* uni0ECB (U+0ECB): L<<227.0,875.0>--<227.0,865.0>> -> L<<227.0,865.0>--<219.0,779.0>>
 
-	* uni0ECB (U+0ECB): L<<-330.0,636.0>--<-330.0,646.0>> -> L<<-330.0,646.0>--<-322.0,733.0>> 
+	* uni0ECB (U+0ECB): L<<323.0,725.0>--<313.0,725.0>> -> L<<313.0,725.0>--<219.0,733.0>> 
 
-	* uni0ECB (U+0ECB): L<<-426.0,787.0>--<-416.0,787.0>> -> L<<-416.0,787.0>--<-322.0,779.0>> [code: found-colinear-vectors]
-</div></details><br></div></details><details><summary><b>[11] NotoSerifLao-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+	* uni0ECB (U+0ECB): L<<50.0,787.0>--<60.0,787.0>> -> L<<60.0,787.0>--<154.0,779.0>> [code: found-colinear-vectors]
+</div></details><br></div></details><details><summary><b>[14] NotoSerifLao-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
+
+
+* 🔥 **FAIL** The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌
+
+The dot of soft dotted characters should disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́ [code: soft-dotted]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking font version fields (head and name table). (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/head.html#com.google.fonts/check/font_version">com.google.fonts/check/font_version</a>)</summary><div>
+
+
+* 🔥 **FAIL** head version is "2.00301" while name version string (for platform 3, encoding 1) is "Version 2.002; ttfautohint (v1.8.4.7-5d5b)". [code: mismatch]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
@@ -744,7 +889,9 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- uni00A0.1
+	- uni00A0.1 
+
+	- uni0ECD.narrow
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -774,6 +921,11 @@ The following math glyphs have a different width, though:
 Width = 310:
 minus
  [code: width-outliers]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 uni0EBA (U+0EBA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -787,19 +939,19 @@ minus
 
 	* Q (U+0051): X=470.0,Y=-1.0 (should be at baseline 0?)
 
-	* a (U+0061): X=186.5,Y=538.0 (should be at x-height 536?)
+	* a (U+0061): X=285.0,Y=548.0 (should be at x-height 550?)
+
+	* c (U+0063): X=287.0,Y=548.0 (should be at x-height 550?)
+
+	* e (U+0065): X=288.0,Y=548.0 (should be at x-height 550?)
 
 	* f (U+0066): X=309.0,Y=716.0 (should be at cap-height 714?)
 
-	* y (U+0079): X=254.0,Y=-2.0 (should be at baseline 0?)
+	* g (U+0067): X=258.0,Y=548.0 (should be at x-height 550?)
 
-	* y (U+0079): X=343.0,Y=-1.0 (should be at baseline 0?)
+	* h (U+0068): X=383.0,Y=548.0 (should be at x-height 550?) 
 
-	* sterling (U+00A3): X=71.0,Y=2.0 (should be at baseline 0?)
-
-	* Aring (U+00C5): X=477.0,Y=715.5 (should be at cap-height 714?) 
-
-	* 27 more.
+	* 36 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -807,11 +959,11 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs have colinear vectors:
 
-	* uni0ECB (U+0ECB): L<<-159.0,717.0>--<-169.0,717.0>> -> L<<-169.0,717.0>--<-261.0,725.0>>
+	* uni0ECB (U+0ECB): L<<237.0,783.0>--<329.0,791.0>> -> L<<329.0,791.0>--<339.0,791.0>>
 
-	* uni0ECB (U+0ECB): L<<-261.0,783.0>--<-169.0,791.0>> -> L<<-169.0,791.0>--<-159.0,791.0>> 
+	* uni0ECB (U+0ECB): L<<339.0,717.0>--<329.0,717.0>> -> L<<329.0,717.0>--<237.0,725.0>> 
 
-	* uni0ECB (U+0ECB): L<<-448.0,791.0>--<-438.0,791.0>> -> L<<-438.0,791.0>--<-347.0,783.0>> [code: found-colinear-vectors]
+	* uni0ECB (U+0ECB): L<<50.0,791.0>--<60.0,791.0>> -> L<<60.0,791.0>--<151.0,783.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -824,10 +976,20 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
 
 	* sterling (U+00A3): L<<419.0,336.0>--<262.0,337.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[9] NotoSerifLao-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSerifLao-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
+
+
+* 🔥 **FAIL** The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌
+
+The dot of soft dotted characters should disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́ [code: soft-dotted]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking font version fields (head and name table). (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/head.html#com.google.fonts/check/font_version">com.google.fonts/check/font_version</a>)</summary><div>
+
+
+* 🔥 **FAIL** head version is "2.00301" while name version string (for platform 3, encoding 1) is "Version 2.002; ttfautohint (v1.8.4.7-5d5b)". [code: mismatch]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -837,7 +999,9 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- uni00A0.1
+	- uni00A0.1 
+
+	- uni0ECD.narrow
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -867,6 +1031,11 @@ The following math glyphs have a different width, though:
 Width = 310:
 minus
  [code: width-outliers]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 uni0EBA (U+0EBA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -882,17 +1051,17 @@ minus
 
 	* b (U+0062): X=114.0,Y=715.5 (should be at cap-height 714?)
 
+	* b (U+0062): X=320.0,Y=544.0 (should be at x-height 542?)
+
+	* d (U+0064): X=256.0,Y=543.0 (should be at x-height 542?)
+
+	* d (U+0064): X=432.0,Y=543.0 (should be at x-height 542?)
+
 	* d (U+0064): X=428.0,Y=715.5 (should be at cap-height 714?)
 
-	* g (U+0067): X=394.0,Y=537.5 (should be at x-height 536?)
+	* g (U+0067): X=481.0,Y=544.0 (should be at x-height 542?) 
 
-	* h (U+0068): X=114.0,Y=715.5 (should be at cap-height 714?)
-
-	* k (U+006B): X=114.0,Y=715.5 (should be at cap-height 714?)
-
-	* l (U+006C): X=110.0,Y=715.5 (should be at cap-height 714?) 
-
-	* 29 more.
+	* 35 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -900,23 +1069,23 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs have colinear vectors:
 
-	* uni0EC8 (U+0EC8): L<<-246.0,813.0>--<-246.0,734.0>> -> L<<-246.0,734.0>--<-252.0,636.0>>
+	* uni0EC8 (U+0EC8): L<<56.0,636.0>--<50.0,734.0>> -> L<<50.0,734.0>--<50.0,813.0>>
 
-	* uni0EC8 (U+0EC8): L<<-268.0,636.0>--<-274.0,734.0>> -> L<<-274.0,734.0>--<-274.0,813.0>>
+	* uni0EC8 (U+0EC8): L<<78.0,813.0>--<78.0,734.0>> -> L<<78.0,734.0>--<72.0,636.0>>
 
-	* uni0ECB (U+0ECB): L<<-163.0,717.0>--<-178.0,717.0>> -> L<<-178.0,717.0>--<-250.0,721.0>>
+	* uni0ECB (U+0ECB): L<<138.0,636.0>--<138.0,646.0>> -> L<<138.0,646.0>--<142.0,721.0>>
 
-	* uni0ECB (U+0ECB): L<<-246.0,824.0>--<-246.0,814.0>> -> L<<-246.0,814.0>--<-250.0,739.0>>
+	* uni0ECB (U+0ECB): L<<142.0,739.0>--<138.0,814.0>> -> L<<138.0,814.0>--<138.0,824.0>>
 
-	* uni0ECB (U+0ECB): L<<-250.0,721.0>--<-246.0,646.0>> -> L<<-246.0,646.0>--<-246.0,636.0>>
+	* uni0ECB (U+0ECB): L<<162.0,721.0>--<166.0,646.0>> -> L<<166.0,646.0>--<166.0,636.0>>
 
-	* uni0ECB (U+0ECB): L<<-250.0,739.0>--<-178.0,743.0>> -> L<<-178.0,743.0>--<-163.0,743.0>>
+	* uni0ECB (U+0ECB): L<<162.0,739.0>--<234.0,743.0>> -> L<<234.0,743.0>--<249.0,743.0>>
 
-	* uni0ECB (U+0ECB): L<<-270.0,739.0>--<-274.0,814.0>> -> L<<-274.0,814.0>--<-274.0,824.0>>
+	* uni0ECB (U+0ECB): L<<166.0,824.0>--<166.0,814.0>> -> L<<166.0,814.0>--<162.0,739.0>>
 
-	* uni0ECB (U+0ECB): L<<-274.0,636.0>--<-274.0,646.0>> -> L<<-274.0,646.0>--<-270.0,721.0>> 
+	* uni0ECB (U+0ECB): L<<249.0,717.0>--<234.0,717.0>> -> L<<234.0,717.0>--<162.0,721.0>> 
 
-	* uni0ECB (U+0ECB): L<<-362.0,743.0>--<-347.0,743.0>> -> L<<-347.0,743.0>--<-270.0,739.0>> [code: found-colinear-vectors]
+	* uni0ECB (U+0ECB): L<<50.0,743.0>--<65.0,743.0>> -> L<<65.0,743.0>--<142.0,739.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -937,7 +1106,11 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* exclamdown (U+00A1): L<<123.0,-177.0>--<124.0,370.0>> 
 
 	* exclamdown (U+00A1): L<<149.0,370.0>--<152.0,-177.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[8] NotoSerifLao[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check font names are correct (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_names">com.google.fonts/check/font_names</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSerifLao[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check the OS/2 usWeightClass is appropriate for the font's best SubFamily name. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/usweightclass">com.google.fonts/check/usweightclass</a>)</summary><div>
+
+
+* 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
+</div></details><details><summary>💔 <b>ERROR:</b> Check font names are correct (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_names">com.google.fonts/check/font_names</a>)</summary><div>
 
 
 * 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
@@ -953,6 +1126,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
+</div></details><details><summary>🔥 <b>FAIL:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
+
+
+* 🔥 **FAIL** The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌
+
+The dot of soft dotted characters should disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̒ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̦̒ į̧̀ į̧́ [code: soft-dotted]
+</div></details><details><summary>🔥 <b>FAIL:</b> Checking font version fields (head and name table). (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/head.html#com.google.fonts/check/font_version">com.google.fonts/check/font_version</a>)</summary><div>
+
+
+* 🔥 **FAIL** head version is "2.00301" while name version string (for platform 3, encoding 1) is "Version 2.002". [code: mismatch]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -962,7 +1145,9 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- uni00A0.1
+	- uni00A0.1 
+
+	- uni0ECD.narrow
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check math signs have the same width. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/math_signs_width">com.google.fonts/check/math_signs_width</a>)</summary><div>
 
@@ -973,6 +1158,11 @@ The following math glyphs have a different width, though:
 Width = 310:
 minus
  [code: width-outliers]
+</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
+
+
+* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
+	 uni0EBA (U+0EBA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
 
 
@@ -998,7 +1188,7 @@ minus
 
 	* G (U+0047): X=519.0,Y=1.5 (should be at baseline 0?) 
 
-	* 75 more.
+	* 78 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><br></div></details>
@@ -1007,8 +1197,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 3 | 12 | 76 | 1140 | 62 | 963 | 0 |
-| 0% | 1% | 3% | 51% | 3% | 43% | 0% |
+| 4 | 32 | 86 | 1151 | 62 | 972 | 0 |
+| 0% | 1% | 4% | 50% | 3% | 42% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
