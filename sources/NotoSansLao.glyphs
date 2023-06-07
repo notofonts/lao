@@ -46744,10 +46744,6 @@ name = underlinePosition;
 value = -100;
 },
 {
-name = "gasp Table";
-value = "";
-},
-{
 name = "TTFAutohint options";
 value = "--hinting-range-min=12 --hinting-range-max=32 --increase-x-height=16 --fallback-stem-width=26 --windows-compatibility --no-info";
 }
