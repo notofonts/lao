@@ -1424,7 +1424,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 	* exclam (U+0021): L<<100.0,174.0>--<98.0,714.0>> 
 
 	* exclam (U+0021): L<<127.0,714.0>--<125.0,174.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[15] NotoSansLaoLoopedUI[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check the OS/2 usWeightClass is appropriate for the font's best SubFamily name. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/usweightclass">com.google.fonts/check/usweightclass</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[16] NotoSansLaoLoopedUI[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check the OS/2 usWeightClass is appropriate for the font's best SubFamily name. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/usweightclass">com.google.fonts/check/usweightclass</a>)</summary><div>
 
 
 * 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
@@ -1432,6 +1432,20 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 
 * 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
+</div></details><details><summary>💔 <b>ERROR:</b> Familyname must be unique according to namecheck.fontdata.com (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/fontdata_namecheck">com.google.fonts/check/fontdata_namecheck</a>)</summary><div>
+
+
+* 💔 **ERROR** Failed to access: http://namecheck.fontdata.com.
+		This check relies on the external service http://namecheck.fontdata.com via the internet. While the service cannot be reached or does not respond this check is broken.
+
+		You can exclude this check with the command line option:
+		-x com.google.fonts/check/fontdata_namecheck
+
+		Or you can wait until the service is available again.
+		If the problem persists please report this issue at: https://github.com/googlefonts/fontbakery/issues
+
+		Original error message:
+		<class 'requests.exceptions.ReadTimeout'> [code: namecheck-service]
 </div></details><details><summary>💔 <b>ERROR:</b> Check a font's STAT table contains compulsory Axis Values. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/STAT">com.google.fonts/check/STAT</a>)</summary><div>
 
 
@@ -1559,7 +1573,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 4 | 54 | 81 | 1171 | 65 | 932 | 0 |
+| 5 | 54 | 81 | 1171 | 65 | 931 | 0 |
 | 0% | 2% | 4% | 51% | 3% | 40% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
