@@ -93896,7 +93896,7 @@ value = "Noto is a trademark of Google LLC.";
 },
 {
 key = versionString;
-value = "Version 1.001";
+value = "Version 1.002";
 },
 {
 key = sampleTexts;
