@@ -9,3 +9,4 @@
 # Names should be added to this file as:
 # Name <email address>
 # Ben Mitchell ben@fontpad.co.uk
+# Mark Frömberg hello@markfromberg.com
