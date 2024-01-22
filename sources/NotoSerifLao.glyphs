@@ -1,7 +1,7 @@
 {
-.appVersion = "3133";
+.appVersion = "3227";
 DisplayStrings = (
-"/koKai-lao/niggahita-lao/maiEk-lao/space/koKai-lao/niggahita-lao/maiTho-lao/space/koKai-lao/niggahita-lao/maiTi-lao/space/koKai-lao/niggahita-lao/maiCatawa-lao/space/koKai-lao/niggahita-lao/karan-lao \012/koKai-lao/maiEk-lao/amVowel-lao/space/koKai-lao/maiTho-lao/amVowel-lao/space/koKai-lao/maiTi-lao/amVowel-lao/space/koKai-lao/maiCatawa-lao/amVowel-lao/space/koKai-lao/karan-lao/amVowel-lao"
+"/virama-lao/niggahita-lao/maiEk-lao/space/koKai-lao/niggahita-lao/maiTho-lao/space/koKai-lao/niggahita-lao/maiTi-lao/space/koKai-lao/niggahita-lao/maiCatawa-lao/space/koKai-lao/niggahita-lao/karan-lao \012/koKai-lao/maiEk-lao/amVowel-lao/space/koKai-lao/maiTho-lao/amVowel-lao/space/koKai-lao/maiTi-lao/amVowel-lao/space/koKai-lao/maiCatawa-lao/amVowel-lao/space/koKai-lao/karan-lao/amVowel-lao"
 );
 classes = (
 {
@@ -189,18 +189,6 @@ kip
 },
 {
 disabled = 1;
-name = unicodeRanges;
-value = (
-0,
-1,
-25,
-31,
-33,
-45
-);
-},
-{
-disabled = 1;
 name = codePageRanges;
 value = (
 1252
@@ -236,12 +224,12 @@ value = (
 {
 name = "Lao TopTopMarks bottom";
 position = 893;
-size = "-10";
+size = -10;
 },
 {
 name = "Lao Topmarks Bottom";
 position = 636;
-size = "-15";
+size = -15;
 }
 );
 },
@@ -56437,7 +56425,7 @@ rightMetricsKey = "=50";
 },
 {
 glyphname = "virama-lao";
-lastChange = "2023-02-08 15:50:07 +0000";
+lastChange = "2024-01-22 14:35:22 +0000";
 layers = (
 {
 anchors = (
@@ -56649,6 +56637,8 @@ width = 282;
 leftMetricsKey = "=50";
 rightMetricsKey = "=50";
 unicode = 0EBA;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 glyphname = "yamakkan-lao";

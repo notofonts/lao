@@ -1,6 +1,9 @@
 {
-.appVersion = "3179";
+.appVersion = "3227";
 .formatVersion = 3;
+DisplayStrings = (
+"ຄ"
+);
 axes = (
 {
 name = Weight;
@@ -486,7 +489,15 @@ lookup laoSmallToneMarks {
 	sub @laoAboveMarks [maiEk-lao maiTho-lao maiTi-lao maiCatawa-lao karan-lao]' by [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small]; # ກິ້ ປິ້ 
 	} laoSmallToneMarks;
 ";
-notes = "lookup laoTonemarksAboveMaiKanMaiKong {\012	# Use .smallright tonemarks above default (right side) maiKan and maiKong\012	sub [maiKanVowel-lao maiKonVowel-lao] [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small niggahita-lao]' by [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright niggahita-lao.right]; # ກັ້ ກົ້\012	} laoTonemarksAboveMaiKanMaiKong;\012\012lookup laoSmallRight {\012	# Any tonemarks above .smallright tonemarks will also switch to .smallright versions (extremely unlikely to occur)\012	sub [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright] [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small]' by [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright]; # ກັ້້ ກົ້້\012	} laoSmallRight;";
+notes = "lookup laoTonemarksAboveMaiKanMaiKong {
+	# Use .smallright tonemarks above default (right side) maiKan and maiKong
+	sub [maiKanVowel-lao maiKonVowel-lao] [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small niggahita-lao]' by [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright niggahita-lao.right]; # ກັ້ ກົ້
+	} laoTonemarksAboveMaiKanMaiKong;
+
+lookup laoSmallRight {
+	# Any tonemarks above .smallright tonemarks will also switch to .smallright versions (extremely unlikely to occur)
+	sub [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright] [maiEk-lao.small maiTho-lao.small maiTi-lao.small maiCatawa-lao.small karan-lao.small]' by [maiEk-lao.smallright maiTho-lao.smallright maiTi-lao.smallright maiCatawa-lao.smallright karan-lao.smallright]; # ກັ້້ ກົ້້
+	} laoSmallRight;";
 tag = ccmp;
 },
 {
@@ -607,7 +618,6 @@ over = -15;
 pos = -462;
 },
 {
-over = -15;
 },
 {
 over = -5;
@@ -716,7 +726,6 @@ over = -15;
 pos = -462;
 },
 {
-over = -15;
 },
 {
 over = -5;
@@ -826,7 +835,6 @@ over = -15;
 pos = -462;
 },
 {
-over = -15;
 },
 {
 over = -5;
@@ -936,7 +944,6 @@ over = -15;
 pos = -462;
 },
 {
-over = -15;
 },
 {
 over = -5;
@@ -1046,7 +1053,6 @@ over = -15;
 pos = -462;
 },
 {
-over = -15;
 },
 {
 over = -5;
@@ -1156,7 +1162,6 @@ over = -15;
 pos = -462;
 },
 {
-over = -15;
 },
 {
 over = -5;
@@ -40818,8 +40823,9 @@ metricLeft = "=50";
 metricRight = "=50";
 },
 {
+category = Mark;
 glyphname = "virama-lao";
-lastChange = "2023-02-08 18:12:41 +0000";
+lastChange = "2024-01-22 14:35:04 +0000";
 layers = (
 {
 anchors = (
@@ -41022,6 +41028,7 @@ width = 282;
 );
 metricLeft = "=50";
 metricRight = "=50";
+subCategory = Nonspacing;
 unicode = 3770;
 },
 {
@@ -46828,7 +46835,7 @@ value = -100;
 }
 );
 instanceInterpolations = {
-"6449CA81-A7C3-4005-93E5-765657812F1B" = 0.20312;
+"6449CA81-A7C3-4005-93E5-765657812F1B" = 0.20313;
 "64BC062E-13E4-450B-B24E-D8A474022433" = 0.79688;
 };
 name = ExtraLight;
@@ -49010,7 +49017,7 @@ value = -100;
 );
 instanceInterpolations = {
 "009F2F33-BFE3-455D-BDCF-6F386AA465CF" = 0.79688;
-"AA55D700-EA4F-438C-81A6-FEFC4FC5520F" = 0.20312;
+"AA55D700-EA4F-438C-81A6-FEFC4FC5520F" = 0.20313;
 };
 name = "ExtraCondensed ExtraLight";
 properties = (
@@ -49681,6 +49688,15 @@ value = "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/l
 );
 },
 {
+key = descriptions;
+values = (
+{
+language = dflt;
+value = "Designed by Monotype design team.";
+}
+);
+},
+{
 key = designers;
 values = (
 {
@@ -49692,6 +49708,19 @@ value = "Monotype Design Team";
 {
 key = designerURL;
 value = "http://www.monotype.com/studio";
+},
+{
+key = licenses;
+values = (
+{
+language = dflt;
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
+}
+);
+},
+{
+key = licenseURL;
+value = "https://scripts.sil.org/OFL";
 },
 {
 key = manufacturers;
@@ -49707,32 +49736,6 @@ key = manufacturerURL;
 value = "http://www.google.com/get/noto/";
 },
 {
-key = licenseURL;
-value = "https://scripts.sil.org/OFL";
-},
-{
-key = vendorID;
-value = GOOG;
-},
-{
-key = descriptions;
-values = (
-{
-language = dflt;
-value = "Designed by Monotype design team.";
-}
-);
-},
-{
-key = licenses;
-values = (
-{
-language = dflt;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
-}
-);
-},
-{
 key = trademarks;
 values = (
 {
@@ -49740,6 +49743,10 @@ language = dflt;
 value = "Noto is a trademark of Google Inc.";
 }
 );
+},
+{
+key = vendorID;
+value = GOOG;
 },
 {
 key = versionString;
