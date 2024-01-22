@@ -1,0 +1,4082 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - User Strings</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+    
+        html{
+	  font-family: sans-serif;
+	}
+    @font-face {
+        font-family: "Adobe NotDef";
+        src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+    }
+	.box-title{
+	  width: 100%;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	  width: 100%;
+	  float: left;
+	}
+	.box-text{
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	  z-index: 100;
+	}
+	#font-toggle{
+	}
+	.nav-item{
+		display: block;
+		cursor: pointer;
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+		text-align: center;
+		color: white;
+		background-color: black;
+		display: block;
+		font-size: 9pt;
+		padding: 5px;
+		margin: 2px;
+	}
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	font-family: sans-serif;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	font-size: 12pt;
+	line-height: 15pt;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	padding: 10px;
+	visibility: visible;
+	}
+	.tooltipleft {
+		float:left;
+		width: 249px;
+	}
+	.tooltipright {
+		float:right;
+		width:250px;
+	}
+
+			/* Stuff needed for the table differ */
+            body {
+                font-family: Helvetica;
+            }
+            .node {
+                font-family: courier;
+                cursor: pointer;
+                position: relative;
+                left: 30px;
+                padding: 5px;
+                display: block;
+                border: 1px dashed grey;
+            }
+            .header {
+            font-weight: bold;
+            }
+            .attr-before{
+                color: red;
+                cursor: text;
+            }
+            .attr-after{
+                color: green;
+                cursor: text;
+            }
+            .leaf {
+            font-weight: bold;
+            }
+            .old .cell .new {
+            	display:  none;
+            }
+            .new .cell .old {
+            	display:  none;
+            }
+            .both .cell .old {
+            	opacity: 0.75;
+            	color:  red;
+            }
+            .both .cell .new {
+            	opacity: 0.75;
+            	position: absolute;
+            	top: 0;
+            	color:  green;
+            }
+			.spacer {
+				display:block;
+				float:left;
+				width:100%;
+			}
+
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedBlack.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao[wght].ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 400 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao[wdth,wght].ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 100 900;
+    font-stretch: 62% 100%;
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedExtraBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedExtraLight.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedLight.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedMedium.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedSemiBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedThin.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-CondensedBold.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifLao-Condensed.ttf);
+    font-family: "old Noto Serif Lao";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-Bold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedBlack.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-Black.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedExtraBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedExtraLight.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedLight.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedMedium.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedSemiBold.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-CondensedThin.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifLao-Condensed.ttf);
+    font-family: "new Noto Serif Lao";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+
+	  
+
+	  
+	    .old-Black{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 900.0;
+    font-stretch: 100.0%;
+    font-style: normal;
+    font-variation-settings: "wght" 900.0, "wdth" 100.0;
+}
+	  
+	    .old-Bold{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 700.0;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 700.0;
+}
+	  
+	    .old-Condensed{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 400;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+}
+	  
+	    .old-Condensed-Black{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 900;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 900;
+}
+	  
+	    .old-Condensed-Bold{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 700;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 700;
+}
+	  
+	    .old-Condensed-ExtraBold{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 800;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 800;
+}
+	  
+	    .old-Condensed-ExtraLight{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 200;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 200;
+}
+	  
+	    .old-Condensed-Light{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 300;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 300;
+}
+	  
+	    .old-Condensed-Medium{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 500;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 500;
+}
+	  
+	    .old-Condensed-SemiBold{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 600;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 600;
+}
+	  
+	    .old-Condensed-Thin{
+    font-family: "old Noto Serif Lao", "Adobe NotDef";
+    font-weight: 100;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 100;
+}
+	  
+
+	  
+	    .new-Black{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 900;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 900;
+}
+	  
+	    .new-Bold{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 700;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 700;
+}
+	  
+	    .new-Condensed{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 400;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+}
+	  
+	    .new-Condensed-Black{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 900;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 900;
+}
+	  
+	    .new-Condensed-Bold{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 700;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 700;
+}
+	  
+	    .new-Condensed-ExtraBold{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 800;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 800;
+}
+	  
+	    .new-Condensed-ExtraLight{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 200;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 200;
+}
+	  
+	    .new-Condensed-Light{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 300;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 300;
+}
+	  
+	    .new-Condensed-Medium{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 500;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 500;
+}
+	  
+	    .new-Condensed-SemiBold{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 600;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 600;
+}
+	  
+	    .new-Condensed-Thin{
+    font-family: "new Noto Serif Lao", "Adobe NotDef";
+    font-weight: 100;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 100;
+}
+	  
+
+	  
+	
+
+	   #ot-panel {
+		max-height: 400px;
+		overflow-y: scroll;
+		background: white;
+		padding: 10px;
+		display: none;
+	   }
+    </style>
+</head>
+<body>
+    <div id="nav">
+		
+			<div class="nav-item" id="font-toggle">old</div>
+		
+			<div class="nav-item" id="ot-button">OT features</div>
+			<div id="ot-panel">
+			</div>
+		
+	</div>
+    <div id="content">
+	<h2>
+<b>Text</b>
+</h2>
+	
+  
+    <div class="box">
+      <div class="box-title">old-Black 20pt</div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+    <div class="box">
+      <div class="box-title">old-Bold 20pt</div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+    <div class="box">
+      <div class="box-title">old-Condensed 20pt</div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+    <div class="box">
+      <div class="box-title">old-Condensed-Black 20pt</div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Black" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+    <div class="box">
+      <div class="box-title">old-Condensed-Bold 20pt</div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Bold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+    <div class="box">
+      <div class="box-title">old-Condensed-ExtraBold 20pt</div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+    <div class="box">
+      <div class="box-title">old-Condensed-ExtraLight 20pt</div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-ExtraLight" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+    <div class="box">
+      <div class="box-title">old-Condensed-Light 20pt</div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Light" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+    <div class="box">
+      <div class="box-title">old-Condensed-Medium 20pt</div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Medium" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+    <div class="box">
+      <div class="box-title">old-Condensed-SemiBold 20pt</div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-SemiBold" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+    <div class="box">
+      <div class="box-title">old-Condensed-Thin 20pt</div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Check yamakkan with spacing and diacritic vowels (tonemarks also checked but as they're not used in Pali)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ກ໎ະກ໎າກ໎ຳກ໎ຽກ໎ັກ໎ິກ໎ີກ໎ຶກ໎ືກ໎ົກ໎ໍກ໎຺ກ໎ຸກ໎ູເກ໎ແກ໎ໂກ໎ໃກ໎ໄກ໎ກ໎່ກ໎້ກ໎໊ກ໎໋ກ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຂ໎ະຂ໎າຂ໎ຳຂ໎ຽຂ໎ັຂ໎ິຂ໎ີຂ໎ຶຂ໎ືຂ໎ົຂ໎ໍຂ໎຺ຂ໎ຸຂ໎ູເຂ໎ແຂ໎ໂຂ໎ໃຂ໎ໄຂ໎ຂ໎່ຂ໎້ຂ໎໊ຂ໎໋ຂ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຄ໎ະຄ໎າຄ໎ຳຄ໎ຽຄ໎ັຄ໎ິຄ໎ີຄ໎ຶຄ໎ືຄ໎ົຄ໎ໍຄ໎຺ຄ໎ຸຄ໎ູເຄ໎ແຄ໎ໂຄ໎ໃຄ໎ໄຄ໎ຄ໎່ຄ໎້ຄ໎໊ຄ໎໋ຄ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຆ໎ະຆ໎າຆ໎ຳຆ໎ຽຆ໎ັຆ໎ິຆ໎ີຆ໎ຶຆ໎ືຆ໎ົຆ໎ໍຆ໎຺ຆ໎ຸຆ໎ູເຆ໎ແຆ໎ໂຆ໎ໃຆ໎ໄຆ໎ຆ໎່ຆ໎້ຆ໎໊ຆ໎໋ຆ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ງ໎ະງ໎າງ໎ຳງ໎ຽງ໎ັງ໎ິງ໎ີງ໎ຶງ໎ືງ໎ົງ໎ໍງ໎຺ງ໎ຸງ໎ູເງ໎ແງ໎ໂງ໎ໃງ໎ໄງ໎ງ໎່ງ໎້ງ໎໊ງ໎໋ງ໎໌   ງູ ງ໎ູ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຈ໎ະຈ໎າຈ໎ຳຈ໎ຽຈ໎ັຈ໎ິຈ໎ີຈ໎ຶຈ໎ືຈ໎ົຈ໎ໍຈ໎຺ຈ໎ຸຈ໎ູເຈ໎ແຈ໎ໂຈ໎ໃຈ໎ໄຈ໎ຈ໎່ຈ໎້ຈ໎໊ຈ໎໋ຈ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຉ໎ະຉ໎າຉ໎ຳຉ໎ຽຉ໎ັຉ໎ິຉ໎ີຉ໎ຶຉ໎ືຉ໎ົຉ໎ໍຉ໎຺ຉ໎ຸຉ໎ູເຉ໎ແຉ໎ໂຉ໎ໃຉ໎ໄຉ໎ຉ໎່ຉ໎້ຉ໎໊ຉ໎໋ຉ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຊ໎ະຊ໎າຊ໎ຳຊ໎ຽຊ໎ັຊ໎ິຊ໎ີຊ໎ຶຊ໎ືຊ໎ົຊ໎ໍຊ໎຺ຊ໎ຸຊ໎ູເຊ໎ແຊ໎ໂຊ໎ໃຊ໎ໄຊ໎ຊ໎່ຊ໎້ຊ໎໊ຊ໎໋ຊ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຌ໎ະຌ໎າຌ໎ຳຌ໎ຽຌ໎ັຌ໎ິຌ໎ີຌ໎ຶຌ໎ືຌ໎ົຌ໎ໍຌ໎຺ຌ໎ຸຌ໎ູເຌ໎ແຌ໎ໂຌ໎ໃຌ໎ໄຌ໎ຌ໎່ຌ໎້ຌ໎໊ຌ໎໋ຌ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຍ໎ະຍ໎າຍ໎ຳຍ໎ຽຍ໎ັຍ໎ິຍ໎ີຍ໎ຶຍ໎ືຍ໎ົຍ໎ໍຍ໎຺ຍ໎ຸຍ໎ູເຍ໎ແຍ໎ໂຍ໎ໃຍ໎ໄຍ໎ຍ໎່ຍ໎້ຍ໎໊ຍ໎໋ຍ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຎ໎ະຎ໎າຎ໎ຳຎ໎ຽຎ໎ັຎ໎ິຎ໎ີຎ໎ຶຎ໎ືຎ໎ົຎ໎ໍຎ໎຺ຎ໎ຸຎ໎ູເຎ໎ແຎ໎ໂຎ໎ໃຎ໎ໄຎ໎ຎ໎່ຎ໎້ຎ໎໊ຎ໎໋ຎ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຏ໎ະຏ໎າຏ໎ຳຏ໎ຽຏ໎ັຏ໎ິຏ໎ີຏ໎ຶຏ໎ືຏ໎ົຏ໎ໍຏ໎຺ຏ໎ຸຏ໎ູເຏ໎ແຏ໎ໂຏ໎ໃຏ໎ໄຏ໎ຏ໎່ຏ໎້ຏ໎໊ຏ໎໋ຏ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຐ໎ະຐ໎າຐ໎ຳຐ໎ຽຐ໎ັຐ໎ິຐ໎ີຐ໎ຶຐ໎ືຐ໎ົຐ໎ໍຐ໎຺ຐ໎ຸຐ໎ູເຐ໎ແຐ໎ໂຐ໎ໃຐ໎ໄຐ໎ຐ໎່ຐ໎້ຐ໎໊ຐ໎໋ຐ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຑ໎ະຑ໎າຑ໎ຳຑ໎ຽຑ໎ັຑ໎ິຑ໎ີຑ໎ຶຑ໎ືຑ໎ົຑ໎ໍຑ໎຺ຑ໎ຸຑ໎ູເຑ໎ແຑ໎ໂຑ໎ໃຑ໎ໄຑ໎ຑ໎່ຑ໎້ຑ໎໊ຑ໎໋ຑ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຒ໎ະຒ໎າຒ໎ຳຒ໎ຽຒ໎ັຒ໎ິຒ໎ີຒ໎ຶຒ໎ືຒ໎ົຒ໎ໍຒ໎຺ຒ໎ຸຒ໎ູເຒ໎ແຒ໎ໂຒ໎ໃຒ໎ໄຒ໎ຒ໎່ຒ໎້ຒ໎໊ຒ໎໋ຒ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຓ໎ະຓ໎າຓ໎ຳຓ໎ຽຓ໎ັຓ໎ິຓ໎ີຓ໎ຶຓ໎ືຓ໎ົຓ໎ໍຓ໎຺ຓ໎ຸຓ໎ູເຓ໎ແຓ໎ໂຓ໎ໃຓ໎ໄຓ໎ຓ໎່ຓ໎້ຓ໎໊ຓ໎໋ຓ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ດ໎ະດ໎າດ໎ຳດ໎ຽດ໎ັດ໎ິດ໎ີດ໎ຶດ໎ືດ໎ົດ໎ໍດ໎຺ດ໎ຸດ໎ູເດ໎ແດ໎ໂດ໎ໃດ໎ໄດ໎ດ໎່ດ໎້ດ໎໊ດ໎໋ດ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຕ໎ະຕ໎າຕ໎ຳຕ໎ຽຕ໎ັຕ໎ິຕ໎ີຕ໎ຶຕ໎ືຕ໎ົຕ໎ໍຕ໎຺ຕ໎ຸຕ໎ູເຕ໎ແຕ໎ໂຕ໎ໃຕ໎ໄຕ໎ຕ໎່ຕ໎້ຕ໎໊ຕ໎໋ຕ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຖ໎ະຖ໎າຖ໎ຳຖ໎ຽຖ໎ັຖ໎ິຖ໎ີຖ໎ຶຖ໎ືຖ໎ົຖ໎ໍຖ໎຺ຖ໎ຸຖ໎ູເຖ໎ແຖ໎ໂຖ໎ໃຖ໎ໄຖ໎ຖ໎່ຖ໎້ຖ໎໊ຖ໎໋ຖ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ທ໎ະທ໎າທ໎ຳທ໎ຽທ໎ັທ໎ິທ໎ີທ໎ຶທ໎ືທ໎ົທ໎ໍທ໎຺ທ໎ຸທ໎ູເທ໎ແທ໎ໂທ໎ໃທ໎ໄທ໎ທ໎່ທ໎້ທ໎໊ທ໎໋ທ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຘ໎ະຘ໎າຘ໎ຳຘ໎ຽຘ໎ັຘ໎ິຘ໎ີຘ໎ຶຘ໎ືຘ໎ົຘ໎ໍຘ໎຺ຘ໎ຸຘ໎ູເຘ໎ແຘ໎ໂຘ໎ໃຘ໎ໄຘ໎ຘ໎່ຘ໎້ຘ໎໊ຘ໎໋ຘ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ນ໎ະນ໎ານ໎ຳນ໎ຽນ໎ັນ໎ິນ໎ີນ໎ຶນ໎ືນ໎ົນ໎ໍນ໎຺ນ໎ຸນ໎ູເນ໎ແນ໎ໂນ໎ໃນ໎ໄນ໎ນ໎່ນ໎້ນ໎໊ນ໎໋ນ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ບ໎ະບ໎າບ໎ຳບ໎ຽບ໎ັບ໎ິບ໎ີບ໎ຶບ໎ືບ໎ົບ໎ໍບ໎຺ບ໎ຸບ໎ູເບ໎ແບ໎ໂບ໎ໃບ໎ໄບ໎ບ໎່ບ໎້ບ໎໊ບ໎໋ບ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ປ໎ະປ໎າປ໎ຳປ໎ຽປ໎ັປ໎ິປ໎ີປ໎ຶປ໎ືປ໎ົປ໎ໍປ໎຺ປ໎ຸປ໎ູເປ໎ແປ໎ໂປ໎ໃປ໎ໄປ໎ປ໎່ປ໎້ປ໎໊ປ໎໋ປ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຜ໎ະຜ໎າຜ໎ຳຜ໎ຽຜ໎ັຜ໎ິຜ໎ີຜ໎ຶຜ໎ືຜ໎ົຜ໎ໍຜ໎຺ຜ໎ຸຜ໎ູເຜ໎ແຜ໎ໂຜ໎ໃຜ໎ໄຜ໎ຜ໎່ຜ໎້ຜ໎໊ຜ໎໋ຜ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຝ໎ະຝ໎າຝ໎ຳຝ໎ຽຝ໎ັຝ໎ິຝ໎ີຝ໎ຶຝ໎ືຝ໎ົຝ໎ໍຝ໎຺ຝ໎ຸຝ໎ູເຝ໎ແຝ໎ໂຝ໎ໃຝ໎ໄຝ໎ຝ໎່ຝ໎້ຝ໎໊ຝ໎໋ຝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ພ໎ະພ໎າພ໎ຳພ໎ຽພ໎ັພ໎ິພ໎ີພ໎ຶພ໎ືພ໎ົພ໎ໍພ໎຺ພ໎ຸພ໎ູເພ໎ແພ໎ໂພ໎ໃພ໎ໄພ໎ພ໎່ພ໎້ພ໎໊ພ໎໋ພ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຟ໎ະຟ໎າຟ໎ຳຟ໎ຽຟ໎ັຟ໎ິຟ໎ີຟ໎ຶຟ໎ືຟ໎ົຟ໎ໍຟ໎຺ຟ໎ຸຟ໎ູເຟ໎ແຟ໎ໂຟ໎ໃຟ໎ໄຟ໎ຟ໎່ຟ໎້ຟ໎໊ຟ໎໋ຟ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຠ໎ະຠ໎າຠ໎ຳຠ໎ຽຠ໎ັຠ໎ິຠ໎ີຠ໎ຶຠ໎ືຠ໎ົຠ໎ໍຠ໎຺ຠ໎ຸຠ໎ູເຠ໎ແຠ໎ໂຠ໎ໃຠ໎ໄຠ໎ຠ໎່ຠ໎້ຠ໎໊ຠ໎໋ຠ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ມ໎ະມ໎າມ໎ຳມ໎ຽມ໎ັມ໎ິມ໎ີມ໎ຶມ໎ືມ໎ົມ໎ໍມ໎຺ມ໎ຸມ໎ູເມ໎ແມ໎ໂມ໎ໃມ໎ໄມ໎ມ໎່ມ໎້ມ໎໊ມ໎໋ມ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຢ໎ະຢ໎າຢ໎ຳຢ໎ຽຢ໎ັຢ໎ິຢ໎ີຢ໎ຶຢ໎ືຢ໎ົຢ໎ໍຢ໎຺ຢ໎ຸຢ໎ູເຢ໎ແຢ໎ໂຢ໎ໃຢ໎ໄຢ໎ຢ໎່ຢ໎້ຢ໎໊ຢ໎໋ຢ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຣ໎ະຣ໎າຣ໎ຳຣ໎ຽຣ໎ັຣ໎ິຣ໎ີຣ໎ຶຣ໎ືຣ໎ົຣ໎ໍຣ໎຺ຣ໎ຸຣ໎ູເຣ໎ແຣ໎ໂຣ໎ໃຣ໎ໄຣ໎ຣ໎່ຣ໎້ຣ໎໊ຣ໎໋ຣ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ລ໎ະລ໎າລ໎ຳລ໎ຽລ໎ັລ໎ິລ໎ີລ໎ຶລ໎ືລ໎ົລ໎ໍລ໎຺ລ໎ຸລ໎ູເລ໎ແລ໎ໂລ໎ໃລ໎ໄລ໎ລ໎່ລ໎້ລ໎໊ລ໎໋ລ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ວ໎ະວ໎າວ໎ຳວ໎ຽວ໎ັວ໎ິວ໎ີວ໎ຶວ໎ືວ໎ົວ໎ໍວ໎຺ວ໎ຸວ໎ູເວ໎ແວ໎ໂວ໎ໃວ໎ໄວ໎ວ໎່ວ໎້ວ໎໊ວ໎໋ວ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ສ໎ະສ໎າສ໎ຳສ໎ຽສ໎ັສ໎ິສ໎ີສ໎ຶສ໎ືສ໎ົສ໎ໍສ໎຺ສ໎ຸສ໎ູເສ໎ແສ໎ໂສ໎ໃສ໎ໄສ໎ສ໎່ສ໎້ສ໎໊ສ໎໋ສ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຨ໎ະຨ໎າຨ໎ຳຨ໎ຽຨ໎ັຨ໎ິຨ໎ີຨ໎ຶຨ໎ືຨ໎ົຨ໎ໍຨ໎຺ຨ໎ຸຨ໎ູເຨ໎ແຨ໎ໂຨ໎ໃຨ໎ໄຨ໎ຨ໎່ຨ໎້ຨ໎໊ຨ໎໋ຨ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຩ໎ະຩ໎າຩ໎ຳຩ໎ຽຩ໎ັຩ໎ິຩ໎ີຩ໎ຶຩ໎ືຩ໎ົຩ໎ໍຩ໎຺ຩ໎ຸຩ໎ູເຩ໎ແຩ໎ໂຩ໎ໃຩ໎ໄຩ໎ຩ໎່ຩ໎້ຩ໎໊ຩ໎໋ຩ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຫ໎ະຫ໎າຫ໎ຳຫ໎ຽຫ໎ັຫ໎ິຫ໎ີຫ໎ຶຫ໎ືຫ໎ົຫ໎ໍຫ໎຺ຫ໎ຸຫ໎ູເຫ໎ແຫ໎ໂຫ໎ໃຫ໎ໄຫ໎ຫ໎່ຫ໎້ຫ໎໊ຫ໎໋ຫ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຬ໎ະຬ໎າຬ໎ຳຬ໎ຽຬ໎ັຬ໎ິຬ໎ີຬ໎ຶຬ໎ືຬ໎ົຬ໎ໍຬ໎຺ຬ໎ຸຬ໎ູເຬ໎ແຬ໎ໂຬ໎ໃຬ໎ໄຬ໎ຬ໎່ຬ໎້ຬ໎໊ຬ໎໋ຬ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ອ໎ະອ໎າອ໎ຳອ໎ຽອ໎ັອ໎ິອ໎ີອ໎ຶອ໎ືອ໎ົອ໎ໍອ໎຺ອ໎ຸອ໎ູເອ໎ແອ໎ໂອ໎ໃອ໎ໄອ໎ອ໎່ອ໎້ອ໎໊ອ໎໋ອ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ຮ໎ະຮ໎າຮ໎ຳຮ໎ຽຮ໎ັຮ໎ິຮ໎ີຮ໎ຶຮ໎ືຮ໎ົຮ໎ໍຮ໎຺ຮ໎ຸຮ໎ູເຮ໎ແຮ໎ໂຮ໎ໃຮ໎ໄຮ໎ຮ໎່ຮ໎້ຮ໎໊ຮ໎໋ຮ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໞ໎ະໞ໎າ ໞ໎ຳໞ໎ຽໞ໎ັໞ໎ິໞ໎ີໞ໎ຶໞ໎ືໞ໎ົໞ໎ໍໞ໎຺ໞ໎ຸໞ໎ູເໞ໎ແໞ໎ໂໞ໎ໃໞ໎ໄໞ໎ໞ໎່ໞ໎້ໞ໎໊ໞ໎໋ໞ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໟ໎ະໟ໎າໟ໎ຳໟ໎ຽໟ໎ັໟ໎ິໟ໎ີໟ໎ຶໟ໎ືໟ໎ົໟ໎ໍໟ໎຺ໟ໎ຸໟ໎ູເໟ໎ແໟ໎ໂໟ໎ໃໟ໎ໄໟ໎ໟ໎່ໟ໎້ໟ໎໊ໟ໎໋ໟ໎໌  (not a known combination currently)&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໜ໎ະໜ໎າໜ໎ຳໜ໎ຽໜ໎ັໜ໎ິໜ໎ີໜ໎ຶໜ໎ືໜ໎ົໜ໎ໍໜ໎຺ໜ໎ຸໜ໎ູເໜ໎ແໜ໎ໂໜ໎ໃໜ໎ໄໜ໎ໜ໎່ໜ໎້ໜ໎໊ໜ໎໋ໜ໎໌ &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ໝ໎ະໝ໎າໝ໎ຳໝ໎ຽໝ໎ັໝ໎ິໝ໎ີໝ໎ຶໝ໎ືໝ໎ົໝ໎ໍໝ໎຺ໝ໎ຸໝ໎ູເໝ໎ແໝ໎ໂໝ໎ໃໝ໎ໄໝ໎ໝ໎່ໝ໎້ໝ໎໊ໝ໎໋ໝ໎໌  &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        &nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        check phinthu and yamakkan don't disable contextual rules:&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        Above: ກ຺໎ິ ປ຺໎ິ ເກ຺໎ົ ເປ຺໎ົ&nbsp; 
+    </div>
+</div></div>
+		
+			<div class="old-Condensed-Thin" dir="auto" style="font-size: 20pt; float: left;"><div style="font-feature-settings: " lang=" which needs to go below the phinthu.)">
+    <div class="tooltip">
+        Below: ງ ງ຺ ງູ ງ຺ູ ງ໎ູ ງ຺໎ູ  (Need a bit of work to reconfigure phinthu + belowvowel. Phinthu followed by vowel wasn't possible before the encoding of yamakkan. Now the phinthu would mark the end of one syllable with a devowellised consonant&nbsp; 
+    </div>
+</div></div>
+		
+    </div>
+  
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "old"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	boxTitles = document.getElementsByClassName("box-title")
+	items = document.getElementsByClassName("box-text");
+	  
+	if (POSITION === "old") {
+	  POSITION = "new"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("old", "new")
+	    fontToggle.textContent = "new"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("old", "new")
+	  }
+
+	  } else {
+	  POSITION = "old"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("new", "old")
+	    fontToggle.textContent = "old"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("new", "old")
+	  }
+	}
+	}
+	if (fontToggle !== null) {
+		fontToggle.addEventListener("click", switchFonts);
+	}
+
+// apply optional ot feats
+
+function buildFeatureList() {
+	var features = [
+		'aalt', 'c2sc', 'calt', 'case', 'cpsp', 'dlig', 'dnom',
+		'fina', 'frac', 'init', 'kern', 'liga', 'lnum', 'numr', 'onum',
+		'ordn', 'pnum', 'salt', 'sinf', 'smcp', 'sups',
+		'swsh', 'titl', 'tnum', 'zero', 'ss01', 'ss02',
+		'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08',
+		'ss09', 'ss10', 'ss11', 'ss12', 'ss13', 'ss14',
+		'ss15', 'ss16', 'ss17', 'ss18', 'ss19', 'ss20'
+	]
+	
+	var otPanel = document.getElementById("ot-panel")
+	for (i=0; i<features.length; i++) {
+		var feat = features[i]
+		
+		var row = document.createElement("div");
+
+		var item = document.createElement("input");
+		item.type = "checkbox"
+		item.value = feat
+		item.classList.add("ot-checkbox")
+		var label = document.createElement("label")
+		label.textContent = feat
+
+		row.appendChild(item)
+		row.appendChild(label)
+
+		otPanel.appendChild(row)
+	}
+}
+
+buildFeatureList()
+
+
+function enableFeatures() {
+	var checkboxes = document.getElementsByClassName("ot-checkbox")
+	var res = []
+	var disableKerning = false
+	for (i=0; i<checkboxes.length; i++) {
+		if (checkboxes[i].checked === true) {
+			var checkbox = checkboxes[i]
+			res.push('"' + checkbox.value + '"')
+
+			if (checkbox.value === "kern") {
+				disableKerning = true
+			}
+		}
+	}	
+
+	var boxText = document.getElementsByClassName("box-text")
+	var otString = res.join(", ")
+	for (j=0; j<boxText.length; j++) {
+		boxText[j].style.fontFeatureSettings = otString
+		if (disableKerning === true) {
+			boxText[j].style.fontKerning = "none"
+		}
+	}
+}
+
+var otButton = document.getElementById("ot-button")
+otButton.addEventListener("click", function() {
+    otPanel = document.getElementById("ot-panel")
+    if (otPanel.style.display !== "block") {
+        otPanel.style.display = "block"
+    } else {
+        otPanel.style.display = "none"
+    }
+})
+var checkboxes = document.getElementsByClassName("ot-checkbox")
+for (i=0; i<checkboxes.length; i++) {
+	cb = checkboxes[i]
+	cb.addEventListener("click", enableFeatures)
+}	
+    
+	// break text so that no reflow happens
+async function breakText() {
+	boxContent = document.getElementsByClassName("box-text")
+	for (let box of boxContent) {
+		switchFonts()
+		await sleep(1)
+		break1 = getLineBreaks(box)
+		switchFonts()
+		await sleep(1)
+		break2 = getLineBreaks(box)
+
+		if (break1.length >= break2.length) {
+		breaks = break1
+		} else {
+		breaks = break2
+		}
+		insertBreaks(box, breaks)
+		box.style.whiteSpace = "pre"
+		console.log("set to pre")
+	}
+	}
+
+function getLineBreaks(elem) {
+	const nodes = grabTextNodes(elem);
+	for (const node of nodes) { // each node is a big block of text
+		let rangeIndex = 1;
+		let textIndex = 0;
+		let nodeText = node.textContent;
+		const textLength = nodeText.length;
+
+		linebreaks = []
+		prevTop = 0;
+		while (rangeIndex <= textLength) {
+			const range = document.createRange();
+			range.setStart(node, rangeIndex-1);
+			range.setEnd(node, rangeIndex)
+			currentTop = range.getBoundingClientRect().top
+		if (currentTop > prevTop) {
+			linebreaks.push(rangeIndex-2)
+		}
+		rangeIndex += 1;
+		prevTop = currentTop
+		}
+	}
+	return linebreaks
+}
+
+function grabTextNodes(elem) {
+	const walker = document.createTreeWalker(elem, NodeFilter.SHOW_TEXT, null);
+	const nodes = [];
+	while (walker.nextNode()) {
+		nodes.push(walker.currentNode);
+	}
+	return nodes;
+}
+
+	function sleep(ms) {
+		return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+function insertBreaks(node, breaks) {
+	console.log(node, breaks)
+	newText = ""
+	currentText = node.textContent
+	for (i=0; i<currentText.length; i++) {
+		if (breaks.includes(i)) {
+		newText += "<br>"
+		} else {
+		newText += currentText[i]
+		}
+	}
+	node.innerHTML = newText
+}
+
+	if (fontToggle !== null) {
+		breakText()
+}
+
+	
+
+
+    </script>
+</html>
