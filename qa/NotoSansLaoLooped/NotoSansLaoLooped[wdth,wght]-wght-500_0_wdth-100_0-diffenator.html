@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - Glyphs</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+    
+
+        html{
+	  font-family: sans-serif;
+	}
+    @font-face {
+        font-family: "Adobe NotDef";
+        src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+    }
+	.box-title{
+	  width: 100%;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	  width: 100%;
+	  float: left;
+	}
+	.box-text{
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	  z-index: 100;
+	}
+	#font-toggle{
+	}
+	.nav-item{
+		display: block;
+		cursor: pointer;
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+		text-align: center;
+		color: white;
+		background-color: black;
+		display: block;
+		font-size: 9pt;
+		padding: 5px;
+		margin: 2px;
+	}
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	font-family: sans-serif;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	font-size: 12pt;
+	line-height: 15pt;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	padding: 10px;
+	visibility: visible;
+	}
+	.tooltipleft {
+		float:left;
+		width: 249px;
+	}
+	.tooltipright {
+		float:right;
+		width:250px;
+	}
+
+			/* Stuff needed for the table differ */
+            body {
+                font-family: Helvetica;
+            }
+            .node {
+                font-family: courier;
+                cursor: pointer;
+                position: relative;
+                left: 30px;
+                padding: 5px;
+                display: block;
+                border: 1px dashed grey;
+            }
+            .header {
+            font-weight: bold;
+            }
+            .attr-before{
+                color: red;
+                cursor: text;
+            }
+            .attr-after{
+                color: green;
+                cursor: text;
+            }
+            .leaf {
+            font-weight: bold;
+            }
+            .old .cell .new {
+            	display:  none;
+            }
+            .new .cell .old {
+            	display:  none;
+            }
+            .both .cell .old {
+            	opacity: 0.75;
+            	color:  red;
+            }
+            .both .cell .new {
+            	opacity: 0.75;
+            	position: absolute;
+            	top: 0;
+            	color:  green;
+            }
+			.spacer {
+				display:block;
+				float:left;
+				width:100%;
+			}
+
+	  
+	    @font-face{
+    src: url("old-NotoSansLaoLooped[wdth,wght].ttf");
+    font-family: "old font";
+    font-weight: 100 900;
+    font-stretch: 62% 100%;
+    font-style: normal;
+}
+	  
+
+	  
+	    @font-face{
+    src: url("new-NotoSansLaoLooped[wdth,wght].ttf");
+    font-family: "new font";
+    font-weight: 100 900;
+    font-stretch: 62% 100%;
+    font-style: normal;
+}
+	  
+
+	  
+
+	  
+	    .old-wght-500_0_wdth-100_0{
+    font-family: "old font", "Adobe NotDef";
+    font-weight: 500.0;
+    font-stretch: 100.0%;
+    font-style: normal;
+    font-variation-settings: "wght" 500.0, "wdth" 100.0;
+}
+	  
+
+	  
+	    .new-wght-500_0_wdth-100_0{
+    font-family: "new font", "Adobe NotDef";
+    font-weight: 500.0;
+    font-stretch: 100.0%;
+    font-style: normal;
+    font-variation-settings: "wght" 500.0, "wdth" 100.0;
+}
+	  
+
+	  
+	
+.cell{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  width: 50pt;
+  line-height: 48.0px;
+}
+.cell-word{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  line-height: 48.0px;
+}
+.cat-strings .cell {
+  clear: both;
+  position: static;
+  float: none;
+  text-align: left;
+}
+.box-title {
+  clear: both;
+}
+
+
+	   #ot-panel {
+		max-height: 400px;
+		overflow-y: scroll;
+		background: white;
+		padding: 10px;
+		display: none;
+	   }
+    </style>
+</head>
+<body>
+    <div id="nav">
+		
+			<div class="nav-item" id="font-toggle">old</div>
+		
+			<div class="nav-item" id="ot-button">OT features</div>
+			<div id="ot-panel">
+			</div>
+		
+	</div>
+    <div id="content">
+	<h2>
+<b>Diffenator</b>
+</h2>
+	
+  
+    <div class="box">
+    <div class="box-title">Tables</div>
+      <div data-path="root" data-open="0" id="difftable"></div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+
+    
+      <div class="box">
+        <div class="box-title">Misshapen Common words</div>
+        <div class="box-text old-wght-500_0_wdth-100_0" style="font-size: 32pt">
+          
+        </div>
+      </div>
+    
+      <div class="box">
+        <div class="box-title">Misshapen Lao words</div>
+        <div class="box-text old-wght-500_0_wdth-100_0" style="font-size: 32pt">
+          
+        </div>
+      </div>
+    
+    
+    <div class="box">
+      <div class="box-title">Misshapen user strings</div>
+      <div class="box-text old-wght-500_0_wdth-100_0" style="font-size: 32pt">
+        
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+  
+<script>var fontdiff = {"name": {"261/1/0/0": [null, "Thin"], "277/3/1/1033": ["Black", null], "337/1/0/0": ["Regular", null], "5/3/1/1033": ["Version 1.002", "Version 1.003"], "303/3/1/1033": ["Condensed", null], "268/3/1/1033": [null, "ExtraBold"], "260/1/0/0": [null, "Width"], "262/3/1/1033": [null, "ExtraLight"], "338/3/1/1033": ["Medium", null], "336/3/1/1033": ["Light", null], "334/3/1/1033": ["Thin", null], "264/3/1/1033": [null, "Regular"], "337/3/1/1033": ["Regular", null], "14/3/1/1033": ["https://scripts.sil.org/OFL", "https://openfontlicense.org"], "266/1/0/0": [null, "SemiBold"], "265/1/0/0": [null, "Medium"], "272/3/1/1033": [null, "SemiCondensed"], "259/1/0/0": [null, "Weight"], "269/3/1/1033": ["Medium", "Black"], "263/1/0/0": [null, "Light"], "266/3/1/1033": [null, "SemiBold"], "269/1/0/0": [null, "Black"], "262/1/0/0": [null, "ExtraLight"], "267/3/1/1033": [null, "Bold"], "340/3/1/1033": ["Bold", null], "267/1/0/0": [null, "Bold"], "333/3/1/1033": ["Normal", null], "340/1/0/0": ["Bold", null], "321/3/1/1033": ["ExtraCondensed", null], "13/3/1/1033": ["This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL", "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"], "285/3/1/1033": ["SemiCondensed", null], "339/1/0/0": ["SemiBold", null], "341/3/1/1033": ["ExtraBold", null], "336/1/0/0": ["Light", null], "335/3/1/1033": ["ExtraLight", null], "268/1/0/0": [null, "ExtraBold"], "273/3/1/1033": ["Bold", "Normal"], "265/3/1/1033": ["Light", "Medium"], "338/1/0/0": ["Medium", null], "342/1/0/0": ["Black", null], "275/3/1/1033": ["ExtraBold", null], "3/3/1/1033": ["1.002;GOOG;NotoSansLaoLooped-Regular", "1.003;GOOG;NotoSansLaoLooped-Regular"], "339/3/1/1033": ["SemiBold", null], "264/1/0/0": [null, "Regular"], "270/3/1/1033": [null, "ExtraCondensed"], "263/3/1/1033": ["ExtraLight", "Light"], "341/1/0/0": ["ExtraBold", null], "342/3/1/1033": ["Black", null], "271/3/1/1033": ["SemiBold", "Condensed"], "335/1/0/0": ["ExtraLight", null], "334/1/0/0": ["Thin", null]}, "MVAR": {"table": {"ValueRecord": {"0": {"VarIdx": [65537, 1]}, "1": {"VarIdx": [3, 6]}, "2": {"VarIdx": [65536, 0]}, "3": {"VarIdx": [1, 3]}, "4": {"VarIdx": [0, 2]}, "5": {"VarIdx": [2, 5]}, "6": {"VarIdx": [65538, 4]}}, "VarStore": {"VarData": {"0": {"ItemCount": [4, 7], "VarRegionIndex": {"3": [4, 3], "4": [null, 4]}, "Item": {"0": {"0": [-36, -76], "1": [20, -19], "2": [0, -38], "3": [0, 36], "4": [null, 38]}, "1": {"0": [-20, -45], "1": [10, 51], "2": [0, 6], "3": [0, 7], "4": [null, -34]}, "2": {"0": [7, -36], "1": [-8, 20], "4": [null, 0]}, "3": {"0": [24, -20], "1": [-21, 10], "2": [1, 0], "3": [6, 0], "4": [null, 0]}, "4": {"0": [null, -8], "1": [null, 17], "2": [null, 1], "3": [null, -2], "4": [null, -1]}, "5": {"0": [null, 7], "1": [null, -8], "2": [null, 0], "3": [null, 0], "4": [null, 0]}, "6": {"0": [null, 24], "1": [null, -21], "2": [null, 1], "3": [null, 0], "4": [null, 6]}}, "VarRegionCount": [4, 5]}, "1": {"ItemCount": [3, null], "NumShorts": [0, null], "VarRegionCount": [5, null], "VarRegionIndex": {"0": [0, null], "1": [1, null], "2": [2, null], "3": [3, null], "4": [4, null]}, "Item": {"0": {"0": [-76, null], "1": [-19, null], "2": [-38, null], "3": [36, null], "4": [38, null]}, "1": {"0": [-45, null], "1": [51, null], "2": [6, null], "3": [7, null], "4": [-34, null]}, "2": {"0": [-8, null], "1": [17, null], "2": [1, null], "3": [-2, null], "4": [-1, null]}}}}, "VarDataCount": [2, 1]}}}, "head": {"fontRevision": [1.0019989013671875, 1.0030059814453125], "checkSumAdjustment": [1145627631, 2392868225], "modified": [3770259556, 3799380515]}, "HVAR": {"table": {"AdvWidthMap": {"mapping": {"uni0ED6": [262191, 65583], "uni0EB5": [0, 29], "uni0E95": [262156, 65548], "figuredash": [262150, 65542], "uni0EAA.BRACKET.varAlt01": [262164, 65556], "uni0EC8.ss03": [0, 29], "uni200D": [0, 29], "uni0EB8.small": [0, 29], "space": [131096, 31], "guillemotright": [196608, 131072], "uni200B": [0, 29], "parenright": [131083, 12], "uni0EB1.right": [0, 29], "uni0E82": [262193, 65585], "uni0ECB.ss03": [0, 29], ".notdef": [65536, 26], "uni0E8A": [262193, 65585], "uni0E8D": [262173, 65565], "ellipsis": [131072, 0], "uni0EC9.small": [0, 29], "uni0ECC.small": [0, 29], "uni200C": [0, 29], "uni0E8C": [262201, 65593], "uni0E92": [262159, 65551], "uni0E94": [262171, 65563], "uni0ED0.sups": [131085, 14], "uni0EC4": [131092, 21], "uni0E9A": [262165, 65557], "uni0EC2": [131095, 25], "question": [131089, 18], "uni0E98": [262190, 65582], "uni0EB5.right": [0, 29], "quotedblleft": [196610, 131074], "uni0EAB": [262161, 65553], "uni0EDF": [262197, 65589], "uni0EDF.BRACKET.varAlt01": [262196, 65588], "multiply": [262198, 65590], "uni0EAC": [262187, 65579], "uni0EB7.right": [0, 29], "uni0E87.short": [262189, 65581], "uni0EB9.narrow": [0, 29], "quotedblright": [196611, 131075], "quotesingle": [131077, 5], "uni0EA5": [262163, 65555], "uni0EAA": [262164, 65556], "uni0ED2": [262176, 65568], "uni0EC8": [0, 29], "uni0ED2.sups": [131088, 17], "CR": [1, 131076], "uni0EBA": [0, 29], "uni0E5B": [262144, 65536], "uni0E9D": [262149, 65541], "uni0ECD": [0, 29], "uni0EB4": [0, 29], "uni0EC8.small": [0, 29], "uni0E9E": [262155, 65547], "uni0ECC": [0, 29], "colon": [327680, 8], "uni0EB7.narrow": [0, 29], "uni0ED7": [262162, 65554], "uni0E8F": [262170, 65562], "uni0ED9.sups": [131090, 19], "uni0ED1": [262180, 65572], "uni0EA1": [262181, 65573], "uni0EA3": [262192, 65584], "uni0EB7": [0, 29], "uni0EB6.right": [0, 29], "uni0EB4.right": [0, 29], "uni0E8E": [262183, 65575], "uni0E93": [262153, 65545], "uni0EBB.centred": [0, 29], "uni0ECD.small": [0, 29], "uni0EA8": [262200, 65592], "uni0EBB.right": [0, 29], "comma": [131076, 4], "uni0ECB.small": [0, 29], "uni0E9C": [262158, 65550], "period": [131079, 7], "uni0EBD": [262148, 65540], "uni0E91": [262147, 65539], "uni0EC0": [131093, 22], "uni0ED8": [262184, 65576], "slash": [131078, 6], "uni0EA9": [262195, 65587], "uni0EB8": [0, 29], "uni0EB1.narrow": [0, 29], "uni0E84": [262179, 65571], "uni0E9F": [262155, 65547], "uni0EC1": [262152, 65544], "ampersand": [262154, 65546], "uni0EBB.narrow": [0, 29], "parenleft": [131083, 12], "uni0ED6.sups": [131086, 15], "uni20AD": [327683, 65595], "guilsinglleft": [131074, 2], "uni2060": [0, 29], "uni25CC": [0, 29], "uni0EA0": [262146, 65538], "uni0ECA.small": [0, 29], "NULL": [2, 131077], "uni0ED1.sups": [131094, 24], "uni0E89.BRACKET.varAlt01": [262172, 65564], "uni0E9B": [262165, 65557], "endash": [327684, 28], "uni0EB5.narrow": [0, 29], "uni0E89": [262172, 65564], "uni0EB9.small": [0, 29], "uni0E97": [262166, 65558], "quoteright": [131081, 10], "uni0EC6": [262151, 65543], "uni0E88": [262157, 65549], "uni0EB1": [0, 29], "uni0EAF": [262178, 65570], "uni0EB6.narrow": [0, 29], "uni0ECA.ss03": [0, 29], "uni0E96": [262188, 65580], "uni0EDE.BRACKET.varAlt01": [262203, 65597], "uni0EB3": [262185, 65577], "uni0ED7.sups": [131084, 13], "uni0ED4": [262207, 65601], "uni0ED9": [262182, 65574], "uni0E87": [262189, 65581], "uni0EA7": [262177, 65569], "uni0ED5.sups": [131091, 20], "space.BRACKET.varAlt01": [131097, 32], "bullet": [65538, 30], "uni0EB6": [0, 29], "uni0EB9": [0, 29], "uni0E90": [262165, 65557], "uni0ECD.right": [0, 29], "uni00A0": [131096, 31], "uni0EC9.narrow": [0, 29], "uni0E4F": [262205, 65599], "uni0EB0": [262206, 65600], "exclam": [131082, 11], "uni2010": [65537, 27], "uni0EC3": [131087, 16], "uni0ECA": [0, 29], "uni0EC9": [0, 29], "uni0EBC": [0, 29], "uni0EBB": [0, 29], "uni0EA2": [262173, 65565], "guilsinglright": [131073, 1], "emdash": [327684, 28], "uni0EDD": [262174, 65566], "asterisk": [327682, 65594], "uni0EAC.ss02": [262169, 65561], "uni0ECB": [0, 29], "yamakkanlao": [0, 29], "uni0ED3.sups": [327681, 23], "uni0EB2": [262185, 65577], "hyphen": [65537, 27], "uni0E86": [262145, 65537], "uni0EB1.centred": [0, 29], "uni0EBC.narrow": [0, 29], "uni0E88.ss01": [262157, 65549], "uni0ED3": [262202, 65596], "uni0ECE.centre": [0, 29], "uni0EA5.BRACKET.varAlt01": [262163, 65555], "uni0EC9.ss03": [0, 29], "uni0ED5": [262207, 65601], "uni0ED8.sups": [131086, 15], "semicolon": [131080, 9], "uni0ED4.sups": [131091, 20], "uni2638": [0, 29], "uni0EA8.BRACKET.varAlt01": [262199, 65591], "uni0EB8.narrow": [0, 29], "quoteleft": [131081, 10], "uni0E99": [262168, 65560], "uni0EDE": [262204, 65598], "uni2015": [0, 29], "guillemotleft": [196609, 131073], "uni0E81": [262186, 65578], "uni0ED0": [262160, 65552], "uni0ECA.narrow": [0, 29], "uni034F": [0, 29], "uni0EAE": [262193, 65585], "uni0EB4.narrow": [0, 29], "uni0ECB.narrow": [0, 29], "quotedbl": [131075, 3], "uni0EA9.BRACKET.varAlt01": [262194, 65586], "uni0EDC": [262175, 65567], "uni0EAD": [262167, 65559]}}, "VarStore": {"VarData": {"0": {"ItemCount": [3, 33], "VarRegionIndex": {"2": [null, 2], "3": [null, 3], "4": [null, 4]}, "Item": {"0": {"0": [0, -120], "1": [0, 76], "2": [null, -112], "3": [null, 8], "4": [null, 68]}, "1": {"0": [329, -90], "1": [-11, 90], "2": [null, -39], "3": [null, 50], "4": [null, -40]}, "2": {"0": [581, -90], "1": [-19, 90], "2": [null, -39], "3": [null, 53], "4": [null, -40]}, "3": {"0": [null, -88], "1": [null, 116], "2": [null, -29], "3": [null, 2], "4": [null, -11]}, "4": {"0": [null, -85], "1": [null, 41], "2": [null, -42], "3": [null, 35], "4": [null, 6]}, "5": {"0": [null, -53], "1": [null, 67], "2": [null, -17], "3": [null, 6], "4": [null, -23]}, "6": {"0": [null, -50], "1": [null, 70], "2": [null, -1], "3": [null, 7], "4": [null, -16]}, "7": {"0": [null, -48], "1": [null, 21], "2": [null, -42], "3": [null, 2], "4": [null, 26]}, "8": {"0": [null, -48], "1": [null, 21], "2": [null, -40], "3": [null, 0], "4": [null, 31]}, "9": {"0": [null, -48], "1": [null, 29], "2": [null, -40], "3": [null, -3], "4": [null, 23]}, "10": {"0": [null, -48], "1": [null, 75], "2": [null, 14], "3": [null, -10], "4": [null, 9]}, "11": {"0": [null, -46], "1": [null, 21], "2": [null, -34], "3": [null, 5], "4": [null, 15]}, "12": {"0": [null, -45], "1": [null, 59], "2": [null, -9], "3": [null, 17], "4": [null, -24]}, "13": {"0": [null, -29], "1": [null, 25], "2": [null, -109], "3": [null, -27], "4": [null, 20]}, "14": {"0": [null, -29], "1": [null, 37], "2": [null, -97], "3": [null, -7], "4": [null, 13]}, "15": {"0": [null, -26], "1": [null, 2], "2": [null, -90], "3": [null, -47], "4": [null, 6]}, "16": {"0": [null, -22], "1": [null, 18], "2": [null, -107], "3": [null, -10], "4": [null, 35]}, "17": {"0": [null, -22], "1": [null, 45], "2": [null, -88], "3": [null, -34], "4": [null, 3]}, "18": {"0": [null, -21], "1": [null, 71], "2": [null, -116], "3": [null, -34], "4": [null, 13]}, "19": {"0": [null, -21], "1": [null, 73], "2": [null, -125], "3": [null, -57], "4": [null, -1]}, "20": {"0": [null, -17], "1": [null, 35], "2": [null, -100], "3": [null, -42], "4": [null, 19]}, "21": {"0": [null, -16], "1": [null, 15], "2": [null, -104], "3": [null, -13], "4": [null, 34]}, "22": {"0": [null, -16], "1": [null, 27], "2": [null, -85], "3": [null, -17], "4": [null, 25]}, "23": {"0": [null, -14], "1": [null, 58], "2": [null, -89], "3": [null, -44], "4": [null, 0]}, "24": {"0": [null, -10], "1": [null, 63], "2": [null, -81], "3": [null, -38], "4": [null, -3]}, "25": {"0": [null, -9], "1": [null, 20], "2": [null, -107], "3": [null, -19], "4": [null, 32]}, "26": {"0": [null, 0], "1": [null, -18], "2": [null, -5], "3": [null, 5], "4": [null, 5]}, "27": {"0": [null, 0], "1": [null, -4], "2": [null, -48], "3": [null, -11], "4": [null, 55]}, "28": {"0": [null, 0], "1": [null, 0], "2": [null, 0], "3": [null, -4], "4": [null, 0]}, "29": {"0": [null, 0], "1": [null, 0], "2": [null, 0], "3": [null, 0], "4": [null, 0]}, "30": {"0": [null, 0], "1": [null, 16], "2": [null, 5], "3": [null, -26], "4": [null, -5]}, "31": {"0": [null, 12], "1": [null, -19], "2": [null, -70], "3": [null, -10], "4": [null, 23]}, "32": {"0": [null, 12], "1": [null, -19], "2": [null, -70], "3": [null, 70], "4": [null, 23]}}, "VarRegionCount": [2, 5], "NumShorts": [1, 0]}, "1": {"ItemCount": [3, 66], "VarRegionIndex": {"0": [1, 2], "1": [2, 0], "2": [3, 1], "3": [4, 3], "4": [null, 4]}, "Item": {"0": {"0": [-18, -300], "1": [-5, -48], "2": [5, 63], "3": [5, -26], "4": [null, 108]}, "1": {"0": [-4, -238], "1": [-48, -43], "2": [-11, 73], "3": [55, -27], "4": [null, 67]}, "2": {"0": [16, -198], "1": [5, -40], "2": [-26, 55], "3": [-5, -19], "4": [null, 58]}, "3": {"0": [null, -244], "1": [null, -39], "2": [null, 55], "3": [null, -28], "4": [null, 70]}, "4": {"0": [null, -141], "1": [null, -36], "2": [null, 40], "3": [null, -7], "4": [null, 43]}, "5": {"0": [null, -181], "1": [null, -34], "2": [null, 53], "3": [null, -23], "4": [null, 52]}, "6": {"0": [null, -143], "1": [null, -32], "2": [null, 9], "3": [null, -17], "4": [null, 57]}, "7": {"0": [null, -165], "1": [null, -32], "2": [null, 33], "3": [null, -14], "4": [null, 50]}, "8": {"0": [null, -145], "1": [null, -31], "2": [null, 65], "3": [null, -27], "4": [null, 45]}, "9": {"0": [null, -210], "1": [null, -30], "2": [null, 55], "3": [null, -31], "4": [null, 59]}, "10": {"0": [null, -255], "1": [null, -30], "2": [null, 67], "3": [null, -62], "4": [null, 99]}, "11": {"0": [null, -199], "1": [null, -30], "2": [null, 81], "3": [null, -34], "4": [null, 50]}, "12": {"0": [null, -180], "1": [null, -28], "2": [null, 30], "3": [null, -20], "4": [null, 56]}, "13": {"0": [null, -154], "1": [null, -27], "2": [null, 39], "3": [null, -8], "4": [null, 49]}, "14": {"0": [null, -183], "1": [null, -27], "2": [null, 48], "3": [null, -28], "4": [null, 51]}, "15": {"0": [null, -268], "1": [null, -26], "2": [null, 28], "3": [null, -31], "4": [null, 82]}, "16": {"0": [null, -168], "1": [null, -24], "2": [null, 2], "3": [null, -6], "4": [null, 58]}, "17": {"0": [null, -214], "1": [null, -23], "2": [null, 54], "3": [null, -33], "4": [null, 59]}, "18": {"0": [null, -177], "1": [null, -22], "2": [null, 19], "3": [null, -16], "4": [null, 56]}, "19": {"0": [null, -165], "1": [null, -22], "2": [null, 37], "3": [null, -16], "4": [null, 48]}, "20": {"0": [null, -164], "1": [null, -22], "2": [null, 37], "3": [null, -17], "4": [null, 47]}, "21": {"0": [null, -169], "1": [null, -21], "2": [null, 32], "3": [null, -19], "4": [null, 50]}, "22": {"0": [null, -209], "1": [null, -21], "2": [null, 55], "3": [null, -30], "4": [null, 58]}, "23": {"0": [null, -170], "1": [null, -20], "2": [null, 21], "3": [null, -12], "4": [null, 56]}, "24": {"0": [null, -181], "1": [null, -20], "2": [null, 25], "3": [null, -17], "4": [null, 57]}, "25": {"0": [null, -172], "1": [null, -20], "2": [null, 26], "3": [null, -16], "4": [null, 53]}, "26": {"0": [null, -177], "1": [null, -20], "2": [null, 29], "3": [null, -23], "4": [null, 54]}, "27": {"0": [null, -172], "1": [null, -20], "2": [null, 30], "3": [null, -24], "4": [null, 52]}, "28": {"0": [null, -165], "1": [null, -20], "2": [null, 40], "3": [null, -15], "4": [null, 49]}, "29": {"0": [null, -167], "1": [null, -19], "2": [null, 30], "3": [null, -21], "4": [null, 49]}, "30": {"0": [null, -290], "1": [null, -19], "2": [null, 41], "3": [null, -43], "4": [null, 81]}, "31": {"0": [null, -290], "1": [null, -19], "2": [null, 41], "3": [null, -43], "4": [null, 82]}, "32": {"0": [null, -166], "1": [null, -18], "2": [null, 6], "3": [null, -11], "4": [null, 54]}, "33": {"0": [null, -161], "1": [null, -18], "2": [null, 26], "3": [null, -11], "4": [null, 51]}, "34": {"0": [null, -141], "1": [null, -18], "2": [null, 28], "3": [null, -14], "4": [null, 40]}, "35": {"0": [null, -168], "1": [null, -18], "2": [null, 31], "3": [null, -22], "4": [null, 49]}, "36": {"0": [null, -159], "1": [null, -17], "2": [null, 12], "3": [null, -12], "4": [null, 52]}, "37": {"0": [null, -174], "1": [null, -16], "2": [null, 27], "3": [null, -23], "4": [null, 51]}, "38": {"0": [null, -215], "1": [null, -16], "2": [null, 38], "3": [null, -33], "4": [null, 64]}, "39": {"0": [null, -241], "1": [null, -14], "2": [null, 18], "3": [null, -29], "4": [null, 73]}, "40": {"0": [null, -172], "1": [null, -14], "2": [null, 30], "3": [null, -28], "4": [null, 50]}, "41": {"0": [null, -129], "1": [null, -13], "2": [null, 41], "3": [null, -22], "4": [null, 34]}, "42": {"0": [null, -184], "1": [null, -12], "2": [null, 21], "3": [null, -23], "4": [null, 55]}, "43": {"0": [null, -160], "1": [null, -10], "2": [null, 20], "3": [null, -18], "4": [null, 47]}, "44": {"0": [null, -181], "1": [null, -10], "2": [null, 21], "3": [null, -24], "4": [null, 54]}, "45": {"0": [null, -132], "1": [null, -9], "2": [null, 42], "3": [null, -26], "4": [null, 34]}, "46": {"0": [null, -149], "1": [null, -9], "2": [null, 55], "3": [null, -26], "4": [null, 36]}, "47": {"0": [null, -166], "1": [null, -8], "2": [null, 22], "3": [null, -22], "4": [null, 48]}, "48": {"0": [null, -154], "1": [null, -8], "2": [null, 34], "3": [null, -23], "4": [null, 43]}, "49": {"0": [null, -154], "1": [null, -8], "2": [null, 38], "3": [null, -23], "4": [null, 41]}, "50": {"0": [null, -169], "1": [null, -5], "2": [null, 47], "3": [null, -58], "4": [null, 44]}, "51": {"0": [null, -169], "1": [null, -5], "2": [null, 47], "3": [null, -54], "4": [null, 44]}, "52": {"0": [null, -167], "1": [null, -3], "2": [null, 45], "3": [null, -60], "4": [null, 43]}, "53": {"0": [null, -167], "1": [null, -3], "2": [null, 45], "3": [null, -56], "4": [null, 43]}, "54": {"0": [null, -142], "1": [null, -2], "2": [null, 14], "3": [null, -29], "4": [null, 56]}, "55": {"0": [null, -168], "1": [null, -2], "2": [null, 46], "3": [null, -61], "4": [null, 43]}, "56": {"0": [null, -168], "1": [null, -2], "2": [null, 46], "3": [null, -57], "4": [null, 43]}, "57": {"0": [null, -153], "1": [null, -2], "2": [null, 49], "3": [null, -36], "4": [null, 34]}, "58": {"0": [null, -154], "1": [null, 0], "2": [null, -14], "3": [null, -58], "4": [null, 92]}, "59": {"0": [null, -143], "1": [null, 0], "2": [null, 0], "3": [null, -50], "4": [null, 66]}, "60": {"0": [null, -154], "1": [null, 1], "2": [null, 24], "3": [null, -26], "4": [null, 42]}, "61": {"0": [null, -184], "1": [null, 4], "2": [null, 36], "3": [null, -62], "4": [null, 49]}, "62": {"0": [null, -184], "1": [null, 4], "2": [null, 36], "3": [null, -58], "4": [null, 49]}, "63": {"0": [null, -156], "1": [null, 10], "2": [null, -36], "3": [null, -13], "4": [null, 55]}, "64": {"0": [null, -129], "1": [null, 11], "2": [null, 24], "3": [null, -27], "4": [null, 32]}, "65": {"0": [null, -156], "1": [null, 25], "2": [null, 20], "3": [null, -39], "4": [null, 38]}}, "VarRegionCount": [4, 5], "NumShorts": [0, 1]}, "2": {"ItemCount": [26, 6], "Item": {"0": {"0": [-120, -116], "1": [76, 168], "2": [-112, -45], "3": [8, 53], "4": [68, -68]}, "1": {"0": [-90, -116], "1": [90, 168], "2": [-39, -45], "3": [50, 64], "4": [-40, -68]}, "2": {"0": [-90, -94], "1": [90, 140], "2": [-39, -5], "3": [53, -5], "4": [-40, 9]}, "3": {"0": [-88, -94], "1": [116, 140], "2": [-29, -5], "3": [2, -4], "4": [-11, 9]}, "4": {"0": [-85, 329], "1": [41, -11], "2": [-42, 0], "3": [35, 0], "4": [6, 0]}, "5": {"0": [-53, 581], "1": [67, -19], "2": [-17, 0], "3": [6, 0], "4": [-23, 0]}, "6": {"0": [-50, null], "1": [70, null], "2": [-1, null], "3": [7, null], "4": [-16, null]}, "7": {"0": [-48, null], "1": [21, null], "2": [-42, null], "3": [2, null], "4": [26, null]}, "8": {"0": [-48, null], "1": [29, null], "2": [-40, null], "3": [-3, null], "4": [23, null]}, "9": {"0": [-48, null], "1": [75, null], "2": [14, null], "3": [-10, null], "4": [9, null]}, "10": {"0": [-46, null], "1": [21, null], "2": [-34, null], "3": [5, null], "4": [15, null]}, "11": {"0": [-45, null], "1": [59, null], "2": [-9, null], "3": [17, null], "4": [-24, null]}, "12": {"0": [-29, null], "1": [25, null], "2": [-109, null], "3": [-27, null], "4": [20, null]}, "13": {"0": [-29, null], "1": [37, null], "2": [-97, null], "3": [-7, null], "4": [13, null]}, "14": {"0": [-26, null], "1": [2, null], "2": [-90, null], "3": [-47, null], "4": [6, null]}, "15": {"0": [-22, null], "1": [18, null], "2": [-107, null], "3": [-10, null], "4": [35, null]}, "16": {"0": [-22, null], "1": [45, null], "2": [-88, null], "3": [-34, null], "4": [3, null]}, "17": {"0": [-21, null], "1": [71, null], "2": [-116, null], "3": [-34, null], "4": [13, null]}, "18": {"0": [-21, null], "1": [73, null], "2": [-125, null], "3": [-57, null], "4": [-1, null]}, "19": {"0": [-17, null], "1": [35, null], "2": [-100, null], "3": [-42, null], "4": [19, null]}, "20": {"0": [-16, null], "1": [15, null], "2": [-104, null], "3": [-13, null], "4": [34, null]}, "21": {"0": [-16, null], "1": [27, null], "2": [-85, null], "3": [-17, null], "4": [25, null]}, "22": {"0": [-10, null], "1": [63, null], "2": [-81, null], "3": [-38, null], "4": [-3, null]}, "23": {"0": [-9, null], "1": [20, null], "2": [-107, null], "3": [-19, null], "4": [32, null]}, "24": {"0": [12, null], "1": [-19, null], "2": [-70, null], "3": [-10, null], "4": [23, null]}, "25": {"0": [12, null], "1": [-19, null], "2": [-70, null], "3": [70, null], "4": [23, null]}}, "NumShorts": [0, 2]}, "3": {"ItemCount": [4, null], "NumShorts": [1, null], "VarRegionCount": [5, null], "VarRegionIndex": {"0": [1, null], "1": [0, null], "2": [2, null], "3": [3, null], "4": [4, null]}, "Item": {"0": {"0": [168, null], "1": [-116, null], "2": [-45, null], "3": [53, null], "4": [-68, null]}, "1": {"0": [168, null], "1": [-116, null], "2": [-45, null], "3": [64, null], "4": [-68, null]}, "2": {"0": [140, null], "1": [-94, null], "2": [-5, null], "3": [-5, null], "4": [9, null]}, "3": {"0": [140, null], "1": [-94, null], "2": [-5, null], "3": [-4, null], "4": [9, null]}}}, "4": {"ItemCount": [64, null], "NumShorts": [1, null], "VarRegionCount": [5, null], "VarRegionIndex": {"0": [2, null], "1": [0, null], "2": [1, null], "3": [3, null], "4": [4, null]}, "Item": {"0": {"0": [-300, null], "1": [-48, null], "2": [63, null], "3": [-26, null], "4": [108, null]}, "1": {"0": [-238, null], "1": [-43, null], "2": [73, null], "3": [-27, null], "4": [67, null]}, "2": {"0": [-198, null], "1": [-40, null], "2": [55, null], "3": [-19, null], "4": [58, null]}, "3": {"0": [-244, null], "1": [-39, null], "2": [55, null], "3": [-28, null], "4": [70, null]}, "4": {"0": [-141, null], "1": [-36, null], "2": [40, null], "3": [-7, null], "4": [43, null]}, "5": {"0": [-181, null], "1": [-34, null], "2": [53, null], "3": [-23, null], "4": [52, null]}, "6": {"0": [-143, null], "1": [-32, null], "2": [9, null], "3": [-17, null], "4": [57, null]}, "7": {"0": [-165, null], "1": [-32, null], "2": [33, null], "3": [-14, null], "4": [50, null]}, "8": {"0": [-145, null], "1": [-31, null], "2": [65, null], "3": [-27, null], "4": [45, null]}, "9": {"0": [-210, null], "1": [-30, null], "2": [55, null], "3": [-31, null], "4": [59, null]}, "10": {"0": [-255, null], "1": [-30, null], "2": [67, null], "3": [-62, null], "4": [99, null]}, "11": {"0": [-199, null], "1": [-30, null], "2": [81, null], "3": [-34, null], "4": [50, null]}, "12": {"0": [-180, null], "1": [-28, null], "2": [30, null], "3": [-20, null], "4": [56, null]}, "13": {"0": [-154, null], "1": [-27, null], "2": [39, null], "3": [-8, null], "4": [49, null]}, "14": {"0": [-183, null], "1": [-27, null], "2": [48, null], "3": [-28, null], "4": [51, null]}, "15": {"0": [-268, null], "1": [-26, null], "2": [28, null], "3": [-31, null], "4": [82, null]}, "16": {"0": [-168, null], "1": [-24, null], "2": [2, null], "3": [-6, null], "4": [58, null]}, "17": {"0": [-214, null], "1": [-23, null], "2": [54, null], "3": [-33, null], "4": [59, null]}, "18": {"0": [-177, null], "1": [-22, null], "2": [19, null], "3": [-16, null], "4": [56, null]}, "19": {"0": [-165, null], "1": [-22, null], "2": [37, null], "3": [-16, null], "4": [48, null]}, "20": {"0": [-164, null], "1": [-22, null], "2": [37, null], "3": [-17, null], "4": [47, null]}, "21": {"0": [-169, null], "1": [-21, null], "2": [32, null], "3": [-19, null], "4": [50, null]}, "22": {"0": [-209, null], "1": [-21, null], "2": [55, null], "3": [-30, null], "4": [58, null]}, "23": {"0": [-170, null], "1": [-20, null], "2": [21, null], "3": [-12, null], "4": [56, null]}, "24": {"0": [-181, null], "1": [-20, null], "2": [25, null], "3": [-17, null], "4": [57, null]}, "25": {"0": [-172, null], "1": [-20, null], "2": [26, null], "3": [-16, null], "4": [53, null]}, "26": {"0": [-177, null], "1": [-20, null], "2": [29, null], "3": [-23, null], "4": [54, null]}, "27": {"0": [-172, null], "1": [-20, null], "2": [30, null], "3": [-24, null], "4": [52, null]}, "28": {"0": [-165, null], "1": [-20, null], "2": [40, null], "3": [-15, null], "4": [49, null]}, "29": {"0": [-167, null], "1": [-19, null], "2": [30, null], "3": [-21, null], "4": [49, null]}, "30": {"0": [-290, null], "1": [-19, null], "2": [41, null], "3": [-43, null], "4": [81, null]}, "31": {"0": [-290, null], "1": [-19, null], "2": [41, null], "3": [-43, null], "4": [82, null]}, "32": {"0": [-166, null], "1": [-18, null], "2": [6, null], "3": [-11, null], "4": [54, null]}, "33": {"0": [-161, null], "1": [-18, null], "2": [26, null], "3": [-11, null], "4": [51, null]}, "34": {"0": [-141, null], "1": [-18, null], "2": [28, null], "3": [-14, null], "4": [40, null]}, "35": {"0": [-168, null], "1": [-18, null], "2": [31, null], "3": [-22, null], "4": [49, null]}, "36": {"0": [-159, null], "1": [-17, null], "2": [12, null], "3": [-12, null], "4": [52, null]}, "37": {"0": [-174, null], "1": [-16, null], "2": [27, null], "3": [-23, null], "4": [51, null]}, "38": {"0": [-215, null], "1": [-16, null], "2": [38, null], "3": [-33, null], "4": [64, null]}, "39": {"0": [-241, null], "1": [-14, null], "2": [18, null], "3": [-29, null], "4": [73, null]}, "40": {"0": [-172, null], "1": [-14, null], "2": [30, null], "3": [-28, null], "4": [50, null]}, "41": {"0": [-129, null], "1": [-13, null], "2": [41, null], "3": [-22, null], "4": [34, null]}, "42": {"0": [-184, null], "1": [-12, null], "2": [21, null], "3": [-23, null], "4": [55, null]}, "43": {"0": [-160, null], "1": [-10, null], "2": [20, null], "3": [-18, null], "4": [47, null]}, "44": {"0": [-181, null], "1": [-10, null], "2": [21, null], "3": [-24, null], "4": [54, null]}, "45": {"0": [-132, null], "1": [-9, null], "2": [42, null], "3": [-26, null], "4": [34, null]}, "46": {"0": [-149, null], "1": [-9, null], "2": [55, null], "3": [-26, null], "4": [36, null]}, "47": {"0": [-166, null], "1": [-8, null], "2": [22, null], "3": [-22, null], "4": [48, null]}, "48": {"0": [-154, null], "1": [-8, null], "2": [34, null], "3": [-23, null], "4": [43, null]}, "49": {"0": [-154, null], "1": [-8, null], "2": [38, null], "3": [-23, null], "4": [41, null]}, "50": {"0": [-169, null], "1": [-5, null], "2": [47, null], "3": [-58, null], "4": [44, null]}, "51": {"0": [-169, null], "1": [-5, null], "2": [47, null], "3": [-54, null], "4": [44, null]}, "52": {"0": [-167, null], "1": [-3, null], "2": [45, null], "3": [-60, null], "4": [43, null]}, "53": {"0": [-167, null], "1": [-3, null], "2": [45, null], "3": [-56, null], "4": [43, null]}, "54": {"0": [-142, null], "1": [-2, null], "2": [14, null], "3": [-29, null], "4": [56, null]}, "55": {"0": [-168, null], "1": [-2, null], "2": [46, null], "3": [-61, null], "4": [43, null]}, "56": {"0": [-168, null], "1": [-2, null], "2": [46, null], "3": [-57, null], "4": [43, null]}, "57": {"0": [-153, null], "1": [-2, null], "2": [49, null], "3": [-36, null], "4": [34, null]}, "58": {"0": [-154, null], "1": [1, null], "2": [24, null], "3": [-26, null], "4": [42, null]}, "59": {"0": [-184, null], "1": [4, null], "2": [36, null], "3": [-62, null], "4": [49, null]}, "60": {"0": [-184, null], "1": [4, null], "2": [36, null], "3": [-58, null], "4": [49, null]}, "61": {"0": [-156, null], "1": [10, null], "2": [-36, null], "3": [-13, null], "4": [55, null]}, "62": {"0": [-129, null], "1": [11, null], "2": [24, null], "3": [-27, null], "4": [32, null]}, "63": {"0": [-156, null], "1": [25, null], "2": [20, null], "3": [-39, null], "4": [38, null]}}}, "5": {"ItemCount": [5, null], "NumShorts": [1, null], "VarRegionCount": [5, null], "VarRegionIndex": {"0": [2, null], "1": [0, null], "2": [1, null], "3": [3, null], "4": [4, null]}, "Item": {"0": {"0": [-40, null], "1": [-48, null], "2": [21, null], "3": [0, null], "4": [31, null]}, "1": {"0": [-89, null], "1": [-14, null], "2": [58, null], "3": [-44, null], "4": [0, null]}, "2": {"0": [-154, null], "1": [0, null], "2": [-14, null], "3": [-58, null], "4": [92, null]}, "3": {"0": [-143, null], "1": [0, null], "2": [0, null], "3": [-50, null], "4": [66, null]}, "4": {"0": [0, null], "1": [0, null], "2": [0, null], "3": [-4, null], "4": [0, null]}}}}, "VarDataCount": [6, 3]}}}, "hhea": {"caretSlopeRise": [1, 1000]}, "GDEF": {"table": {"VarStore": {"VarData": {"0": {"ItemCount": [2, 4], "VarRegionIndex": {"0": [1, 2]}, "Item": {"0": {"0": [5, -10]}, "1": {"0": [10, 5]}, "2": {"0": [null, 10]}, "3": {"0": [null, 20]}}}, "1": {"ItemCount": [4, 12], "VarRegionIndex": {"0": [2, 0], "1": [null, 1]}, "Item": {"0": {"0": [-10, -20], "1": [null, 20]}, "1": {"0": [5, -15], "1": [null, -7]}, "2": {"0": [10, -10], "1": [null, -2]}, "3": {"0": [20, -10], "1": [null, 10]}, "4": {"0": [null, -10], "1": [null, 35]}, "5": {"0": [null, -5], "1": [null, 5]}, "6": {"0": [null, -1], "1": [null, 5]}, "7": {"0": [null, 0], "1": [null, 5]}, "8": {"0": [null, 0], "1": [null, 10]}, "9": {"0": [null, 19], "1": [null, -45]}, "10": {"0": [null, 19], "1": [null, -35]}, "11": {"0": [null, 40], "1": [null, -60]}}, "VarRegionCount": [1, 2]}, "2": {"ItemCount": [10, 169], "VarRegionIndex": {"2": [null, 2], "3": [null, 3], "4": [null, 4]}, "Item": {"0": {"0": [-20, -62], "1": [20, 64], "2": [null, -105], "3": [null, 3], "4": [null, 27]}, "1": {"0": [-15, -62], "1": [-7, 74], "2": [null, -44], "3": [null, 1], "4": [null, 5]}, "2": {"0": [-10, -62], "1": [-2, 84], "2": [null, -68], "3": [null, -4], "4": [null, 16]}, "3": {"0": [-10, -57], "1": [10, 96], "2": [null, -8], "3": [null, 6], "4": [null, -7]}, "4": {"0": [-10, -53], "1": [35, 100], "2": [null, -10], "3": [null, 2], "4": [null, -6]}, "5": {"0": [-5, -50], "1": [5, 66], "2": [null, -104], "3": [null, -2], "4": [null, 30]}, "6": {"0": [-1, -50], "1": [5, 67], "2": [null, -105], "3": [null, -1], "4": [null, 27]}, "7": {"0": [19, -50], "1": [-45, 67], "2": [null, -105], "3": [null, -1], "4": [null, 28]}, "8": {"0": [19, -46], "1": [-35, 83], "2": [null, -33], "3": [null, 0], "4": [null, 1]}, "9": {"0": [40, -45], "1": [-60, 65], "2": [null, -67], "3": [null, 0], "4": [null, 16]}, "10": {"0": [null, -45], "1": [null, 65], "2": [null, -53], "3": [null, 2], "4": [null, 11]}, "11": {"0": [null, -43], "1": [null, 68], "2": [null, -109], "3": [null, -8], "4": [null, 29]}, "12": {"0": [null, -41], "1": [null, 10], "2": [null, -93], "3": [null, 10], "4": [null, 36]}, "13": {"0": [null, -41], "1": [null, 30], "2": [null, -88], "3": [null, 5], "4": [null, 30]}, "14": {"0": [null, -41], "1": [null, 63], "2": [null, -125], "3": [null, -7], "4": [null, 35]}, "15": {"0": [null, -40], "1": [null, 19], "2": [null, -111], "3": [null, 0], "4": [null, 45]}, "16": {"0": [null, -40], "1": [null, 60], "2": [null, -83], "3": [null, -8], "4": [null, 14]}, "17": {"0": [null, -39], "1": [null, 80], "2": [null, -52], "3": [null, -6], "4": [null, 7]}, "18": {"0": [null, -38], "1": [null, 6], "2": [null, -110], "3": [null, 7], "4": [null, 41]}, "19": {"0": [null, -37], "1": [null, 31], "2": [null, -79], "3": [null, 4], "4": [null, 26]}, "20": {"0": [null, -36], "1": [null, 20], "2": [null, -102], "3": [null, -1], "4": [null, 32]}, "21": {"0": [null, -36], "1": [null, 45], "2": [null, -118], "3": [null, -5], "4": [null, 34]}, "22": {"0": [null, -36], "1": [null, 58], "2": [null, -125], "3": [null, -7], "4": [null, 35]}, "23": {"0": [null, -35], "1": [null, 35], "2": [null, -52], "3": [null, 3], "4": [null, 28]}, "24": {"0": [null, -34], "1": [null, 34], "2": [null, -41], "3": [null, 6], "4": [null, 13]}, "25": {"0": [null, -34], "1": [null, 81], "2": [null, -60], "3": [null, -3], "4": [null, 23]}, "26": {"0": [null, -31], "1": [null, 20], "2": [null, -39], "3": [null, 10], "4": [null, 9]}, "27": {"0": [null, -31], "1": [null, 32], "2": [null, -52], "3": [null, 2], "4": [null, 3]}, "28": {"0": [null, -30], "1": [null, 29], "2": [null, -54], "3": [null, 1], "4": [null, 18]}, "29": {"0": [null, -30], "1": [null, 57], "2": [null, -32], "3": [null, -1], "4": [null, 1]}, "30": {"0": [null, -29], "1": [null, 51], "2": [null, -56], "3": [null, 12], "4": [null, 28]}, "31": {"0": [null, -28], "1": [null, 46], "2": [null, -5], "3": [null, 3], "4": [null, -2]}, "32": {"0": [null, -27], "1": [null, 36], "2": [null, -14], "3": [null, 3], "4": [null, -5]}, "33": {"0": [null, -27], "1": [null, 65], "2": [null, -103], "3": [null, -14], "4": [null, 24]}, "34": {"0": [null, -26], "1": [null, 38], "2": [null, -44], "3": [null, -1], "4": [null, 11]}, "35": {"0": [null, -26], "1": [null, 58], "2": [null, -47], "3": [null, -6], "4": [null, 8]}, "36": {"0": [null, -26], "1": [null, 60], "2": [null, -115], "3": [null, -13], "4": [null, 32]}, "37": {"0": [null, -26], "1": [null, 98], "2": [null, -50], "3": [null, -15], "4": [null, -3]}, "38": {"0": [null, -25], "1": [null, 20], "2": [null, -65], "3": [null, 1], "4": [null, 21]}, "39": {"0": [null, -25], "1": [null, 23], "2": [null, -52], "3": [null, -1], "4": [null, 15]}, "40": {"0": [null, -25], "1": [null, 33], "2": [null, -52], "3": [null, -1], "4": [null, 15]}, "41": {"0": [null, -24], "1": [null, 22], "2": [null, -24], "3": [null, 5], "4": [null, 9]}, "42": {"0": [null, -23], "1": [null, 11], "2": [null, -87], "3": [null, 1], "4": [null, 29]}, "43": {"0": [null, -23], "1": [null, 11], "2": [null, -82], "3": [null, -4], "4": [null, 24]}, "44": {"0": [null, -23], "1": [null, 25], "2": [null, -26], "3": [null, 3], "4": [null, 8]}, "45": {"0": [null, -23], "1": [null, 30], "2": [null, -28], "3": [null, 1], "4": [null, 7]}, "46": {"0": [null, -23], "1": [null, 41], "2": [null, -3], "3": [null, 1], "4": [null, -3]}, "47": {"0": [null, -23], "1": [null, 51], "2": [null, -6], "3": [null, -1], "4": [null, -4]}, "48": {"0": [null, -23], "1": [null, 55], "2": [null, -25], "3": [null, -10], "4": [null, 4]}, "49": {"0": [null, -23], "1": [null, 66], "2": [null, -106], "3": [null, -18], "4": [null, 24]}, "50": {"0": [null, -22], "1": [null, 7], "2": [null, -84], "3": [null, 5], "4": [null, 28]}, "51": {"0": [null, -22], "1": [null, 60], "2": [null, -103], "3": [null, -14], "4": [null, 24]}, "52": {"0": [null, -21], "1": [null, 17], "2": [null, -20], "3": [null, 3], "4": [null, 5]}, "53": {"0": [null, -21], "1": [null, 23], "2": [null, -43], "3": [null, 0], "4": [null, 13]}, "54": {"0": [null, -21], "1": [null, 40], "2": [null, -25], "3": [null, 0], "4": [null, 4]}, "55": {"0": [null, -21], "1": [null, 58], "2": [null, -31], "3": [null, -5], "4": [null, 1]}, "56": {"0": [null, -20], "1": [null, -6], "2": [null, -96], "3": [null, 5], "4": [null, 38]}, "57": {"0": [null, -20], "1": [null, 10], "2": [null, -3], "3": [null, 3], "4": [null, 2]}, "58": {"0": [null, -20], "1": [null, 16], "2": [null, -85], "3": [null, 2], "4": [null, 24]}, "59": {"0": [null, -19], "1": [null, 19], "2": [null, -23], "3": [null, 3], "4": [null, 6]}, "60": {"0": [null, -18], "1": [null, 2], "2": [null, -54], "3": [null, -2], "4": [null, 16]}, "61": {"0": [null, -18], "1": [null, 10], "2": [null, -50], "3": [null, 3], "4": [null, 15]}, "62": {"0": [null, -18], "1": [null, 61], "2": [null, -106], "3": [null, -18], "4": [null, 24]}, "63": {"0": [null, -17], "1": [null, -8], "2": [null, -78], "3": [null, 5], "4": [null, 22]}, "64": {"0": [null, -17], "1": [null, 3], "2": [null, -95], "3": [null, 8], "4": [null, 32]}, "65": {"0": [null, -17], "1": [null, 22], "2": [null, -80], "3": [null, -5], "4": [null, 23]}, "66": {"0": [null, -17], "1": [null, 23], "2": [null, -56], "3": [null, -4], "4": [null, 8]}, "67": {"0": [null, -17], "1": [null, 27], "2": [null, -90], "3": [null, -12], "4": [null, 26]}, "68": {"0": [null, -17], "1": [null, 27], "2": [null, -90], "3": [null, -11], "4": [null, 26]}, "69": {"0": [null, -17], "1": [null, 34], "2": [null, -31], "3": [null, -2], "4": [null, 6]}, "70": {"0": [null, -17], "1": [null, 34], "2": [null, -30], "3": [null, -3], "4": [null, 5]}, "71": {"0": [null, -17], "1": [null, 63], "2": [null, -74], "3": [null, -22], "4": [null, 13]}, "72": {"0": [null, -16], "1": [null, 5], "2": [null, -72], "3": [null, -8], "4": [null, 29]}, "73": {"0": [null, -16], "1": [null, 12], "2": [null, -85], "3": [null, -17], "4": [null, 27]}, "74": {"0": [null, -16], "1": [null, 12], "2": [null, -85], "3": [null, 2], "4": [null, 27]}, "75": {"0": [null, -16], "1": [null, 14], "2": [null, -49], "3": [null, 0], "4": [null, 16]}, "76": {"0": [null, -16], "1": [null, 23], "2": [null, -72], "3": [null, -14], "4": [null, 18]}, "77": {"0": [null, -16], "1": [null, 23], "2": [null, -72], "3": [null, -7], "4": [null, 18]}, "78": {"0": [null, -16], "1": [null, 78], "2": [null, -30], "3": [null, -3], "4": [null, 2]}, "79": {"0": [null, -15], "1": [null, -2], "2": [null, -54], "3": [null, 3], "4": [null, 21]}, "80": {"0": [null, -15], "1": [null, -2], "2": [null, -51], "3": [null, 0], "4": [null, 18]}, "81": {"0": [null, -15], "1": [null, 8], "2": [null, -51], "3": [null, 0], "4": [null, 17]}, "82": {"0": [null, -15], "1": [null, 16], "2": [null, -83], "3": [null, -6], "4": [null, 26]}, "83": {"0": [null, -15], "1": [null, 22], "2": [null, -42], "3": [null, 10], "4": [null, -10]}, "84": {"0": [null, -15], "1": [null, 23], "2": [null, -79], "3": [null, -7], "4": [null, 22]}, "85": {"0": [null, -15], "1": [null, 38], "2": [null, -95], "3": [null, -17], "4": [null, 17]}, "86": {"0": [null, -14], "1": [null, 15], "2": [null, -90], "3": [null, -10], "4": [null, 28]}, "87": {"0": [null, -14], "1": [null, 15], "2": [null, -63], "3": [null, -4], "4": [null, 19]}, "88": {"0": [null, -14], "1": [null, 15], "2": [null, -49], "3": [null, -1], "4": [null, 14]}, "89": {"0": [null, -14], "1": [null, 26], "2": [null, -15], "3": [null, -1], "4": [null, 2]}, "90": {"0": [null, -14], "1": [null, 40], "2": [null, -103], "3": [null, -17], "4": [null, 26]}, "91": {"0": [null, -13], "1": [null, 7], "2": [null, -2], "3": [null, 2], "4": [null, 1]}, "92": {"0": [null, -12], "1": [null, 29], "2": [null, -62], "3": [null, -12], "4": [null, 10]}, "93": {"0": [null, -12], "1": [null, 34], "2": [null, -34], "3": [null, -4], "4": [null, 8]}, "94": {"0": [null, -11], "1": [null, 10], "2": [null, -88], "3": [null, -3], "4": [null, 30]}, "95": {"0": [null, -11], "1": [null, 14], "2": [null, -84], "3": [null, -8], "4": [null, 26]}, "96": {"0": [null, -11], "1": [null, 16], "2": [null, -84], "3": [null, -6], "4": [null, 25]}, "97": {"0": [null, -11], "1": [null, 17], "2": [null, -83], "3": [null, -7], "4": [null, 24]}, "98": {"0": [null, -11], "1": [null, 36], "2": [null, -113], "3": [null, -17], "4": [null, 24]}, "99": {"0": [null, -10], "1": [null, 7], "2": [null, -120], "3": [null, -15], "4": [null, 37]}, "100": {"0": [null, -10], "1": [null, 10], "2": [null, -82], "3": [null, -7], "4": [null, 26]}, "101": {"0": [null, -10], "1": [null, 10], "2": [null, -4], "3": [null, 4], "4": [null, -1]}, "102": {"0": [null, -10], "1": [null, 10], "2": [null, 0], "3": [null, 0], "4": [null, -10]}, "103": {"0": [null, -10], "1": [null, 10], "2": [null, 5], "3": [null, 0], "4": [null, 0]}, "104": {"0": [null, -10], "1": [null, 13], "2": [null, -88], "3": [null, -8], "4": [null, 27]}, "105": {"0": [null, -10], "1": [null, 13], "2": [null, -87], "3": [null, -11], "4": [null, 26]}, "106": {"0": [null, -10], "1": [null, 13], "2": [null, -86], "3": [null, -8], "4": [null, 26]}, "107": {"0": [null, -10], "1": [null, 15], "2": [null, -87], "3": [null, -11], "4": [null, 24]}, "108": {"0": [null, -10], "1": [null, 20], "2": [null, 10], "3": [null, 0], "4": [null, 0]}, "109": {"0": [null, -9], "1": [null, -19], "2": [null, -82], "3": [null, -9], "4": [null, 11]}, "110": {"0": [null, -9], "1": [null, -7], "2": [null, -94], "3": [null, -2], "4": [null, 33]}, "111": {"0": [null, -9], "1": [null, -7], "2": [null, -91], "3": [null, -5], "4": [null, 30]}, "112": {"0": [null, -9], "1": [null, 16], "2": [null, -82], "3": [null, -9], "4": [null, 24]}, "113": {"0": [null, -8], "1": [null, -26], "2": [null, -92], "3": [null, 0], "4": [null, 36]}, "114": {"0": [null, -8], "1": [null, -4], "2": [null, -86], "3": [null, -6], "4": [null, 29]}, "115": {"0": [null, -8], "1": [null, -4], "2": [null, -86], "3": [null, -5], "4": [null, 29]}, "116": {"0": [null, -7], "1": [null, 9], "2": [null, -64], "3": [null, -6], "4": [null, 20]}, "117": {"0": [null, -7], "1": [null, 23], "2": [null, -57], "3": [null, -10], "4": [null, 14]}, "118": {"0": [null, -7], "1": [null, 37], "2": [null, -72], "3": [null, -13], "4": [null, 17]}, "119": {"0": [null, -6], "1": [null, -21], "2": [null, -1], "3": [null, 1], "4": [null, 4]}, "120": {"0": [null, -6], "1": [null, -6], "2": [null, -1], "3": [null, 1], "4": [null, 2]}, "121": {"0": [null, -6], "1": [null, 21], "2": [null, -76], "3": [null, -11], "4": [null, 16]}, "122": {"0": [null, -6], "1": [null, 21], "2": [null, -76], "3": [null, -11], "4": [null, 18]}, "123": {"0": [null, -5], "1": [null, 2], "2": [null, -83], "3": [null, -9], "4": [null, 31]}, "124": {"0": [null, -5], "1": [null, 9], "2": [null, -83], "3": [null, -8], "4": [null, 25]}, "125": {"0": [null, -4], "1": [null, 10], "2": [null, -80], "3": [null, -9], "4": [null, 23]}, "126": {"0": [null, -4], "1": [null, 31], "2": [null, -60], "3": [null, -13], "4": [null, 13]}, "127": {"0": [null, -3], "1": [null, -7], "2": [null, -87], "3": [null, -7], "4": [null, 29]}, "128": {"0": [null, -3], "1": [null, 20], "2": [null, -71], "3": [null, -11], "4": [null, 19]}, "129": {"0": [null, -2], "1": [null, 17], "2": [null, -80], "3": [null, -12], "4": [null, 21]}, "130": {"0": [null, -2], "1": [null, 30], "2": [null, -70], "3": [null, -9], "4": [null, 11]}, "131": {"0": [null, -1], "1": [null, 3], "2": [null, -96], "3": [null, -12], "4": [null, 29]}, "132": {"0": [null, -1], "1": [null, 8], "2": [null, -89], "3": [null, -12], "4": [null, 26]}, "133": {"0": [null, -1], "1": [null, 19], "2": [null, -78], "3": [null, -14], "4": [null, 19]}, "134": {"0": [null, 0], "1": [null, -2], "2": [null, -24], "3": [null, -5], "4": [null, 28]}, "135": {"0": [null, 0], "1": [null, -1], "2": [null, 0], "3": [null, -2], "4": [null, 1]}, "136": {"0": [null, 0], "1": [null, 0], "2": [null, 0], "3": [null, -2], "4": [null, 1]}, "137": {"0": [null, 0], "1": [null, 0], "2": [null, 5], "3": [null, 0], "4": [null, -10]}, "138": {"0": [null, 0], "1": [null, 0], "2": [null, 5], "3": [null, 0], "4": [null, 1]}, "139": {"0": [null, 0], "1": [null, 2], "2": [null, 3], "3": [null, -7], "4": [null, 6]}, "140": {"0": [null, 0], "1": [null, 4], "2": [null, 3], "3": [null, -7], "4": [null, 4]}, "141": {"0": [null, 0], "1": [null, 5], "2": [null, -71], "3": [null, -14], "4": [null, 29]}, "142": {"0": [null, 0], "1": [null, 15], "2": [null, -35], "3": [null, -10], "4": [null, 34]}, "143": {"0": [null, 0], "1": [null, 20], "2": [null, 0], "3": [null, 0], "4": [null, -10]}, "144": {"0": [null, 0], "1": [null, 28], "2": [null, -67], "3": [null, -9], "4": [null, 18]}, "145": {"0": [null, 1], "1": [null, 40], "2": [null, -56], "3": [null, -8], "4": [null, 8]}, "146": {"0": [null, 2], "1": [null, -4], "2": [null, -95], "3": [null, -12], "4": [null, 34]}, "147": {"0": [null, 2], "1": [null, 41], "2": [null, -44], "3": [null, -14], "4": [null, -1]}, "148": {"0": [null, 3], "1": [null, -14], "2": [null, -108], "3": [null, -11], "4": [null, 35]}, "149": {"0": [null, 3], "1": [null, 21], "2": [null, -61], "3": [null, -16], "4": [null, 4]}, "150": {"0": [null, 5], "1": [null, -16], "2": [null, -106], "3": [null, -13], "4": [null, 34]}, "151": {"0": [null, 6], "1": [null, -7], "2": [null, -85], "3": [null, -13], "4": [null, 26]}, "152": {"0": [null, 6], "1": [null, 20], "2": [null, -74], "3": [null, -16], "4": [null, 17]}, "153": {"0": [null, 6], "1": [null, 25], "2": [null, -78], "3": [null, -20], "4": [null, 17]}, "154": {"0": [null, 8], "1": [null, -9], "2": [null, -124], "3": [null, -18], "4": [null, 37]}, "155": {"0": [null, 8], "1": [null, 9], "2": [null, -78], "3": [null, -17], "4": [null, 20]}, "156": {"0": [null, 9], "1": [null, -22], "2": [null, -82], "3": [null, -20], "4": [null, 19]}, "157": {"0": [null, 9], "1": [null, 14], "2": [null, -60], "3": [null, -16], "4": [null, 14]}, "158": {"0": [null, 10], "1": [null, -13], "2": [null, -110], "3": [null, -28], "4": [null, 58]}, "159": {"0": [null, 10], "1": [null, -11], "2": [null, -106], "3": [null, -34], "4": [null, 54]}, "160": {"0": [null, 10], "1": [null, 11], "2": [null, -79], "3": [null, -18], "4": [null, 22]}, "161": {"0": [null, 12], "1": [null, -23], "2": [null, -101], "3": [null, -12], "4": [null, 34]}, "162": {"0": [null, 14], "1": [null, 15], "2": [null, -128], "3": [null, -39], "4": [null, 56]}, "163": {"0": [null, 15], "1": [null, -9], "2": [null, -117], "3": [null, -22], "4": [null, 33]}, "164": {"0": [null, 19], "1": [null, -45], "2": [null, -17], "3": [null, -10], "4": [null, 19]}, "165": {"0": [null, 19], "1": [null, -45], "2": [null, 3], "3": [null, -3], "4": [null, 20]}, "166": {"0": [null, 23], "1": [null, -34], "2": [null, -98], "3": [null, -24], "4": [null, 56]}, "167": {"0": [null, 25], "1": [null, -36], "2": [null, -96], "3": [null, -26], "4": [null, 55]}, "168": {"0": [null, 26], "1": [null, -3], "2": [null, -117], "3": [null, -31], "4": [null, 29]}}, "VarRegionCount": [2, 5]}, "3": {"ItemCount": [2, 89], "VarRegionIndex": {"1": [4, 0], "2": [null, 1], "3": [null, 3], "4": [null, 4]}, "Item": {"0": {"0": [5, -212], "1": [-10, -57], "2": [null, 97], "3": [null, -19], "4": [null, 57]}, "1": {"0": [5, -142], "1": [1, -56], "2": [null, 64], "3": [null, -2], "4": [null, 43]}, "2": {"0": [null, -172], "1": [null, -54], "2": [null, 79], "3": [null, -11], "4": [null, 48]}, "3": {"0": [null, -218], "1": [null, -53], "2": [null, 79], "3": [null, -20], "4": [null, 60]}, "4": {"0": [null, -212], "1": [null, -52], "2": [null, 92], "3": [null, -19], "4": [null, 57]}, "5": {"0": [null, -172], "1": [null, -49], "2": [null, 74], "3": [null, -11], "4": [null, 48]}, "6": {"0": [null, -218], "1": [null, -48], "2": [null, 74], "3": [null, -20], "4": [null, 60]}, "7": {"0": [null, -155], "1": [null, -48], "2": [null, 77], "3": [null, -15], "4": [null, 42]}, "8": {"0": [null, -184], "1": [null, -44], "2": [null, 79], "3": [null, -23], "4": [null, 49]}, "9": {"0": [null, -173], "1": [null, -44], "2": [null, 105], "3": [null, -26], "4": [null, 40]}, "10": {"0": [null, -155], "1": [null, -43], "2": [null, 72], "3": [null, -15], "4": [null, 42]}, "11": {"0": [null, -154], "1": [null, -42], "2": [null, 54], "3": [null, -12], "4": [null, 46]}, "12": {"0": [null, -242], "1": [null, -40], "2": [null, 52], "3": [null, -23], "4": [null, 72]}, "13": {"0": [null, -184], "1": [null, -39], "2": [null, 74], "3": [null, -23], "4": [null, 49]}, "14": {"0": [null, -173], "1": [null, -39], "2": [null, 100], "3": [null, -26], "4": [null, 40]}, "15": {"0": [null, -154], "1": [null, -37], "2": [null, 49], "3": [null, -12], "4": [null, 46]}, "16": {"0": [null, -188], "1": [null, -37], "2": [null, 78], "3": [null, -25], "4": [null, 49]}, "17": {"0": [null, -138], "1": [null, -36], "2": [null, 61], "3": [null, -12], "4": [null, 37]}, "18": {"0": [null, -137], "1": [null, -36], "2": [null, 61], "3": [null, -12], "4": [null, 36]}, "19": {"0": [null, -242], "1": [null, -35], "2": [null, 47], "3": [null, -23], "4": [null, 72]}, "20": {"0": [null, -143], "1": [null, -35], "2": [null, 56], "3": [null, -11], "4": [null, 40]}, "21": {"0": [null, -183], "1": [null, -35], "2": [null, 79], "3": [null, -22], "4": [null, 48]}, "22": {"0": [null, -141], "1": [null, -34], "2": [null, 45], "3": [null, -11], "4": [null, 42]}, "23": {"0": [null, -155], "1": [null, -34], "2": [null, 49], "3": [null, -9], "4": [null, 47]}, "24": {"0": [null, -146], "1": [null, -34], "2": [null, 52], "3": [null, -12], "4": [null, 42]}, "25": {"0": [null, -151], "1": [null, -34], "2": [null, 53], "3": [null, -15], "4": [null, 44]}, "26": {"0": [null, -146], "1": [null, -34], "2": [null, 54], "3": [null, -16], "4": [null, 42]}, "27": {"0": [null, -136], "1": [null, -34], "2": [null, 64], "3": [null, -14], "4": [null, 35]}, "28": {"0": [null, -141], "1": [null, -33], "2": [null, 54], "3": [null, -13], "4": [null, 39]}, "29": {"0": [null, -264], "1": [null, -33], "2": [null, 65], "3": [null, -35], "4": [null, 71]}, "30": {"0": [null, -264], "1": [null, -33], "2": [null, 65], "3": [null, -35], "4": [null, 72]}, "31": {"0": [null, -141], "1": [null, -32], "2": [null, 9], "3": [null, -19], "4": [null, 65]}, "32": {"0": [null, -132], "1": [null, -32], "2": [null, 50], "3": [null, -10], "4": [null, 37]}, "33": {"0": [null, -142], "1": [null, -32], "2": [null, 55], "3": [null, -14], "4": [null, 39]}, "34": {"0": [null, -188], "1": [null, -32], "2": [null, 73], "3": [null, -25], "4": [null, 49]}, "35": {"0": [null, -145], "1": [null, -31], "2": [null, 22], "3": [null, -4], "4": [null, 46]}, "36": {"0": [null, -140], "1": [null, -31], "2": [null, 56], "3": [null, -11], "4": [null, 40]}, "37": {"0": [null, -138], "1": [null, -31], "2": [null, 56], "3": [null, -12], "4": [null, 37]}, "38": {"0": [null, -137], "1": [null, -31], "2": [null, 56], "3": [null, -12], "4": [null, 36]}, "39": {"0": [null, -148], "1": [null, -30], "2": [null, 51], "3": [null, -15], "4": [null, 41]}, "40": {"0": [null, -143], "1": [null, -30], "2": [null, 51], "3": [null, -11], "4": [null, 40]}, "41": {"0": [null, -183], "1": [null, -30], "2": [null, 74], "3": [null, -22], "4": [null, 48]}, "42": {"0": [null, -141], "1": [null, -29], "2": [null, 40], "3": [null, -11], "4": [null, 42]}, "43": {"0": [null, -155], "1": [null, -29], "2": [null, 44], "3": [null, -9], "4": [null, 47]}, "44": {"0": [null, -151], "1": [null, -29], "2": [null, 48], "3": [null, -15], "4": [null, 44]}, "45": {"0": [null, -146], "1": [null, -29], "2": [null, 49], "3": [null, -16], "4": [null, 42]}, "46": {"0": [null, -138], "1": [null, -29], "2": [null, 49], "3": [null, -12], "4": [null, 39]}, "47": {"0": [null, -136], "1": [null, -29], "2": [null, 59], "3": [null, -14], "4": [null, 35]}, "48": {"0": [null, -131], "1": [null, -29], "2": [null, 59], "3": [null, -19], "4": [null, 30]}, "49": {"0": [null, -136], "1": [null, -29], "2": [null, 69], "3": [null, -19], "4": [null, 28]}, "50": {"0": [null, -215], "1": [null, -28], "2": [null, 42], "3": [null, -21], "4": [null, 63]}, "51": {"0": [null, -137], "1": [null, -28], "2": [null, 43], "3": [null, -14], "4": [null, 38]}, "52": {"0": [null, -136], "1": [null, -28], "2": [null, 43], "3": [null, -11], "4": [null, 41]}, "53": {"0": [null, -141], "1": [null, -28], "2": [null, 49], "3": [null, -13], "4": [null, 39]}, "54": {"0": [null, -163], "1": [null, -28], "2": [null, 55], "3": [null, -9], "4": [null, 28]}, "55": {"0": [null, -264], "1": [null, -28], "2": [null, 60], "3": [null, -35], "4": [null, 71]}, "56": {"0": [null, -264], "1": [null, -28], "2": [null, 60], "3": [null, -35], "4": [null, 72]}, "57": {"0": [null, -174], "1": [null, -27], "2": [null, 35], "3": [null, -17], "4": [null, 50]}, "58": {"0": [null, -132], "1": [null, -27], "2": [null, 45], "3": [null, -10], "4": [null, 37]}, "59": {"0": [null, -142], "1": [null, -27], "2": [null, 50], "3": [null, -14], "4": [null, 39]}, "60": {"0": [null, -184], "1": [null, -26], "2": [null, 6], "3": [null, -5], "4": [null, 67]}, "61": {"0": [null, -158], "1": [null, -26], "2": [null, 45], "3": [null, -15], "4": [null, 45]}, "62": {"0": [null, -178], "1": [null, -25], "2": [null, 36], "3": [null, -16], "4": [null, 53]}, "63": {"0": [null, -148], "1": [null, -25], "2": [null, 46], "3": [null, -15], "4": [null, 41]}, "64": {"0": [null, -152], "1": [null, -24], "2": [null, 28], "3": [null, -10], "4": [null, 41]}, "65": {"0": [null, -138], "1": [null, -24], "2": [null, 44], "3": [null, -12], "4": [null, 19]}, "66": {"0": [null, -138], "1": [null, -24], "2": [null, 44], "3": [null, -12], "4": [null, 39]}, "67": {"0": [null, -155], "1": [null, -24], "2": [null, 45], "3": [null, -16], "4": [null, 44]}, "68": {"0": [null, -137], "1": [null, -24], "2": [null, 64], "3": [null, -19], "4": [null, 34]}, "69": {"0": [null, -215], "1": [null, -23], "2": [null, 37], "3": [null, -21], "4": [null, 63]}, "70": {"0": [null, -137], "1": [null, -23], "2": [null, 38], "3": [null, -14], "4": [null, 38]}, "71": {"0": [null, -221], "1": [null, -21], "2": [null, 8], "3": [null, -20], "4": [null, 69]}, "72": {"0": [null, -217], "1": [null, -21], "2": [null, 18], "3": [null, -24], "4": [null, 63]}, "73": {"0": [null, -158], "1": [null, -21], "2": [null, 40], "3": [null, -15], "4": [null, 45]}, "74": {"0": [null, -155], "1": [null, -19], "2": [null, 40], "3": [null, -16], "4": [null, 44]}, "75": {"0": [null, -150], "1": [null, -19], "2": [null, 44], "3": [null, 4], "4": [null, 39]}, "76": {"0": [null, -144], "1": [null, -17], "2": [null, 45], "3": [null, 5], "4": [null, 37]}, "77": {"0": [null, -141], "1": [null, -16], "2": [null, 63], "3": [null, -25], "4": [null, 33]}, "78": {"0": [null, -142], "1": [null, -15], "2": [null, 27], "3": [null, -21], "4": [null, 39]}, "79": {"0": [null, -194], "1": [null, -11], "2": [null, 3], "3": [null, -20], "4": [null, 62]}, "80": {"0": [null, -141], "1": [null, -11], "2": [null, 58], "3": [null, -25], "4": [null, 43]}, "81": {"0": [null, -210], "1": [null, -10], "2": [null, 17], "3": [null, -27], "4": [null, 61]}, "82": {"0": [null, -208], "1": [null, -10], "2": [null, 17], "3": [null, -28], "4": [null, 58]}, "83": {"0": [null, -143], "1": [null, -7], "2": [null, 26], "3": [null, -19], "4": [null, 40]}, "84": {"0": [null, -165], "1": [null, -4], "2": [null, -3], "3": [null, -19], "4": [null, 48]}, "85": {"0": [null, -175], "1": [null, 0], "2": [null, -11], "3": [null, -18], "4": [null, 56]}, "86": {"0": [null, -146], "1": [null, 7], "2": [null, 25], "3": [null, -30], "4": [null, 38]}, "87": {"0": [null, -138], "1": [null, 7], "2": [null, 35], "3": [null, -39], "4": [null, 35]}, "88": {"0": [null, -136], "1": [null, 19], "2": [null, -20], "3": [null, -23], "4": [null, 41]}}, "VarRegionCount": [2, 5], "NumShorts": [0, 1]}, "4": {"VarRegionIndex": {"3": [null, 3], "4": [null, 4]}, "Item": {"0": {"0": [-10, -33], "1": [10, 54], "2": [5, -141], "3": [null, -13], "4": [null, -314]}, "1": {"0": [-10, 373], "1": [20, 464], "2": [10, 265], "3": [null, -419], "4": [null, -368]}}, "VarRegionCount": [3, 5], "NumShorts": [0, 5]}, "5": {"ItemCount": [9, null], "NumShorts": [0, null], "VarRegionCount": [4, null], "VarRegionIndex": {"0": [0, null], "1": [1, null], "2": [2, null], "3": [4, null]}, "Item": {"0": {"0": [-46, null], "1": [83, null], "2": [-33, null], "3": [1, null]}, "1": {"0": [-45, null], "1": [65, null], "2": [-67, null], "3": [16, null]}, "2": {"0": [-40, null], "1": [19, null], "2": [-111, null], "3": [45, null]}, "3": {"0": [-21, null], "1": [23, null], "2": [-43, null], "3": [13, null]}, "4": {"0": [-21, null], "1": [40, null], "2": [-25, null], "3": [4, null]}, "5": {"0": [-16, null], "1": [14, null], "2": [-49, null], "3": [16, null]}, "6": {"0": [-15, null], "1": [-2, null], "2": [-51, null], "3": [18, null]}, "7": {"0": [-15, null], "1": [8, null], "2": [-51, null], "3": [17, null]}, "8": {"0": [-8, null], "1": [-26, null], "2": [-92, null], "3": [36, null]}}}, "6": {"ItemCount": [2, null], "NumShorts": [0, null], "VarRegionCount": [4, null], "VarRegionIndex": {"0": [0, null], "1": [1, null], "2": [3, null], "3": [4, null]}, "Item": {"0": {"0": [-10, null], "1": [10, null], "2": [0, null], "3": [-10, null]}, "1": {"0": [0, null], "1": [-1, null], "2": [-2, null], "3": [1, null]}}}, "7": {"ItemCount": [6, null], "NumShorts": [0, null], "VarRegionCount": [4, null], "VarRegionIndex": {"0": [1, null], "1": [2, null], "2": [3, null], "3": [4, null]}, "Item": {"0": {"0": [-2, null], "1": [-24, null], "2": [-5, null], "3": [28, null]}, "1": {"0": [2, null], "1": [3, null], "2": [-7, null], "3": [6, null]}, "2": {"0": [4, null], "1": [3, null], "2": [-7, null], "3": [4, null]}, "3": {"0": [5, null], "1": [-71, null], "2": [-14, null], "3": [29, null]}, "4": {"0": [15, null], "1": [-35, null], "2": [-10, null], "3": [34, null]}, "5": {"0": [28, null], "1": [-67, null], "2": [-9, null], "3": [18, null]}}}, "8": {"ItemCount": [146, null], "NumShorts": [0, null], "VarRegionCount": [5, null], "VarRegionIndex": {"0": [0, null], "1": [1, null], "2": [2, null], "3": [3, null], "4": [4, null]}, "Item": {"0": {"0": [-62, null], "1": [64, null], "2": [-105, null], "3": [3, null], "4": [27, null]}, "1": {"0": [-62, null], "1": [74, null], "2": [-44, null], "3": [1, null], "4": [5, null]}, "2": {"0": [-62, null], "1": [84, null], "2": [-68, null], "3": [-4, null], "4": [16, null]}, "3": {"0": [-57, null], "1": [96, null], "2": [-8, null], "3": [6, null], "4": [-7, null]}, "4": {"0": [-53, null], "1": [100, null], "2": [-10, null], "3": [2, null], "4": [-6, null]}, "5": {"0": [-50, null], "1": [66, null], "2": [-104, null], "3": [-2, null], "4": [30, null]}, "6": {"0": [-50, null], "1": [67, null], "2": [-105, null], "3": [-1, null], "4": [27, null]}, "7": {"0": [-50, null], "1": [67, null], "2": [-105, null], "3": [-1, null], "4": [28, null]}, "8": {"0": [-45, null], "1": [65, null], "2": [-53, null], "3": [2, null], "4": [11, null]}, "9": {"0": [-43, null], "1": [68, null], "2": [-109, null], "3": [-8, null], "4": [29, null]}, "10": {"0": [-41, null], "1": [10, null], "2": [-93, null], "3": [10, null], "4": [36, null]}, "11": {"0": [-41, null], "1": [30, null], "2": [-88, null], "3": [5, null], "4": [30, null]}, "12": {"0": [-41, null], "1": [63, null], "2": [-125, null], "3": [-7, null], "4": [35, null]}, "13": {"0": [-40, null], "1": [60, null], "2": [-83, null], "3": [-8, null], "4": [14, null]}, "14": {"0": [-39, null], "1": [80, null], "2": [-52, null], "3": [-6, null], "4": [7, null]}, "15": {"0": [-38, null], "1": [6, null], "2": [-110, null], "3": [7, null], "4": [41, null]}, "16": {"0": [-37, null], "1": [31, null], "2": [-79, null], "3": [4, null], "4": [26, null]}, "17": {"0": [-36, null], "1": [20, null], "2": [-102, null], "3": [-1, null], "4": [32, null]}, "18": {"0": [-36, null], "1": [45, null], "2": [-118, null], "3": [-5, null], "4": [34, null]}, "19": {"0": [-36, null], "1": [58, null], "2": [-125, null], "3": [-7, null], "4": [35, null]}, "20": {"0": [-35, null], "1": [35, null], "2": [-52, null], "3": [3, null], "4": [28, null]}, "21": {"0": [-34, null], "1": [34, null], "2": [-41, null], "3": [6, null], "4": [13, null]}, "22": {"0": [-34, null], "1": [81, null], "2": [-60, null], "3": [-3, null], "4": [23, null]}, "23": {"0": [-31, null], "1": [20, null], "2": [-39, null], "3": [10, null], "4": [9, null]}, "24": {"0": [-31, null], "1": [32, null], "2": [-52, null], "3": [2, null], "4": [3, null]}, "25": {"0": [-30, null], "1": [29, null], "2": [-54, null], "3": [1, null], "4": [18, null]}, "26": {"0": [-30, null], "1": [57, null], "2": [-32, null], "3": [-1, null], "4": [1, null]}, "27": {"0": [-29, null], "1": [51, null], "2": [-56, null], "3": [12, null], "4": [28, null]}, "28": {"0": [-28, null], "1": [46, null], "2": [-5, null], "3": [3, null], "4": [-2, null]}, "29": {"0": [-27, null], "1": [36, null], "2": [-14, null], "3": [3, null], "4": [-5, null]}, "30": {"0": [-27, null], "1": [65, null], "2": [-103, null], "3": [-14, null], "4": [24, null]}, "31": {"0": [-26, null], "1": [38, null], "2": [-44, null], "3": [-1, null], "4": [11, null]}, "32": {"0": [-26, null], "1": [58, null], "2": [-47, null], "3": [-6, null], "4": [8, null]}, "33": {"0": [-26, null], "1": [60, null], "2": [-115, null], "3": [-13, null], "4": [32, null]}, "34": {"0": [-26, null], "1": [98, null], "2": [-50, null], "3": [-15, null], "4": [-3, null]}, "35": {"0": [-25, null], "1": [20, null], "2": [-65, null], "3": [1, null], "4": [21, null]}, "36": {"0": [-25, null], "1": [23, null], "2": [-52, null], "3": [-1, null], "4": [15, null]}, "37": {"0": [-25, null], "1": [33, null], "2": [-52, null], "3": [-1, null], "4": [15, null]}, "38": {"0": [-24, null], "1": [22, null], "2": [-24, null], "3": [5, null], "4": [9, null]}, "39": {"0": [-23, null], "1": [11, null], "2": [-87, null], "3": [1, null], "4": [29, null]}, "40": {"0": [-23, null], "1": [11, null], "2": [-82, null], "3": [-4, null], "4": [24, null]}, "41": {"0": [-23, null], "1": [25, null], "2": [-26, null], "3": [3, null], "4": [8, null]}, "42": {"0": [-23, null], "1": [30, null], "2": [-28, null], "3": [1, null], "4": [7, null]}, "43": {"0": [-23, null], "1": [41, null], "2": [-3, null], "3": [1, null], "4": [-3, null]}, "44": {"0": [-23, null], "1": [51, null], "2": [-6, null], "3": [-1, null], "4": [-4, null]}, "45": {"0": [-23, null], "1": [55, null], "2": [-25, null], "3": [-10, null], "4": [4, null]}, "46": {"0": [-23, null], "1": [66, null], "2": [-106, null], "3": [-18, null], "4": [24, null]}, "47": {"0": [-22, null], "1": [7, null], "2": [-84, null], "3": [5, null], "4": [28, null]}, "48": {"0": [-22, null], "1": [60, null], "2": [-103, null], "3": [-14, null], "4": [24, null]}, "49": {"0": [-21, null], "1": [17, null], "2": [-20, null], "3": [3, null], "4": [5, null]}, "50": {"0": [-21, null], "1": [58, null], "2": [-31, null], "3": [-5, null], "4": [1, null]}, "51": {"0": [-20, null], "1": [-6, null], "2": [-96, null], "3": [5, null], "4": [38, null]}, "52": {"0": [-20, null], "1": [10, null], "2": [-3, null], "3": [3, null], "4": [2, null]}, "53": {"0": [-20, null], "1": [16, null], "2": [-85, null], "3": [2, null], "4": [24, null]}, "54": {"0": [-19, null], "1": [19, null], "2": [-23, null], "3": [3, null], "4": [6, null]}, "55": {"0": [-18, null], "1": [2, null], "2": [-54, null], "3": [-2, null], "4": [16, null]}, "56": {"0": [-18, null], "1": [10, null], "2": [-50, null], "3": [3, null], "4": [15, null]}, "57": {"0": [-18, null], "1": [61, null], "2": [-106, null], "3": [-18, null], "4": [24, null]}, "58": {"0": [-17, null], "1": [-8, null], "2": [-78, null], "3": [5, null], "4": [22, null]}, "59": {"0": [-17, null], "1": [3, null], "2": [-95, null], "3": [8, null], "4": [32, null]}, "60": {"0": [-17, null], "1": [22, null], "2": [-80, null], "3": [-5, null], "4": [23, null]}, "61": {"0": [-17, null], "1": [23, null], "2": [-56, null], "3": [-4, null], "4": [8, null]}, "62": {"0": [-17, null], "1": [27, null], "2": [-90, null], "3": [-12, null], "4": [26, null]}, "63": {"0": [-17, null], "1": [27, null], "2": [-90, null], "3": [-11, null], "4": [26, null]}, "64": {"0": [-17, null], "1": [34, null], "2": [-31, null], "3": [-2, null], "4": [6, null]}, "65": {"0": [-17, null], "1": [34, null], "2": [-30, null], "3": [-3, null], "4": [5, null]}, "66": {"0": [-17, null], "1": [63, null], "2": [-74, null], "3": [-22, null], "4": [13, null]}, "67": {"0": [-16, null], "1": [5, null], "2": [-72, null], "3": [-8, null], "4": [29, null]}, "68": {"0": [-16, null], "1": [12, null], "2": [-85, null], "3": [-17, null], "4": [27, null]}, "69": {"0": [-16, null], "1": [12, null], "2": [-85, null], "3": [2, null], "4": [27, null]}, "70": {"0": [-16, null], "1": [23, null], "2": [-72, null], "3": [-14, null], "4": [18, null]}, "71": {"0": [-16, null], "1": [23, null], "2": [-72, null], "3": [-7, null], "4": [18, null]}, "72": {"0": [-16, null], "1": [78, null], "2": [-30, null], "3": [-3, null], "4": [2, null]}, "73": {"0": [-15, null], "1": [-2, null], "2": [-54, null], "3": [3, null], "4": [21, null]}, "74": {"0": [-15, null], "1": [16, null], "2": [-83, null], "3": [-6, null], "4": [26, null]}, "75": {"0": [-15, null], "1": [22, null], "2": [-42, null], "3": [10, null], "4": [-10, null]}, "76": {"0": [-15, null], "1": [23, null], "2": [-79, null], "3": [-7, null], "4": [22, null]}, "77": {"0": [-15, null], "1": [38, null], "2": [-95, null], "3": [-17, null], "4": [17, null]}, "78": {"0": [-14, null], "1": [15, null], "2": [-90, null], "3": [-10, null], "4": [28, null]}, "79": {"0": [-14, null], "1": [15, null], "2": [-63, null], "3": [-4, null], "4": [19, null]}, "80": {"0": [-14, null], "1": [15, null], "2": [-49, null], "3": [-1, null], "4": [14, null]}, "81": {"0": [-14, null], "1": [26, null], "2": [-15, null], "3": [-1, null], "4": [2, null]}, "82": {"0": [-14, null], "1": [40, null], "2": [-103, null], "3": [-17, null], "4": [26, null]}, "83": {"0": [-13, null], "1": [7, null], "2": [-2, null], "3": [2, null], "4": [1, null]}, "84": {"0": [-12, null], "1": [29, null], "2": [-62, null], "3": [-12, null], "4": [10, null]}, "85": {"0": [-12, null], "1": [34, null], "2": [-34, null], "3": [-4, null], "4": [8, null]}, "86": {"0": [-11, null], "1": [10, null], "2": [-88, null], "3": [-3, null], "4": [30, null]}, "87": {"0": [-11, null], "1": [14, null], "2": [-84, null], "3": [-8, null], "4": [26, null]}, "88": {"0": [-11, null], "1": [16, null], "2": [-84, null], "3": [-6, null], "4": [25, null]}, "89": {"0": [-11, null], "1": [17, null], "2": [-83, null], "3": [-7, null], "4": [24, null]}, "90": {"0": [-11, null], "1": [36, null], "2": [-113, null], "3": [-17, null], "4": [24, null]}, "91": {"0": [-10, null], "1": [7, null], "2": [-120, null], "3": [-15, null], "4": [37, null]}, "92": {"0": [-10, null], "1": [10, null], "2": [-82, null], "3": [-7, null], "4": [26, null]}, "93": {"0": [-10, null], "1": [10, null], "2": [-4, null], "3": [4, null], "4": [-1, null]}, "94": {"0": [-10, null], "1": [13, null], "2": [-88, null], "3": [-8, null], "4": [27, null]}, "95": {"0": [-10, null], "1": [13, null], "2": [-87, null], "3": [-11, null], "4": [26, null]}, "96": {"0": [-10, null], "1": [13, null], "2": [-86, null], "3": [-8, null], "4": [26, null]}, "97": {"0": [-10, null], "1": [15, null], "2": [-87, null], "3": [-11, null], "4": [24, null]}, "98": {"0": [-9, null], "1": [-19, null], "2": [-82, null], "3": [-9, null], "4": [11, null]}, "99": {"0": [-9, null], "1": [-7, null], "2": [-94, null], "3": [-2, null], "4": [33, null]}, "100": {"0": [-9, null], "1": [-7, null], "2": [-91, null], "3": [-5, null], "4": [30, null]}, "101": {"0": [-9, null], "1": [16, null], "2": [-82, null], "3": [-9, null], "4": [24, null]}, "102": {"0": [-8, null], "1": [-4, null], "2": [-86, null], "3": [-6, null], "4": [29, null]}, "103": {"0": [-8, null], "1": [-4, null], "2": [-86, null], "3": [-5, null], "4": [29, null]}, "104": {"0": [-7, null], "1": [9, null], "2": [-64, null], "3": [-6, null], "4": [20, null]}, "105": {"0": [-7, null], "1": [23, null], "2": [-57, null], "3": [-10, null], "4": [14, null]}, "106": {"0": [-7, null], "1": [37, null], "2": [-72, null], "3": [-13, null], "4": [17, null]}, "107": {"0": [-6, null], "1": [-21, null], "2": [-1, null], "3": [1, null], "4": [4, null]}, "108": {"0": [-6, null], "1": [-6, null], "2": [-1, null], "3": [1, null], "4": [2, null]}, "109": {"0": [-6, null], "1": [21, null], "2": [-76, null], "3": [-11, null], "4": [16, null]}, "110": {"0": [-6, null], "1": [21, null], "2": [-76, null], "3": [-11, null], "4": [18, null]}, "111": {"0": [-5, null], "1": [2, null], "2": [-83, null], "3": [-9, null], "4": [31, null]}, "112": {"0": [-5, null], "1": [9, null], "2": [-83, null], "3": [-8, null], "4": [25, null]}, "113": {"0": [-4, null], "1": [10, null], "2": [-80, null], "3": [-9, null], "4": [23, null]}, "114": {"0": [-4, null], "1": [31, null], "2": [-60, null], "3": [-13, null], "4": [13, null]}, "115": {"0": [-3, null], "1": [-7, null], "2": [-87, null], "3": [-7, null], "4": [29, null]}, "116": {"0": [-3, null], "1": [20, null], "2": [-71, null], "3": [-11, null], "4": [19, null]}, "117": {"0": [-2, null], "1": [17, null], "2": [-80, null], "3": [-12, null], "4": [21, null]}, "118": {"0": [-2, null], "1": [30, null], "2": [-70, null], "3": [-9, null], "4": [11, null]}, "119": {"0": [-1, null], "1": [3, null], "2": [-96, null], "3": [-12, null], "4": [29, null]}, "120": {"0": [-1, null], "1": [8, null], "2": [-89, null], "3": [-12, null], "4": [26, null]}, "121": {"0": [-1, null], "1": [19, null], "2": [-78, null], "3": [-14, null], "4": [19, null]}, "122": {"0": [1, null], "1": [40, null], "2": [-56, null], "3": [-8, null], "4": [8, null]}, "123": {"0": [2, null], "1": [-4, null], "2": [-95, null], "3": [-12, null], "4": [34, null]}, "124": {"0": [2, null], "1": [41, null], "2": [-44, null], "3": [-14, null], "4": [-1, null]}, "125": {"0": [3, null], "1": [-14, null], "2": [-108, null], "3": [-11, null], "4": [35, null]}, "126": {"0": [3, null], "1": [21, null], "2": [-61, null], "3": [-16, null], "4": [4, null]}, "127": {"0": [5, null], "1": [-16, null], "2": [-106, null], "3": [-13, null], "4": [34, null]}, "128": {"0": [6, null], "1": [-7, null], "2": [-85, null], "3": [-13, null], "4": [26, null]}, "129": {"0": [6, null], "1": [20, null], "2": [-74, null], "3": [-16, null], "4": [17, null]}, "130": {"0": [6, null], "1": [25, null], "2": [-78, null], "3": [-20, null], "4": [17, null]}, "131": {"0": [8, null], "1": [-9, null], "2": [-124, null], "3": [-18, null], "4": [37, null]}, "132": {"0": [8, null], "1": [9, null], "2": [-78, null], "3": [-17, null], "4": [20, null]}, "133": {"0": [9, null], "1": [-22, null], "2": [-82, null], "3": [-20, null], "4": [19, null]}, "134": {"0": [9, null], "1": [14, null], "2": [-60, null], "3": [-16, null], "4": [14, null]}, "135": {"0": [10, null], "1": [-13, null], "2": [-110, null], "3": [-28, null], "4": [58, null]}, "136": {"0": [10, null], "1": [-11, null], "2": [-106, null], "3": [-34, null], "4": [54, null]}, "137": {"0": [10, null], "1": [11, null], "2": [-79, null], "3": [-18, null], "4": [22, null]}, "138": {"0": [12, null], "1": [-23, null], "2": [-101, null], "3": [-12, null], "4": [34, null]}, "139": {"0": [14, null], "1": [15, null], "2": [-128, null], "3": [-39, null], "4": [56, null]}, "140": {"0": [15, null], "1": [-9, null], "2": [-117, null], "3": [-22, null], "4": [33, null]}, "141": {"0": [19, null], "1": [-45, null], "2": [-17, null], "3": [-10, null], "4": [19, null]}, "142": {"0": [19, null], "1": [-45, null], "2": [3, null], "3": [-3, null], "4": [20, null]}, "143": {"0": [23, null], "1": [-34, null], "2": [-98, null], "3": [-24, null], "4": [56, null]}, "144": {"0": [25, null], "1": [-36, null], "2": [-96, null], "3": [-26, null], "4": [55, null]}, "145": {"0": [26, null], "1": [-3, null], "2": [-117, null], "3": [-31, null], "4": [29, null]}}}, "9": {"ItemCount": [88, null], "NumShorts": [1, null], "VarRegionCount": [5, null], "VarRegionIndex": {"0": [2, null], "1": [0, null], "2": [1, null], "3": [3, null], "4": [4, null]}, "Item": {"0": {"0": [-212, null], "1": [-57, null], "2": [97, null], "3": [-19, null], "4": [57, null]}, "1": {"0": [-142, null], "1": [-56, null], "2": [64, null], "3": [-2, null], "4": [43, null]}, "2": {"0": [-172, null], "1": [-54, null], "2": [79, null], "3": [-11, null], "4": [48, null]}, "3": {"0": [-218, null], "1": [-53, null], "2": [79, null], "3": [-20, null], "4": [60, null]}, "4": {"0": [-212, null], "1": [-52, null], "2": [92, null], "3": [-19, null], "4": [57, null]}, "5": {"0": [-172, null], "1": [-49, null], "2": [74, null], "3": [-11, null], "4": [48, null]}, "6": {"0": [-218, null], "1": [-48, null], "2": [74, null], "3": [-20, null], "4": [60, null]}, "7": {"0": [-155, null], "1": [-48, null], "2": [77, null], "3": [-15, null], "4": [42, null]}, "8": {"0": [-184, null], "1": [-44, null], "2": [79, null], "3": [-23, null], "4": [49, null]}, "9": {"0": [-173, null], "1": [-44, null], "2": [105, null], "3": [-26, null], "4": [40, null]}, "10": {"0": [-155, null], "1": [-43, null], "2": [72, null], "3": [-15, null], "4": [42, null]}, "11": {"0": [-154, null], "1": [-42, null], "2": [54, null], "3": [-12, null], "4": [46, null]}, "12": {"0": [-242, null], "1": [-40, null], "2": [52, null], "3": [-23, null], "4": [72, null]}, "13": {"0": [-184, null], "1": [-39, null], "2": [74, null], "3": [-23, null], "4": [49, null]}, "14": {"0": [-173, null], "1": [-39, null], "2": [100, null], "3": [-26, null], "4": [40, null]}, "15": {"0": [-154, null], "1": [-37, null], "2": [49, null], "3": [-12, null], "4": [46, null]}, "16": {"0": [-188, null], "1": [-37, null], "2": [78, null], "3": [-25, null], "4": [49, null]}, "17": {"0": [-138, null], "1": [-36, null], "2": [61, null], "3": [-12, null], "4": [37, null]}, "18": {"0": [-137, null], "1": [-36, null], "2": [61, null], "3": [-12, null], "4": [36, null]}, "19": {"0": [-242, null], "1": [-35, null], "2": [47, null], "3": [-23, null], "4": [72, null]}, "20": {"0": [-143, null], "1": [-35, null], "2": [56, null], "3": [-11, null], "4": [40, null]}, "21": {"0": [-183, null], "1": [-35, null], "2": [79, null], "3": [-22, null], "4": [48, null]}, "22": {"0": [-141, null], "1": [-34, null], "2": [45, null], "3": [-11, null], "4": [42, null]}, "23": {"0": [-155, null], "1": [-34, null], "2": [49, null], "3": [-9, null], "4": [47, null]}, "24": {"0": [-146, null], "1": [-34, null], "2": [52, null], "3": [-12, null], "4": [42, null]}, "25": {"0": [-151, null], "1": [-34, null], "2": [53, null], "3": [-15, null], "4": [44, null]}, "26": {"0": [-146, null], "1": [-34, null], "2": [54, null], "3": [-16, null], "4": [42, null]}, "27": {"0": [-136, null], "1": [-34, null], "2": [64, null], "3": [-14, null], "4": [35, null]}, "28": {"0": [-141, null], "1": [-33, null], "2": [54, null], "3": [-13, null], "4": [39, null]}, "29": {"0": [-264, null], "1": [-33, null], "2": [65, null], "3": [-35, null], "4": [71, null]}, "30": {"0": [-264, null], "1": [-33, null], "2": [65, null], "3": [-35, null], "4": [72, null]}, "31": {"0": [-141, null], "1": [-32, null], "2": [9, null], "3": [-19, null], "4": [65, null]}, "32": {"0": [-132, null], "1": [-32, null], "2": [50, null], "3": [-10, null], "4": [37, null]}, "33": {"0": [-142, null], "1": [-32, null], "2": [55, null], "3": [-14, null], "4": [39, null]}, "34": {"0": [-188, null], "1": [-32, null], "2": [73, null], "3": [-25, null], "4": [49, null]}, "35": {"0": [-145, null], "1": [-31, null], "2": [22, null], "3": [-4, null], "4": [46, null]}, "36": {"0": [-140, null], "1": [-31, null], "2": [56, null], "3": [-11, null], "4": [40, null]}, "37": {"0": [-138, null], "1": [-31, null], "2": [56, null], "3": [-12, null], "4": [37, null]}, "38": {"0": [-137, null], "1": [-31, null], "2": [56, null], "3": [-12, null], "4": [36, null]}, "39": {"0": [-148, null], "1": [-30, null], "2": [51, null], "3": [-15, null], "4": [41, null]}, "40": {"0": [-143, null], "1": [-30, null], "2": [51, null], "3": [-11, null], "4": [40, null]}, "41": {"0": [-183, null], "1": [-30, null], "2": [74, null], "3": [-22, null], "4": [48, null]}, "42": {"0": [-141, null], "1": [-29, null], "2": [40, null], "3": [-11, null], "4": [42, null]}, "43": {"0": [-155, null], "1": [-29, null], "2": [44, null], "3": [-9, null], "4": [47, null]}, "44": {"0": [-151, null], "1": [-29, null], "2": [48, null], "3": [-15, null], "4": [44, null]}, "45": {"0": [-146, null], "1": [-29, null], "2": [49, null], "3": [-16, null], "4": [42, null]}, "46": {"0": [-138, null], "1": [-29, null], "2": [49, null], "3": [-12, null], "4": [39, null]}, "47": {"0": [-136, null], "1": [-29, null], "2": [59, null], "3": [-14, null], "4": [35, null]}, "48": {"0": [-131, null], "1": [-29, null], "2": [59, null], "3": [-19, null], "4": [30, null]}, "49": {"0": [-136, null], "1": [-29, null], "2": [69, null], "3": [-19, null], "4": [28, null]}, "50": {"0": [-215, null], "1": [-28, null], "2": [42, null], "3": [-21, null], "4": [63, null]}, "51": {"0": [-137, null], "1": [-28, null], "2": [43, null], "3": [-14, null], "4": [38, null]}, "52": {"0": [-136, null], "1": [-28, null], "2": [43, null], "3": [-11, null], "4": [41, null]}, "53": {"0": [-141, null], "1": [-28, null], "2": [49, null], "3": [-13, null], "4": [39, null]}, "54": {"0": [-163, null], "1": [-28, null], "2": [55, null], "3": [-9, null], "4": [28, null]}, "55": {"0": [-264, null], "1": [-28, null], "2": [60, null], "3": [-35, null], "4": [71, null]}, "56": {"0": [-264, null], "1": [-28, null], "2": [60, null], "3": [-35, null], "4": [72, null]}, "57": {"0": [-174, null], "1": [-27, null], "2": [35, null], "3": [-17, null], "4": [50, null]}, "58": {"0": [-132, null], "1": [-27, null], "2": [45, null], "3": [-10, null], "4": [37, null]}, "59": {"0": [-142, null], "1": [-27, null], "2": [50, null], "3": [-14, null], "4": [39, null]}, "60": {"0": [-184, null], "1": [-26, null], "2": [6, null], "3": [-5, null], "4": [67, null]}, "61": {"0": [-158, null], "1": [-26, null], "2": [45, null], "3": [-15, null], "4": [45, null]}, "62": {"0": [-178, null], "1": [-25, null], "2": [36, null], "3": [-16, null], "4": [53, null]}, "63": {"0": [-148, null], "1": [-25, null], "2": [46, null], "3": [-15, null], "4": [41, null]}, "64": {"0": [-152, null], "1": [-24, null], "2": [28, null], "3": [-10, null], "4": [41, null]}, "65": {"0": [-138, null], "1": [-24, null], "2": [44, null], "3": [-12, null], "4": [19, null]}, "66": {"0": [-138, null], "1": [-24, null], "2": [44, null], "3": [-12, null], "4": [39, null]}, "67": {"0": [-155, null], "1": [-24, null], "2": [45, null], "3": [-16, null], "4": [44, null]}, "68": {"0": [-137, null], "1": [-24, null], "2": [64, null], "3": [-19, null], "4": [34, null]}, "69": {"0": [-215, null], "1": [-23, null], "2": [37, null], "3": [-21, null], "4": [63, null]}, "70": {"0": [-137, null], "1": [-23, null], "2": [38, null], "3": [-14, null], "4": [38, null]}, "71": {"0": [-221, null], "1": [-21, null], "2": [8, null], "3": [-20, null], "4": [69, null]}, "72": {"0": [-217, null], "1": [-21, null], "2": [18, null], "3": [-24, null], "4": [63, null]}, "73": {"0": [-158, null], "1": [-21, null], "2": [40, null], "3": [-15, null], "4": [45, null]}, "74": {"0": [-155, null], "1": [-19, null], "2": [40, null], "3": [-16, null], "4": [44, null]}, "75": {"0": [-150, null], "1": [-19, null], "2": [44, null], "3": [4, null], "4": [39, null]}, "76": {"0": [-144, null], "1": [-17, null], "2": [45, null], "3": [5, null], "4": [37, null]}, "77": {"0": [-141, null], "1": [-16, null], "2": [63, null], "3": [-25, null], "4": [33, null]}, "78": {"0": [-142, null], "1": [-15, null], "2": [27, null], "3": [-21, null], "4": [39, null]}, "79": {"0": [-194, null], "1": [-11, null], "2": [3, null], "3": [-20, null], "4": [62, null]}, "80": {"0": [-141, null], "1": [-11, null], "2": [58, null], "3": [-25, null], "4": [43, null]}, "81": {"0": [-210, null], "1": [-10, null], "2": [17, null], "3": [-27, null], "4": [61, null]}, "82": {"0": [-208, null], "1": [-10, null], "2": [17, null], "3": [-28, null], "4": [58, null]}, "83": {"0": [-143, null], "1": [-7, null], "2": [26, null], "3": [-19, null], "4": [40, null]}, "84": {"0": [-165, null], "1": [-4, null], "2": [-3, null], "3": [-19, null], "4": [48, null]}, "85": {"0": [-146, null], "1": [7, null], "2": [25, null], "3": [-30, null], "4": [38, null]}, "86": {"0": [-138, null], "1": [7, null], "2": [35, null], "3": [-39, null], "4": [35, null]}, "87": {"0": [-136, null], "1": [19, null], "2": [-20, null], "3": [-23, null], "4": [41, null]}}}, "10": {"ItemCount": [5, null], "NumShorts": [5, null], "VarRegionCount": [5, null], "VarRegionIndex": {"0": [0, null], "1": [1, null], "2": [2, null], "3": [3, null], "4": [4, null]}, "Item": {"0": {"0": [-33, null], "1": [54, null], "2": [-141, null], "3": [-13, null], "4": [-314, null]}, "1": {"0": [0, null], "1": [-11, null], "2": [-175, null], "3": [-18, null], "4": [56, null]}, "2": {"0": [0, null], "1": [0, null], "2": [0, null], "3": [-2, null], "4": [1, null]}, "3": {"0": [0, null], "1": [20, null], "2": [0, null], "3": [0, null], "4": [-10, null]}, "4": {"0": [373, null], "1": [464, null], "2": [265, null], "3": [-419, null], "4": [-368, null]}}}}, "VarDataCount": [11, 5]}}}};</script>
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "old"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	boxTitles = document.getElementsByClassName("box-title")
+	items = document.getElementsByClassName("box-text");
+	  
+	if (POSITION === "old") {
+	  POSITION = "new"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("old", "new")
+	    fontToggle.textContent = "new"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("old", "new")
+	  }
+
+	  } else {
+	  POSITION = "old"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("new", "old")
+	    fontToggle.textContent = "old"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("new", "old")
+	  }
+	}
+	}
+	if (fontToggle !== null) {
+		fontToggle.addEventListener("click", switchFonts);
+	}
+
+// apply optional ot feats
+
+function buildFeatureList() {
+	var features = [
+		'aalt', 'c2sc', 'calt', 'case', 'cpsp', 'dlig', 'dnom',
+		'fina', 'frac', 'init', 'kern', 'liga', 'lnum', 'numr', 'onum',
+		'ordn', 'pnum', 'salt', 'sinf', 'smcp', 'sups',
+		'swsh', 'titl', 'tnum', 'zero', 'ss01', 'ss02',
+		'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08',
+		'ss09', 'ss10', 'ss11', 'ss12', 'ss13', 'ss14',
+		'ss15', 'ss16', 'ss17', 'ss18', 'ss19', 'ss20'
+	]
+	
+	var otPanel = document.getElementById("ot-panel")
+	for (i=0; i<features.length; i++) {
+		var feat = features[i]
+		
+		var row = document.createElement("div");
+
+		var item = document.createElement("input");
+		item.type = "checkbox"
+		item.value = feat
+		item.classList.add("ot-checkbox")
+		var label = document.createElement("label")
+		label.textContent = feat
+
+		row.appendChild(item)
+		row.appendChild(label)
+
+		otPanel.appendChild(row)
+	}
+}
+
+buildFeatureList()
+
+
+function enableFeatures() {
+	var checkboxes = document.getElementsByClassName("ot-checkbox")
+	var res = []
+	var disableKerning = false
+	for (i=0; i<checkboxes.length; i++) {
+		if (checkboxes[i].checked === true) {
+			var checkbox = checkboxes[i]
+			res.push('"' + checkbox.value + '"')
+
+			if (checkbox.value === "kern") {
+				disableKerning = true
+			}
+		}
+	}	
+
+	var boxText = document.getElementsByClassName("box-text")
+	var otString = res.join(", ")
+	for (j=0; j<boxText.length; j++) {
+		boxText[j].style.fontFeatureSettings = otString
+		if (disableKerning === true) {
+			boxText[j].style.fontKerning = "none"
+		}
+	}
+}
+
+var otButton = document.getElementById("ot-button")
+otButton.addEventListener("click", function() {
+    otPanel = document.getElementById("ot-panel")
+    if (otPanel.style.display !== "block") {
+        otPanel.style.display = "block"
+    } else {
+        otPanel.style.display = "none"
+    }
+})
+var checkboxes = document.getElementsByClassName("ot-checkbox")
+for (i=0; i<checkboxes.length; i++) {
+	cb = checkboxes[i]
+	cb.addEventListener("click", enableFeatures)
+}	
+    
+  class Table {
+      constructor(data) {
+          this.data = {"root": data}
+          this.open("root")
+      }
+
+      createNode(key, label) {
+          let childElem = document.createElement("div")
+          let childKey = key
+          childElem.dataset.path = childKey
+          childElem.dataset.open = "0"
+          childElem.innerHTML = label
+          childElem.classList.add("node")
+          return childElem
+      }
+
+      close(key) {
+          let htmlParent = document.querySelector(`[data-path="${key}"]`)
+          let label = htmlParent.childNodes[0].nodeValue
+          htmlParent.replaceChildren()
+          htmlParent.textContent = label
+          htmlParent.dataset.open = "0"
+      }
+
+      open(key) {
+          let htmlParent = document.querySelector(`[data-path="${key}"]`)
+          htmlParent.dataset.open = "1"
+
+          // traverse to correct data level based on data-path
+          let path = key.split(".")
+          let data = this.data
+          for (var i=0; i<path.length; i++) {
+              data = data[path[i]];
+
+          }
+
+          // arrays containing two values are used as leaf nodes.
+          // The first item is the before value and the second
+          // is for after value.
+          if (Array.isArray(data)) {
+              let childElem = this.createNode("", "")
+              let before = document.createElement("span")
+              before.classList.add("attr-before")
+              before.textContent = String(data[0]) + " "
+              let after = document.createElement("span")
+              after.classList.add("attr-after")
+              after.textContent = String(data[1])
+              childElem.appendChild(before)
+              childElem.appendChild(after)
+              htmlParent.appendChild(childElem)
+              return
+          }
+          // Create next child nodes
+          for (var i in data) {
+              let childKey = key + "." + i
+              let childElem = this.createNode(childKey, i)
+              htmlParent.appendChild(childElem);
+              var that = this
+
+              // Toggle whether to open or close a node
+              childElem.addEventListener("click", function() {
+                  if (this.dataset.open === "0") {
+                      that.open(childKey)
+                      event.stopPropagation()
+                  } else {
+                      that.close(childKey)
+                      event.stopPropagation()
+                  }
+              })
+          }
+      }
+  }
+
+  let t = new Table(fontdiff, document.getElementById("difftable"))
+
+
+function wordBreaks() {
+  words = document.getElementsByClassName("cell-word")
+  res = []
+  prevTop = 0
+  for (i=0; i<words.length; i++) {
+      var word = words[i]
+      currentTop = word.getBoundingClientRect().top
+      if (currentTop > prevTop) {
+          res.push(i)
+      }
+      prevTop = currentTop
+  }
+  return res
+}
+
+async function insertBreaks() {
+  switchFonts()
+  await sleep(1)
+  breaksBefore = wordBreaks()
+  switchFonts()
+  await sleep(1)
+  breaksAfter = wordBreaks()
+
+
+  console.log(breaksBefore.length, breaksAfter.length)
+
+  if (breaksBefore.length >= breaksAfter.length) {
+    breaks = breaksBefore
+  } else {
+    breaks = breaksAfter
+  }
+
+  words = document.getElementsByClassName("cell-word")
+  breaks.forEach(function(i) {
+    if (i != 0) {
+      i = i
+    }
+    word = words[i]
+    spacer = document.createElement("div")
+    spacer.className = "spacer"
+    word.parentNode.insertBefore(spacer, word)
+  })
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+  
+insertBreaks()
+
+
+    </script>
+</html>
