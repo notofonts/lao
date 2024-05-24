@@ -239,7 +239,7 @@ value = "A12FF52C-901E-4F1C-B651-FD65F325A5D0";
 },
 {
 name = licenseURL;
-value = "https://scripts.sil.org/OFL";
+value = "https://openfontlicense.org";
 },
 {
 name = vendorID;
@@ -256,10 +256,6 @@ value = "This Font Software is licensed under the SIL Open Font License, Version
 {
 name = trademark;
 value = "Noto is a trademark of Google Inc.";
-},
-{
-name = versionString;
-value = "Version 2.003";
 },
 {
 name = Axes;
@@ -66442,5 +66438,5 @@ manufacturer = "Monotype Imaging Inc.";
 manufacturerURL = "http://www.google.com/get/noto/";
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 3;
+versionMinor = 4;
 }
