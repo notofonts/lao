@@ -93864,13 +93864,13 @@ key = licenses;
 values = (
 {
 language = dflt;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org";
 }
 );
 },
 {
 key = licenseURL;
-value = "https://scripts.sil.org/OFL";
+value = "https://openfontlicense.org";
 },
 {
 key = vendorID;
@@ -93893,10 +93893,6 @@ language = dflt;
 value = "Noto is a trademark of Google LLC.";
 }
 );
-},
-{
-key = versionString;
-value = "Version 1.002";
 },
 {
 key = sampleTexts;
@@ -95824,5 +95820,5 @@ O,
 };
 };
 versionMajor = 1;
-versionMinor = 2;
+versionMinor = 3;
 }

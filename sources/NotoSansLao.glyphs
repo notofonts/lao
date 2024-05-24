@@ -1,5 +1,5 @@
 {
-.appVersion = "3227";
+.appVersion = "3243";
 .formatVersion = 3;
 DisplayStrings = (
 "ຄ"
@@ -49714,13 +49714,13 @@ key = licenses;
 values = (
 {
 language = dflt;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org";
 }
 );
 },
 {
 key = licenseURL;
-value = "https://scripts.sil.org/OFL";
+value = "https://openfontlicense.org";
 },
 {
 key = manufacturers;
@@ -49747,10 +49747,6 @@ value = "Noto is a trademark of Google Inc.";
 {
 key = vendorID;
 value = GOOG;
-},
-{
-key = versionString;
-value = "Version 2.003";
 }
 );
 settings = {
@@ -49769,5 +49765,5 @@ name = vStem0;
 );
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 3;
+versionMinor = 4;
 }
