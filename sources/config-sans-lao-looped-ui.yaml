@@ -1,5 +1,6 @@
 buildVariable: true
 familyName: Noto Sans Lao Looped UI
 googleFonts: true
+recipeProvider: noto
 sources:
 - NotoSansLaoLoopedUI.glyphs
