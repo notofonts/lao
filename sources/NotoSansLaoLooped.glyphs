@@ -652,7 +652,7 @@ lookup squishTripleMarks {
 	
 lookup adjustMaiTiOnFoFai {
 	lookupflag UseMarkFilteringSet @laoAboveMarks;
-	pos foFai-lao maiTi-lao' <-90 0 0 0>;
+	pos foFai-lao maiTi-lao' <$maiTiOnFoFaiXOffset 0 0 0>;
 	} adjustMaiTiOnFoFai;
 	
 ";
@@ -863,10 +863,6 @@ value = 300;
 {
 name = strikeoutSize;
 value = 24;
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-50 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 id = "2CD50835-5B7E-4D2A-958C-2F579F79E971";
@@ -926,6 +922,9 @@ pos = -170;
 }
 );
 name = Thin;
+numberValues = (
+-50
+);
 stemValues = (
 25,
 26,
@@ -1056,10 +1055,6 @@ value = 320;
 {
 name = strikeoutSize;
 value = 60;
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-90 0 0 0>;\012	} adjustMaiTiOnFoFai;";
 }
 );
 id = "6E668239-F79A-4803-9842-9160852853A7";
@@ -1119,6 +1114,9 @@ pos = -170;
 }
 );
 name = Regular;
+numberValues = (
+-90
+);
 stemValues = (
 73,
 86,
@@ -1242,10 +1240,6 @@ value = 330;
 {
 name = strikeoutSize;
 value = 80;
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-150 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 id = "EC79AED6-C145-434E-AE62-F6F3D2AFA8D1";
@@ -1306,6 +1300,9 @@ pos = -170;
 }
 );
 name = Black;
+numberValues = (
+-150
+);
 stemValues = (
 146,
 186,
@@ -1429,10 +1426,6 @@ value = 300;
 {
 name = strikeoutSize;
 value = 24;
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-50 0 0 0>;\012	} adjustMaiTiOnFoFai;\012";
 }
 );
 iconName = Condensed;
@@ -1494,6 +1487,9 @@ pos = -170;
 }
 );
 name = "Condensed Thin";
+numberValues = (
+-50
+);
 stemValues = (
 23,
 24,
@@ -1617,10 +1613,6 @@ value = 320;
 {
 name = strikeoutSize;
 value = 60;
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-90 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 iconName = Condensed;
@@ -1681,6 +1673,9 @@ pos = -170;
 }
 );
 name = Condensed;
+numberValues = (
+-90
+);
 stemValues = (
 66,
 78,
@@ -1804,10 +1799,6 @@ value = 330;
 {
 name = strikeoutSize;
 value = 80;
-},
-{
-name = "Replace Feature";
-value = "mkmk;\012\012# Automatic Code End\012\012lookup squishTripleMarks {\012	pos maiEk-lao.small' maiCatawa-lao.small <0 -20 0 0>;\012	} squishTripleMarks;\012	\012lookup adjustMaiTiOnFoFai {\012	lookupflag UseMarkFilteringSet @laoAboveMarks;\012	pos foFai-lao maiTi-lao' <-150 0 0 0>;\012	} adjustMaiTiOnFoFai;\012	";
 }
 );
 iconName = Condensed;
@@ -1869,6 +1860,9 @@ pos = -170;
 }
 );
 name = "Condensed Black";
+numberValues = (
+-150
+);
 stemValues = (
 146,
 172,
@@ -93821,6 +93815,11 @@ name = "zone 8";
 },
 {
 name = "zone 9";
+}
+);
+numbers = (
+{
+name = maiTiOnFoFaiXOffset;
 }
 );
 properties = (
